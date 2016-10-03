@@ -9,6 +9,12 @@
 
 #ifndef HEADER_GEOMETRIC_TRANSFORM_HPP
 #define HEADER_GEOMETRIC_TRANSFORM_HPP
+
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_opengl.h>
+#include <GLES3/gl3.h>
+#include <GL/glut.h>
+
 /**
  * GESTION DES TRANSFORMATIONS GEOMETRIQUE (WRAPPER)
  */

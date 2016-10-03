@@ -17,10 +17,13 @@
 
 #include "frames.hpp"
 #include "modele.hpp"
+#include "../cameraParams/transform.hpp"
+#include "camera.hpp"
 #include "vue.hpp"
 #include "mouse.hpp"
 #include "gui.hpp"
 #include "eventsHandling.cpp"
+#include "camera.hpp"
 
 /**
  * CLASSE TOUTES LES DONNÉES DE L'APPLICATION

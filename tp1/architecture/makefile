@@ -27,11 +27,11 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic \
     -Wunused-function  -Wunused-label  -Wunused-parameter \
     -Wunused-value  -Wunused-variable  -Wvariadic-macros \
     -Wvolatile-register-var  -Wwrite-strings -Wfloat-equal \
-		-Waggregate-return -Weffc++
+                -Waggregate-return -Weffc++
 
 all: runDemo
 
-runDemo: main.cpp frames.hpp  gui.hpp  modele.hpp vue.hpp mouse.hpp eventsHandling.cpp
-	g++ $(CXXFLAGS) main.cpp -o runDemo -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut
+runDemo: main.cpp frames.hpp ../cameraParams/transform.hpp gui.hpp  modele.hpp camera.cpp vue.hpp mouse.hpp eventsHandling.cpp
+	g++ $(CXXFLAGS) camera.cpp main.cpp -o runDemo -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut
 clean:
 	rm -f runDemo

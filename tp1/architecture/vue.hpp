@@ -9,6 +9,7 @@
 
 #ifndef HEADER_VUE_HPP
 #define HEADER_VUE_HPP
+
 /**
  * CLASSE DE GESTION DE L'AFFICHAGE
  */
@@ -19,13 +20,15 @@ struct DisplayManager{
   
   // Modèle de données à afficher
   Modele mModele;
+  Camera mCamera;
   
    /** @brief  Constructeur prenant la géométrie de la fenêtre
    * Initialise les données nécessaires à l'affichage.*/
   DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     :mLargeurFenetre(largeurFenetre),
     mHauteurFenetre(hauteurFenetre),
-    mModele() // Construction du modèle
+    mModele(), // Construction du modèle
+    mCamera(0,0,0,1,0,0,0,1,0,10,100, 50)
   {
     FramesData::Init();
   }
@@ -50,9 +53,9 @@ struct DisplayManager{
   void Redimensionnement(GLint l,GLint h){
     mLargeurFenetre = l;
     mHauteurFenetre = h;
-/*    // Surface de rendu (voir chapitres suivants)
-    glViewport(0,0,(GLsizei)mLargeurFenetre,(GLsizei)mHauteurFenetre);*/
-    mCamera
+    // Surface de rendu (voir chapitres suivants)
+    glViewport((GLint)mCamera.mPosition[0]-(l/2),(GLint)mCamera.mPosition[1]-(h/2),(GLsizei)l,(GLsizei)h);
+    mCamera.Redimensionnement();
     
   }
 };
