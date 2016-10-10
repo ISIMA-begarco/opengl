@@ -64,7 +64,7 @@ struct DisplayManager{
     mLargeurFenetre = l;
     mHauteurFenetre = h;
     // Surface de rendu (voir chapitres suivants)
-    glViewport((GLint)mCamera.mPosition[0],(GLint)mCamera.mPosition[1],(GLsizei)l,(GLsizei)h);
+    glViewport((GLint)mCamera.mPosition[0]-(l/2),(GLint)mCamera.mPosition[1]-(h/2),(GLsizei)l,(GLsizei)h);
     mCamera.Redimensionnement(l, h);
     
   }

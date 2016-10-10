@@ -41,15 +41,15 @@ public:
 		this->mVertical[2] = vertz; 
 	}
 	
-	double* getPositon(){
+	double[] getPositon(){
 		return this->mPosition;
 	}
 	
-	double* getVisee(){
+	double[] getVisee(){
 		return this->mPosition;
 	}
 	
-	double* getVertical(){
+	double[] getVertical(){
 		return this->mPosition;
 	}
     

@@ -85,9 +85,6 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
     
 	 //////////////////////////////////////////////////////
 	 // Événements perso : appuie de touches
-	 
-	 // Faire une liste des touches appuyées si on trouve pas d'autre solution
-	 
 	 case SDL_KEYDOWN:
 	 	if(p_evenement->key.keysym.sym == SDLK_LSHIFT){
 	 		shift = true;
