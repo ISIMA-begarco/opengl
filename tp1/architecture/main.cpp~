@@ -56,7 +56,6 @@ struct MainApplication{
   /** Boucle d'attente des événements */
   void DoEventsLoop(){
     mGuiManager.DoEventsLoop(&mParamsAffichage);
-    mParamsAffichage.Affichage();
   }
 };
 

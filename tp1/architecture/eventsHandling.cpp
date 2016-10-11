@@ -8,8 +8,9 @@
 \******************************************************************************/ 
 
 #include "gui.hpp"
-
-#define SDLK_SIZE 10000
+#include <list>
+#include <algorithm>
+#include <iostream>
 
 /**
  * @brief Gestion d'un événement SDL extrait de la file
@@ -18,11 +19,24 @@
  * @param p_ParamsAffichage instance de la classe Vue
  * @return true si l'événement est SDL_QUIT (fermeture de la fenêtre)
  */
+
+void managePressedKeys(std::list<int> keys){	
+	if(std::find(keys.begin(), keys.end(), SDLK_LSHIFT) != keys.end() ||
+		std::find(keys.begin(), keys.end(), SDLK_RSHIFT) != keys.end()){
+		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
+			std::cout << "X" << std::endl;
+		}
+	}else{
+		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
+			std::cout << "x" << std::endl;
+		}
+	}
+}
+
 bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_Window *window,
 		      DisplayManager *p_ParamsAffichage){
-	static bool shift = false;
-	//static bool touche[SDLK_SIZE] = {false};
-	//touche[0] = touche[0];
+	static std::list<int> keys;
+	std::list<int>::iterator toRemove;
   switch (p_evenement->type){ // suivant le type d'événement 
     //////////////////////////////////////////////////////
     // Événements utilisateur via la souris
@@ -88,25 +102,19 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
 	 
 	 // Faire une liste des touches appuyées si on trouve pas d'autre solution
 	 
-	 case SDL_KEYDOWN:
-	 	if(p_evenement->key.keysym.sym == SDLK_LSHIFT){
-	 		shift = true;
-	 	}
-	 	if(p_evenement->key.keysym.sym == SDLK_x ){
-	 		if( shift){
-		 		std::cout << "in = X" << std::endl;	 		
-	 		}else{
-		 		std::cout << "in = x" << std::endl;
-	 		}
-	 	}
+	case SDL_KEYDOWN:
+		keys.push_back(p_evenement->key.keysym.sym);
+		keys.unique();
+		managePressedKeys(keys);
+		
     break;
     //////////////////////////////////////////////////////
 	 // Événements perso : relachement de touches
     case SDL_KEYUP:
-    	if(p_evenement->key.keysym.sym == SDLK_LSHIFT){
-	 		shift = false;
-	 	}
-    //	touche[p_evenement->key.keysym.sym] = 0;
+	   	toRemove = std::find(keys.begin(), keys.end(), p_evenement->key.keysym.sym);
+    	if(toRemove != keys.end()){
+    		keys.erase(toRemove);
+    	}
     break;
     
     //////////////////////////////////////////////////////
@@ -115,12 +123,13 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
       int w,h;
       SDL_GetWindowSize(window,&w,&h); // récupération taille fenêtre 
       p_ParamsAffichage->Redimensionnement(w, h);
-      break;
+     break;
     //////////////////////////////////////////////////////
     // Fermeture de l'application
     case SDL_QUIT: // fermeture de la fenêtre 
       return true;
-      break;
+    break;
+    
     default:
       fprintf(stderr, "Événement non géré\n");
   }     
