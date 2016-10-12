@@ -33,7 +33,7 @@ struct DisplayManager{
     mCamera(3, 20, -50,
     			0,0,0,
     			0,1,0,
-    			1,100, 50)
+    			1,1000, 50)
   {
     FramesData::Init();
     mCamera.Redimensionnement(largeurFenetre, hauteurFenetre);

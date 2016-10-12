@@ -13,15 +13,19 @@ public:
     double mZ_proche;
     double mZ_eloigne;
     double mAngleOuverture;
+    double mAspect;
 
     Camera(	double px, double py, double pz,
                 double vx, double vy, double vz,
                 double vertx, double verty, double vertz,
-                double zproche = 10, double zeloigne = 100,
+                double zproche = 1, double zeloigne = 500,
                 double angleOuverture = 50);
     void Redimensionnement(int w, int h);
+    void ChangementAngle(double angleOuvertureY);
+    void ApplyPerspectiveProjection(double angleOuvertureY, double aspect, double zProche, double zEloigne);
     void LookAt(double position[3], double pointDeVisee[3], double vecteurVertical[3]);
     void LookAt();
+    void Zoumage(bool forward);
     
 	void setPostion(double px,  double py, double pz){
 		this->mPosition[0] = px;

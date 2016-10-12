@@ -12,6 +12,9 @@
 #include <algorithm>
 #include <iostream>
 
+#define VITESSEKEY 10
+#define VITESSEMOU 100
+
 /**
  * @brief Gestion d'un événement SDL extrait de la file
  * @param p_evenement données de l'événement
@@ -20,23 +23,81 @@
  * @return true si l'événement est SDL_QUIT (fermeture de la fenêtre)
  */
 
-void managePressedKeys(std::list<int> keys){	
+bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){	
+	bool res = std::find(keys.begin(), keys.end(), SDLK_q) != keys.end();
+	if (res){
+		exit(0);
+	}
+	
 	if(std::find(keys.begin(), keys.end(), SDLK_LSHIFT) != keys.end() ||
 		std::find(keys.begin(), keys.end(), SDLK_RSHIFT) != keys.end()){
 		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
-			std::cout << "X" << std::endl;
+			p_ParamsAffichage->mCamera.mPosition[0] += VITESSEKEY;
+		}
+		
+		if(std::find(keys.begin(), keys.end(), SDLK_y) != keys.end()){
+			p_ParamsAffichage->mCamera.mPosition[1] += VITESSEKEY;
+		}
+		
+		if(std::find(keys.begin(), keys.end(), SDLK_z) != keys.end()){
+			p_ParamsAffichage->mCamera.mPosition[2] += VITESSEKEY;
+		}
+		
+		if(std::find(keys.begin(), keys.end(), SDLK_a) != keys.end()){
+			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.mAngleOuverture + VITESSEKEY);
 		}
 	}else{
 		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
-			std::cout << "x" << std::endl;
+			p_ParamsAffichage->mCamera.mPosition[0] -= VITESSEKEY;
+		}
+		
+		if(std::find(keys.begin(), keys.end(), SDLK_y) != keys.end() ||
+			std::find(keys.begin(), keys.end(), SDLK_DOWN) != keys.end() ){
+			p_ParamsAffichage->mCamera.mPosition[1] -= VITESSEKEY;
+		}
+		
+		if(std::find(keys.begin(), keys.end(), SDLK_z) != keys.end()){
+			p_ParamsAffichage->mCamera.mPosition[2] -= VITESSEKEY;
+		}
+		
+		if(std::find(keys.begin(), keys.end(), SDLK_a) != keys.end()){
+			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.mAngleOuverture - VITESSEKEY);
 		}
 	}
+	
+	if(std::find(keys.begin(), keys.end(), SDLK_UP) != keys.end()){
+		p_ParamsAffichage->mCamera.mPosition[1] += VITESSEKEY;
+	}
+	
+	if(std::find(keys.begin(), keys.end(), SDLK_RIGHT) != keys.end()){
+		p_ParamsAffichage->mCamera.mVisee[1] -= VITESSEKEY;
+	}
+	
+	if(std::find(keys.begin(), keys.end(), SDLK_LEFT) != keys.end()){
+		p_ParamsAffichage->mCamera.mVisee[1] += VITESSEKEY;
+	}
+	
+	if(std::find(keys.begin(), keys.end(), SDLK_e) != keys.end()){
+		p_ParamsAffichage->mCamera.Zoumage(true);
+	}
+	
+	if(std::find(keys.begin(), keys.end(), SDLK_r) != keys.end()){
+		p_ParamsAffichage->mCamera.Zoumage(false);
+	}
+	
+	return res;
+}
+
+void manageMouse(DisplayManager *p_ParamsAffichage){	
+	p_ParamsAffichage->mCamera.mVisee[0] += ((MouseData::pmousex - MouseData::mousex)/(double)p_ParamsAffichage->mLargeurFenetre)*VITESSEMOU;
+	p_ParamsAffichage->mCamera.mVisee[2] += ((MouseData::pmousey - MouseData::mousey)/(double)p_ParamsAffichage->mHauteurFenetre)*VITESSEMOU;
 }
 
 bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_Window *window,
 		      DisplayManager *p_ParamsAffichage){
 	static std::list<int> keys;
 	std::list<int>::iterator toRemove;
+	bool res = false;
   switch (p_evenement->type){ // suivant le type d'événement 
     //////////////////////////////////////////////////////
     // Événements utilisateur via la souris
@@ -44,15 +105,18 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
       switch (p_evenement->button.button){
 			case SDL_BUTTON_LEFT :  // Bouton gauche 
 			  MouseData::leftButtonPressed=true;
-			  MouseData::mousex = p_evenement->button.x; // mémorisation coordonnées souris 
-			  MouseData::mousey = p_evenement->button.y; // mémorisation coordonnées souris 
+			 // MouseData::updatePosition(p_evenement->button.x, p_evenement->button.y);
 			  break;
-			case SDL_BUTTON_MIDDLE :  // Bouton gauche 
+			case SDL_BUTTON_MIDDLE :  // Bouton milieu 
 			  MouseData::middleButtonPressed=true;
-			  MouseData::mousex = p_evenement->button.x; // mémorisation coordonnées souris 
-			  MouseData::mousey = p_evenement->button.y; // mémorisation coordonnées souris 
+			 // MouseData::updatePosition(p_evenement->button.x, p_evenement->button.y);
 			  break;
-			default: ;
+			case SDL_BUTTON_RIGHT :  // Bouton droit 
+			  MouseData::rightButtonPressed=true;
+			 // MouseData::updatePosition(p_evenement->button.x, p_evenement->button.y);
+			  break;
+			default: 
+			  break;
       }
       break;     
     case SDL_MOUSEBUTTONUP: // Relachement d'un bouton souris 
@@ -60,24 +124,26 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
 			case SDL_BUTTON_LEFT :  // Bouton gauche 
 			  MouseData::leftButtonPressed=false;
 			  break;
-			case SDL_BUTTON_MIDDLE :  // Bouton gauche 
+			case SDL_BUTTON_MIDDLE :  // Bouton milieu 
 			  MouseData::middleButtonPressed=false;
+			  break;
+			case SDL_BUTTON_RIGHT :  // Bouton droit 
+			  MouseData::rightButtonPressed=false;
 			  break;
 			default: ;
       }
       break;  
     case SDL_MOUSEMOTION: // Mouvement de la souris 
+      MouseData::updatePosition(p_evenement->motion.x, p_evenement->motion.y);
       if (MouseData::leftButtonPressed){
-	// Mise à jour du modèle
-	// Non implémenté
-	MouseData::mousex = p_evenement->motion.x; // enregistrement des nouvelles 
-	MouseData::mousey = p_evenement->motion.y; // coordonnées de la souris 
+			 // MouseData::updatePosition(p_evenement->motion.x, p_evenement->motion.y);
       }
       if (MouseData::middleButtonPressed){
-	// Mise à jour du modèle
-	// Non implémenté
-	MouseData::mousex = p_evenement->motion.x; // enregistrement des nouvelles 
-	MouseData::mousey = p_evenement->motion.y; // coordonnées de la souris 
+			 // MouseData::updatePosition(p_evenement->motion.x, p_evenement->motion.y);
+      }
+      if (MouseData::rightButtonPressed){
+			 // MouseData::updatePosition(p_evenement->motion.x, p_evenement->motion.y);
+			  manageMouse(p_ParamsAffichage);
       }
       break;       
     //////////////////////////////////////////////////////
@@ -105,7 +171,7 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
 	case SDL_KEYDOWN:
 		keys.push_back(p_evenement->key.keysym.sym);
 		keys.unique();
-		managePressedKeys(keys);
+		res = managePressedKeys(keys, p_ParamsAffichage);
 		
     break;
     //////////////////////////////////////////////////////
@@ -133,5 +199,5 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
     default:
       fprintf(stderr, "Événement non géré\n");
   }     
-  return false;
+  return res;
 }
