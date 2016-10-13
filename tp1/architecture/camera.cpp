@@ -29,6 +29,7 @@ void Camera::ChangementAngle(double angleOuvertureY){
 
 void Camera::ApplyPerspectiveProjection(double angleOuvertureY, double aspect,
 					 double zProche, double zEloigne) {
+ 	GeometricTransform::ClearProjection();
     GeometricTransform::ApplyPerspectiveProjection(angleOuvertureY, aspect, zProche, zEloigne);
 }
 

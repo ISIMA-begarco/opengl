@@ -33,7 +33,6 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic \
 all: runDemo
 
 runDemo: main.cpp frames.hpp ../cameraParams/transform.hpp gui.hpp  modele.hpp camera.cpp vue.hpp mouse.hpp eventsHandling.cpp
-#	g++ $(CXXFLAGS) camera.cpp main.cpp -o runDemo -lSDL2 -lGL -lGLU -lglut
-	g++ $(CXXFLAGS) camera.cpp main.cpp -o runDemo -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut
+	g++ $(CXXFLAGS) camera.cpp main.cpp -o runDemo -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp
 clean:
 	rm -f runDemo
