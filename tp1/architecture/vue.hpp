@@ -37,10 +37,13 @@ struct DisplayManager{
   {
     FramesData::Init();
     mCamera.Redimensionnement(largeurFenetre, hauteurFenetre);
+   	this->mModele.addScene("../testAssimp/dwarf.x");
   }
   
   /** Méthode d'affichage */
   void Affichage(){
+	static int scene_list = 0;
+	
     // Affichage des Frames par seconde (FPS)
     if (FramesData::Update()){
       fprintf(stderr, "%s\n", FramesData::getDescriptionFPS());
@@ -49,10 +52,22 @@ struct DisplayManager{
     /*glClearColor(0, 0, 
                  0, 1.0);*/
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-    
     mCamera.LookAt();
+    
+    if(scene_list == 0) {
+	    scene_list = glGenLists(1);
+	    glNewList(scene_list, GL_COMPILE);
+            /* now begin at the root node of the imported data and traverse
+               the scenegraph by multiplying subsequent local transforms
+               together on GL's matrix stack. */
+	    mModele.renderAll();
+	    glEndList();
+	}
 
-    glutSolidTeapot(5);
+	glCallList(scene_list);
+	glutSwapBuffers();
+
+   // glutSolidTeapot(5);
   }
 
   /** Réglage du cadrage pour la vue
