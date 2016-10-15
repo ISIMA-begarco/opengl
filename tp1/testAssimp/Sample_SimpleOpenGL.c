@@ -11,8 +11,6 @@
 // ----------------------------------------------------------------------------
 */
 
-/* gcc Sample_SimpleOpenGL.c -o exemple -g -lSDL2 -lGL -lGLU -lassimp -lglut -lSDL2_ttf */
-
 #include <stdlib.h>
 #include <stdio.h>
 
