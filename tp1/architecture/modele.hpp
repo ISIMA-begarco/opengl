@@ -48,6 +48,10 @@ struct Modele{
   	this->mSceneList.push_back(new SystemeSolaire(sizeSun));
   }
   
+  void addVoiture(double vitesse){
+  	this->mSceneList.push_back(new Voiture(vitesse));
+  }
+  
   void addScene(std::string path){
   	this->mSceneList.push_back(new Scene(path));
   }

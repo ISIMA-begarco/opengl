@@ -39,7 +39,8 @@ struct DisplayManager{
     mCamera.Redimensionnement(largeurFenetre, hauteurFenetre);
    //this->mModele.addScene("../testAssimp/dwarf.x");
    //this->mModele.addTeapot(5);
-   this->mModele.addSystemeSolaire(10);
+   //this->mModele.addSystemeSolaire(10);
+   this->mModele.addVoiture(1.0);
   }
   
   /** Méthode d'affichage */
