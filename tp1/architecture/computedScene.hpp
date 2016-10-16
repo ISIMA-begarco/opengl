@@ -33,24 +33,24 @@ class SystemeSolaire : public AbstractScene {
 	
 		void render(){	
 			// Soleil
-		 	glutSolidSphere(mRayonSoleil, 15, 15);
-		 	
+			glutSolidSphere(mRayonSoleil, 15, 15);
+
 			// Planete
 			// Rotation superieur
 			GeometricTransform::Rotate(0, 1, 0, mRevolutionSun);
-			
+
 			// Translation de la petite planete
 			GeometricTransform::Translate(-mRayonSoleil*3, 0, 0);
-			
+
 			// Rotation de la planete meme
 			GeometricTransform::Rotate(0, 1, 0, mRevolutionSelf);
-			
+
 			// Affichafe de la planete
 			glutSolidSphere(mRayonSoleil/2, 10, 10);
 
-        	// Update
-        	mRevolutionSelf=fmod((mRevolutionSelf+inc*4),360.0);
-        	mRevolutionSun=fmod((mRevolutionSun+inc),360.0);
+			// Update
+			mRevolutionSelf=fmod((mRevolutionSelf+inc*4),360.0);
+			mRevolutionSun=fmod((mRevolutionSun+inc),360.0);
 		}
 };
 
@@ -69,7 +69,7 @@ class Voiture : public AbstractScene {
 				GeometricTransform::Rotate(0, 1, 0, 90);
 				GeometricTransform::Rotate(0, 0, 1, mStep * mVitesseRoue);
 				gluCylinder(gluNewQuadric(),
-				 	5,		//base,
+				 	5,	//base,
 				 	5,  	//top,
 				 	0.5, 	//height,
 				 	12, 	//slices,

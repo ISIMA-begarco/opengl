@@ -85,12 +85,9 @@ void Scene::recursiveRender (const aiNode* nd)
 	glPushMatrix();
 	glMultMatrixf((float*)&m);
 	
-	   std::cout << "coucou1" <<std::endl;
 	/* draw all meshes assigned to this node */
 	for (unsigned n = 0; n < nd->mNumMeshes; ++n) {
-    std::cout << "coucou2" << n << " " << nd->mNumMeshes << " " << this->mScene->mMeshes << std::endl;
 		const aiMesh* mesh = this->mScene->mMeshes[nd->mMeshes[n]];
-    std::cout << "coucou3" << nd << std::endl;
 
 		//apply_material(this->mScene->mMaterials[mesh->mMaterialIndex]);
 
@@ -101,10 +98,6 @@ void Scene::recursiveRender (const aiNode* nd)
 		}
 
 		for (unsigned t = 0; t < mesh->mNumFaces; ++t) {
-			std::cout << "pouet" <<  std::endl;
-			std::cout << "mesh" << mesh << std::endl;
-			std::cout << "mesh->mFaces" << mesh->mFaces << std::endl;
-			std::cout << "t" << t << std::endl;
 			const aiFace* face = &(mesh->mFaces[t]);
 
 			GLenum face_mode;

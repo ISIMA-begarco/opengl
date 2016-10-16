@@ -6,14 +6,24 @@
 #                                                                              # 
 ################################################################################ 
 
-CXXFLAGS =  -std=c++11 -Wall -pedantic \
+# definition des cibles particulieres
+.PHONY: clean
+
+# definition des variables
+CXX = g++
+LXX = -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp
+DXX = -pg
+OBJ = main.o camera.o scene.o noeud.o vecteur3D.o
+APP = runDemo
+
+CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
     -pedantic-errors -Wextra -Wcast-align \
     -Wcast-qual  -Wchar-subscripts  -Wcomment -Wconversion \
     -Wdisabled-optimization \
     -Werror -Wformat -Wformat=2 \
     -Wformat-nonliteral -Wformat-security  \
     -Wformat-y2k \
-    -Wimport  -Winit-self  -Winline \
+    -Wimport  -Winit-self \
     -Winvalid-pch   \
     -Wunsafe-loop-optimizations -Wmissing-braces \
     -Wmissing-field-initializers -Wmissing-format-attribute   \
@@ -21,18 +31,34 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic \
     -Wparentheses  -Wpointer-arith \
     -Wredundant-decls -Wreturn-type \
     -Wsequence-point  -Wshadow -Wsign-compare  -Wstack-protector \
-    -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch  -Wswitch-default \
+    -Wswitch  -Wswitch-default \
     -Wswitch-enum -Wtrigraphs  -Wuninitialized \
     -Wunknown-pragmas  -Wunreachable-code -Wunused \
     -Wunused-function  -Wunused-label  -Wunused-parameter \
     -Wunused-value  -Wunused-variable  -Wvariadic-macros \
     -Wvolatile-register-var  -Wwrite-strings -Wfloat-equal \
-                #-Waggregate-return \
-                -Weffc++
+   #-Waggregate-return -Winline -Wstrict-aliasing -Wstrict-aliasing=2 -Weffc++
+                
 
 all: runDemo
 
-runDemo: main.cpp frames.hpp ../cameraParams/transform.hpp gui.hpp  modele.hpp camera.cpp vue.hpp mouse.hpp eventsHandling.cpp scene.cpp noeud.cpp vecteur3D.cpp computedScene.hpp
-	g++ $(CXXFLAGS) camera.cpp scene.cpp noeud.cpp vecteur3D.cpp main.cpp -o runDemo -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp -g
+$(APP) : $(OBJ)
+	$(CXX) $^ -o ./$@ $(CXXFLAGS) $(LXX)
+
+main.o : main.cpp
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
+
+camera.o : camera.cpp
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
+
+scene.o : scene.cpp
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
+
+noeud.o : noeud.cpp
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
+
+vecteur3D.o : vecteur3D.cpp
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
+
 clean:
-	rm -f runDemo
+	rm -f $(APP); rm -rf *.bak; rm -rf *.o
