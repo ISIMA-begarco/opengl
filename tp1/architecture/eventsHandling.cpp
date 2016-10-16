@@ -186,9 +186,9 @@ bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_W
     //////////////////////////////////////////////////////
     // Événements utilisateur sur la fenêtre graphique
     case SDL_WINDOWEVENT: // La fenêtre graphique a changé
-      int w,h;
-      SDL_GetWindowSize(window,&w,&h); // récupération taille fenêtre 
-      p_ParamsAffichage->Redimensionnement(w, h);
+      //int w,h;
+      //SDL_GetWindowSize(window,&w,&h); // récupération taille fenêtre 
+      //p_ParamsAffichage->Redimensionnement(w, h);
      break;
     //////////////////////////////////////////////////////
     // Fermeture de l'application

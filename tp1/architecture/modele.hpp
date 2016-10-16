@@ -43,6 +43,10 @@ struct Modele{
   void addTeapot(int size){
   	this->mSceneList.push_back(new Teapot(size));
   }
+    
+  void addSystemeSolaire(int sizeSun){
+  	this->mSceneList.push_back(new SystemeSolaire(sizeSun));
+  }
   
   void addScene(std::string path){
   	this->mSceneList.push_back(new Scene(path));

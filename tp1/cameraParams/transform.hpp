@@ -62,7 +62,7 @@ struct GeometricTransform{
   
   /** Applique une rotation autour de l'axe passant par O dirigé par un vecteur */
   static void Rotate(double vecX, double vecY, double vecZ, double angle){
-    glRotated(vecX, vecY, vecZ, angle);
+    glRotated(angle, vecX, vecY, vecZ);
   }
   
   /** Applique un changement d'échelle (affinités orthogonales) sur chaque axe */

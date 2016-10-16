@@ -40,7 +40,7 @@ void Camera::LookAt(double position[3], double pointDeVisee[3], double vecteurVe
    memcpy( mVertical ,  vecteurVertical ,  3*sizeof ( GLdouble ) ) ;
 	
 	GeometricTransform::ClearModelView();
-   GeometricTransform::LookAt(position,pointDeVisee,vecteurVertical);
+	GeometricTransform::LookAt(position,pointDeVisee,vecteurVertical);
 }
 
 void Camera::LookAt(){
