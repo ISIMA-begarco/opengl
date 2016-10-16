@@ -32,7 +32,7 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic \
 
 all: runDemo
 
-runDemo: main.cpp frames.hpp ../cameraParams/transform.hpp gui.hpp  modele.hpp camera.cpp vue.hpp mouse.hpp eventsHandling.cpp scene.cpp noeud.cpp vecteur3D.cpp
+runDemo: main.cpp frames.hpp ../cameraParams/transform.hpp gui.hpp  modele.hpp camera.cpp vue.hpp mouse.hpp eventsHandling.cpp scene.cpp noeud.cpp vecteur3D.cpp computedScene.hpp
 	g++ $(CXXFLAGS) camera.cpp scene.cpp noeud.cpp vecteur3D.cpp main.cpp -o runDemo -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp -g
 clean:
 	rm -f runDemo

@@ -66,6 +66,11 @@ void Scene::getBoundindBoxForNode (
 	*trafo = prev;
 }
 
+void Scene::render (){
+	this->render(this->getRacine());
+}
+
+
 void Scene::render (Noeud noeud){
 	this->recursiveRender(noeud.mNoeud);
 }

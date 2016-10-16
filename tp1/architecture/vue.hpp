@@ -37,7 +37,8 @@ struct DisplayManager{
   {
     FramesData::Init();
     mCamera.Redimensionnement(largeurFenetre, hauteurFenetre);
-   	this->mModele.addScene("../testAssimp/dwarf.x");
+   //this->mModele.addScene("../testAssimp/dwarf.x");
+   this->mModele.addTeapot(5);
   }
   
   /** Méthode d'affichage */
@@ -65,9 +66,6 @@ struct DisplayManager{
 	}
 
 	glCallList(scene_list);
-	glutSwapBuffers();
-
-   // glutSolidTeapot(5);
   }
 
   /** Réglage du cadrage pour la vue

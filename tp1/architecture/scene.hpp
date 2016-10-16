@@ -9,13 +9,14 @@
 #include <assimp/postprocess.h>
 #include <GL/glut.h>
 
+#include "abstractScene.hpp"
 #include "vecteur3D.hpp"
 #include "noeud.hpp"
 
 #define aisgl_min(x,y) (x<y?x:y)
 #define aisgl_max(x,y) (y>x?y:x)
 
-class Scene {
+class Scene : public AbstractScene {
 	private :
 		const aiScene* mScene;
 		aiVector3D* mSceneMin;
@@ -29,8 +30,9 @@ class Scene {
 		
 	public:
 		Scene(const std::string path);
-		virtual ~Scene();
+		~Scene();
 		
+		void render ();
 		void render (Noeud noeud);
 		Noeud getRacine();
 		

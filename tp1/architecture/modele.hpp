@@ -14,6 +14,8 @@
 #include <vector>
 
 #include "scene.hpp"
+#include "abstractScene.hpp"
+#include "computedScene.hpp"
 
 /**
  * Modèle de données
@@ -21,7 +23,7 @@
 struct Modele{
   // Niveau de gris du fond
   float mNiveauGris;
-  std::vector<Scene> mSceneList;
+  std::vector<AbstractScene *> mSceneList;
   
   /** @brief constructeur par défaut
    * Initialise les données nécessaires à l'affichage. */
@@ -38,20 +40,29 @@ struct Modele{
     }
   }
   
+  void addTeapot(int size){
+  	this->mSceneList.push_back(new Teapot(size));
+  }
+  
   void addScene(std::string path){
-  	this->mSceneList.push_back(Scene(path));
-  	    std::cout << "coucou" << std::endl;
+  	this->mSceneList.push_back(new Scene(path));
   }
   
   void render(int i){
   	if(i<(int)this->mSceneList.size()){
-  		this->mSceneList[i].render(this->mSceneList[i].getRacine());
+  		this->mSceneList[i]->render();
   	}
   }
   
   void renderAll(){
   	for (unsigned i = 0; i < this->mSceneList.size(); i++){
   		this->render(i);
+  	}
+  }
+  
+  void clear(){
+  	for(AbstractScene* sc : this->mSceneList){
+  		delete sc;
   	}
   }
 };
