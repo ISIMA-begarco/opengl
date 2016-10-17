@@ -13,7 +13,10 @@
 CXX = g++
 LXX = -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp
 DXX = -pg
-OBJ = main.o abstractCamera.o camera.o scene.o noeud.o vecteur3D.o
+#ARCH = main.o camera.o computedScene.o eventsHandling.o frames.o gui.o modele.o mouse.o  scene.o noeud.o vecteur3D.o vue.o
+ARCH = $(wildcard architecture/*.cpp)
+SRC = $(ARCH)
+OBJ = $(SRC:.cpp=.o)
 APP = runDemo
 
 CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
@@ -42,25 +45,10 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
 
 all: runDemo
 
-$(APP) : $(OBJ)
+$(APP): $(OBJ)
 	$(CXX) $^ -o ./$@ $(CXXFLAGS) $(LXX)
 
-main.o : main.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-abstractCamera.o : abstractCamera.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-camera.o : camera.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-scene.o : scene.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-noeud.o : noeud.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-vecteur3D.o : vecteur3D.cpp
+$(OBJ): $(SRC)
 	$(CXX) -c $< -o $@ $(CXXFLAGS)
 
 clean:
