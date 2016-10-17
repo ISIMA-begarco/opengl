@@ -1,7 +1,7 @@
 #ifndef HEADER_CAMERA_HPP
 #define HEADER_CAMERA_HPP
 
-#include "abstractCamera.hpp"
+#include <iostream>
 
 class Camera : public AbstractCamera {
 public:

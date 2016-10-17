@@ -13,7 +13,7 @@
 CXX = g++
 LXX = -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp
 DXX = -pg
-OBJ = main.o abstractCamera.o camera.o scene.o noeud.o vecteur3D.o
+OBJ = main.o camera.o scene.o noeud.o vecteur3D.o
 APP = runDemo
 
 CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \

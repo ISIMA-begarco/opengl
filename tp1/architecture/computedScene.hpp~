@@ -39,8 +39,9 @@ class SystemeSolaire : public AbstractScene {
 			glPopMatrix();
 
 			// Planete
+
 			glPushMatrix();
-				// Rotation superieur
+						// Rotation superieur
 				GeometricTransform::Rotate(0, 1, 0, mRevolutionSun);
 
 				// Translation de la petite planete

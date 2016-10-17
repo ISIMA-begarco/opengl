@@ -30,7 +30,7 @@ class Scene : public AbstractScene {
 		
 	public:
 		Scene(const std::string path);
-		virtual ~Scene();
+		~Scene();
 		
 		void render ();
 		void render (Noeud noeud);
