@@ -22,36 +22,18 @@ struct FramesData{
   public:
   
   // Initialisation de la description des FPS
-  static void Init(){
-    strcpy(mDescriptionFPS, "00 Frames en 00s, FPS: --");
-  }
+  static void Init();
   
   /**
    * Met à jour l'information du Frame Rate
    * @return true si une mise à jour a eu lieu (chaque seconde)
    */
-  static bool Update(){
-    mNbFrames++;
-
-    // gestion des frames par secondes (ici 50 fps) 
-    GLint currentTime = SDL_GetTicks(); // date courante en milliseconde 
-    if (currentTime/1000 > mNbSeconds){
-      mFps = mNbFrames-mLastNbFrames;
-      mLastNbFrames = mNbFrames;
-      mNbSeconds++;
-      sprintf(mDescriptionFPS, "       %4d Frames, en %ds, soit %d FPS       ",
-		mNbFrames , mNbSeconds, mFps);
-      return true;
-    }
-    return false;
-  }
+  static bool Update();
   
   /**
    * @return description des numéro de frame, durée, et FPS
    */
-  static const char* getDescriptionFPS(){
-    return mDescriptionFPS;
-  }
+  static const char* getDescriptionFPS();
 };
 // Initialisation des données de classe
 GLint FramesData::mNbSeconds = 0; 

@@ -27,51 +27,19 @@ struct Modele{
   
   /** @brief constructeur par défaut
    * Initialise les données nécessaires à l'affichage. */
-  Modele()
-    :mNiveauGris(0.0f),
-    mSceneList()
-  {}
+  Modele();
   
   /** Mise à jour du modèle appelée à chaque événement timer */
-  void Update(){
-    mNiveauGris += 0.01f;
-    if (mNiveauGris > 1.0f){
-      mNiveauGris = 0.0f;
-    }
-  }
+  void Update();
   
-  void addTeapot(int size){
-  	this->mSceneList.push_back(new Teapot(size));
-  }
-    
-  void addSystemeSolaire(int sizeSun){
-  	this->mSceneList.push_back(new SystemeSolaire(sizeSun));
-  }
+  void addTeapot(int size);
+  void addSystemeSolaire(int sizeSun);
+  void addVoiture(double vitesse);
+  void addScene(std::string path);
   
-  void addVoiture(double vitesse){
-  	this->mSceneList.push_back(new Voiture(vitesse));
-  }
+  void render(int i);
+  void renderAll();
   
-  void addScene(std::string path){
-  	this->mSceneList.push_back(new Scene(path));
-  }
-  
-  void render(int i){
-  	if(i<(int)this->mSceneList.size()){
-  		this->mSceneList[i]->render();
-  	}
-  }
-  
-  void renderAll(){
-  	for (unsigned i = 0; i < this->mSceneList.size(); i++){
-  		this->render(i);
-  	}
-  }
-  
-  void clear(){
-  	for(AbstractScene* sc : this->mSceneList){
-  		delete sc;
-  	}
-  }
+  void clear();
 };
 #endif
