@@ -7,28 +7,25 @@
 *                                                                              * 
 \******************************************************************************/ 
 
+#ifndef HEADER_MOUSE_HPP
+#define HEADER_MOUSE_HPP
+
 /** @brief Modèle pour la souris (interaction utilisateur)
  * Paramètres concernant la souris (état, vitesse, etc)
  */
-struct MouseData{
-  // Variables globales pour gestion de la souris
-  static Sint32 mousex; // mémorise la dernière position de la souris 
-  static Sint32 mousey; // mémorise la dernière position de la souris 
-  static Sint32 pmousex; // mémorise la precedente position de la souris 
-  static Sint32 pmousey; // mémorise la precedente position de la souris 
-  static bool leftButtonPressed; // État des boutons de la souris
-  static bool middleButtonPressed; // État des boutons de la souris
-  static bool rightButtonPressed; // État des boutons de la souris
-  static float vitesse; // facteur vitesse de la souris
-  
-  static void updatePosition(Sint32 x, Sint32 y);
+class MouseData{
+	public:
+		// Variables globales pour gestion de la souris
+		static int mousex; // mémorise la dernière position de la souris 
+		static int mousey; // mémorise la dernière position de la souris 
+		static int pmousex; // mémorise la precedente position de la souris 
+		static int pmousey; // mémorise la precedente position de la souris 
+		static bool leftButtonPressed; // État des boutons de la souris
+		static bool middleButtonPressed; // État des boutons de la souris
+		static bool rightButtonPressed; // État des boutons de la souris
+		static float vitesse; // facteur vitesse de la souris
+
+		static void updatePosition(int x, int y);
 };
-// Initialisation des données de classe
-Sint32 MouseData::mousex = 0;
-Sint32 MouseData::mousey = 0;
-Sint32 MouseData::pmousex = 0;
-Sint32 MouseData::pmousey = 0;
-bool MouseData::leftButtonPressed = false;
-bool MouseData::middleButtonPressed = false;
-bool MouseData::rightButtonPressed = false;
-float MouseData::vitesse = 0.2f;
+
+#endif

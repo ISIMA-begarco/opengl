@@ -1,14 +1,15 @@
 #include "gui.hpp"
 
-static void WrapperSDL::EventController::Init(DisplayManager* p_ParamsAffichage){
+SDL_TimerID WrapperSDL::EventController::mTimerId;
+
+void WrapperSDL::EventController::Init(DisplayManager* p_ParamsAffichage) {
 	// Enregistrement d'un timer de raffraichissement de la vue 
-	mTimerId = SDL_AddTimer(20, CreateTimerRefreshFrame,
-		           (void*)p_ParamsAffichage);
+	mTimerId = SDL_AddTimer(20, CreateTimerRefreshFrame, (void*)p_ParamsAffichage);
 }
 
-static void WrapperSDL::EventController::DoEventsLoop(SDL_Window *window, 
-		     DisplayManager* p_ParamsAffichage){
-bool terminer=false;
+void WrapperSDL::EventController::DoEventsLoop(SDL_Window *window, 
+		     DisplayManager* p_ParamsAffichage) {
+	bool terminer=false;
 	SDL_Event evenement; // union contenant un évennement 
 
 	while(!terminer){
@@ -19,7 +20,7 @@ bool terminer=false;
 	}
 }
 
-static Uint32 WrapperSDL::EventController::CreateTimerRefreshFrame(Uint32 interval, void* p_DisplayManager){
+Uint32 WrapperSDL::EventController::CreateTimerRefreshFrame(Uint32 interval, void* p_DisplayManager) {
 
 	SDL_UserEvent userevent;
 
@@ -39,8 +40,9 @@ static Uint32 WrapperSDL::EventController::CreateTimerRefreshFrame(Uint32 interv
 	return interval;
 }
 
-WrapperSDL::WindowManager::WindowManager(int largeurFenetreInit, int hauteurFenetreInit,
-	  const char* windowTitle)
+WrapperSDL::WindowManager::WindowManager(	int largeurFenetreInit,
+											int hauteurFenetreInit,
+	  										const char* windowTitle)
 	// Initialisation d'une fenêtre SDL
 	:mWindow(init_SDL_Window(largeurFenetreInit, hauteurFenetreInit, 
 		                        windowTitle)),
@@ -48,7 +50,7 @@ WrapperSDL::WindowManager::WindowManager(int largeurFenetreInit, int hauteurFene
 	mGlContext(new SDL_GLContext(SDL_GL_CreateContext(mWindow)))
 {}
 
-static SDL_Window * WrapperSDL::WindowManager::init_SDL_Window(int windowWidth, int windowHeight, const char* windowTitle){
+SDL_Window * WrapperSDL::WindowManager::init_SDL_Window(int windowWidth, int windowHeight, const char* windowTitle) {
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION,3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION,3);
 	SDL_Init(SDL_INIT_VIDEO);  
@@ -75,6 +77,6 @@ WrapperSDL::WrapperSDL(int largeurFenetreInit, int hauteurFenetreInit,
 :mWindowManager(largeurFenetreInit, hauteurFenetreInit, windowTitle)
 {}
 
-void WrapperSDL::Init(DisplayManager* p_ParamsAffichage){
+void WrapperSDL::Init(DisplayManager* p_ParamsAffichage) {
 	EventController::Init(p_ParamsAffichage);
 }

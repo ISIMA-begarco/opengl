@@ -32,49 +32,49 @@ bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){
 	if(std::find(keys.begin(), keys.end(), SDLK_LSHIFT) != keys.end() ||
 		std::find(keys.begin(), keys.end(), SDLK_RSHIFT) != keys.end()){
 		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
-			p_ParamsAffichage->mCamera.mPosition[0] += VITESSEKEY;
+			p_ParamsAffichage->mCamera.getPosition()[0] += VITESSEKEY;
 		}
 		
 		if(std::find(keys.begin(), keys.end(), SDLK_y) != keys.end()){
-			p_ParamsAffichage->mCamera.mPosition[1] += VITESSEKEY;
+			p_ParamsAffichage->mCamera.getPosition()[1] += VITESSEKEY;
 		}
 		
 		if(std::find(keys.begin(), keys.end(), SDLK_z) != keys.end()){
-			p_ParamsAffichage->mCamera.mPosition[2] += VITESSEKEY;
+			p_ParamsAffichage->mCamera.getPosition()[2] += VITESSEKEY;
 		}
 		
 		if(std::find(keys.begin(), keys.end(), SDLK_a) != keys.end()){
-			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.mAngleOuverture + VITESSEKEY);
+			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.getAngleOuverture() + VITESSEKEY);
 		}
 	}else{
 		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
-			p_ParamsAffichage->mCamera.mPosition[0] -= VITESSEKEY;
+			p_ParamsAffichage->mCamera.getPosition()[0] -= VITESSEKEY;
 		}
 		
 		if(std::find(keys.begin(), keys.end(), SDLK_y) != keys.end() ||
 			std::find(keys.begin(), keys.end(), SDLK_DOWN) != keys.end() ){
-			p_ParamsAffichage->mCamera.mPosition[1] -= VITESSEKEY;
+			p_ParamsAffichage->mCamera.getPosition()[1] -= VITESSEKEY;
 		}
 		
 		if(std::find(keys.begin(), keys.end(), SDLK_z) != keys.end()){
-			p_ParamsAffichage->mCamera.mPosition[2] -= VITESSEKEY;
+			p_ParamsAffichage->mCamera.getPosition()[2] -= VITESSEKEY;
 		}
 		
 		if(std::find(keys.begin(), keys.end(), SDLK_a) != keys.end()){
-			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.mAngleOuverture - VITESSEKEY);
+			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.getAngleOuverture() - VITESSEKEY);
 		}
 	}
 	
 	if(std::find(keys.begin(), keys.end(), SDLK_UP) != keys.end()){
-		p_ParamsAffichage->mCamera.mPosition[1] += VITESSEKEY;
+		p_ParamsAffichage->mCamera.getPosition()[1] += VITESSEKEY;
 	}
 	
 	if(std::find(keys.begin(), keys.end(), SDLK_RIGHT) != keys.end()){
-		p_ParamsAffichage->mCamera.mVisee[1] -= VITESSEKEY;
+		p_ParamsAffichage->mCamera.getVisee()[1] -= VITESSEKEY;
 	}
 	
 	if(std::find(keys.begin(), keys.end(), SDLK_LEFT) != keys.end()){
-		p_ParamsAffichage->mCamera.mVisee[1] += VITESSEKEY;
+		p_ParamsAffichage->mCamera.getVisee()[1] += VITESSEKEY;
 	}
 	
 	if(std::find(keys.begin(), keys.end(), SDLK_e) != keys.end()){
@@ -89,8 +89,8 @@ bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){
 }
 
 void manageMouse(DisplayManager *p_ParamsAffichage){	
-	p_ParamsAffichage->mCamera.mVisee[0] += ((MouseData::pmousex - MouseData::mousex)/(double)p_ParamsAffichage->mLargeurFenetre)*VITESSEMOU;
-	p_ParamsAffichage->mCamera.mVisee[2] += ((MouseData::pmousey - MouseData::mousey)/(double)p_ParamsAffichage->mHauteurFenetre)*VITESSEMOU;
+	p_ParamsAffichage->mCamera.getVisee()[0] += ((MouseData::pmousex - MouseData::mousex)/(double)p_ParamsAffichage->mLargeurFenetre)*VITESSEMOU;
+	p_ParamsAffichage->mCamera.getVisee()[2] += ((MouseData::pmousey - MouseData::mousey)/(double)p_ParamsAffichage->mHauteurFenetre)*VITESSEMOU;
 }
 
 bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_Window *window,

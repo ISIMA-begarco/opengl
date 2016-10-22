@@ -1,5 +1,5 @@
-#ifndef COMPUTED_SCENE_HPP
-#define COMPUTED_SCENE_HPP
+#ifndef HEADER_COMPUTED_SCENE_HPP
+#define HEADER_COMPUTED_SCENE_HPP
 
 #include "abstractScene.hpp"
 #include "../cameraParams/transform.hpp"
@@ -15,9 +15,7 @@ class Teapot : public AbstractScene {
 		Teapot(int size): mSize(size){}
 		~Teapot() {}
 	
-		void render(){
-		 	glutSolidTeapot(this->mSize);
-		}
+		void render();
 };
 
 class SystemeSolaire : public AbstractScene {

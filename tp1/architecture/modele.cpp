@@ -1,9 +1,7 @@
 #include "modele.hpp"
 
-Modele::Modele()
-:mNiveauGris(0.0f),
-mSceneList()
-{}
+Modele::Modele() : mNiveauGris(0.0f), mSceneList() {
+}
 
 void Modele::Update(){
 	mNiveauGris += 0.01f;
@@ -41,7 +39,8 @@ void Modele::renderAll(){
 }
 
 void Modele::clear(){
-	for(AbstractScene* sc : this->mSceneList){
-		delete sc;
-	}
+	for (auto it = mSceneList.begin() ; it != mSceneList.end(); ++it) {
+		delete (*it);
+	} 
+	mSceneList.clear();
 }

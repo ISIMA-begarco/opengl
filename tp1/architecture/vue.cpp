@@ -1,4 +1,5 @@
 #include "vue.hpp"
+#include <cstdio>
 
 DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     :mLargeurFenetre(largeurFenetre),
@@ -26,7 +27,7 @@ void DisplayManager::Affichage(){
     
 	// On efface le buffer vidéo (fenêtre graphique)
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-    mCamera.LookAt();
+    mCamera.ChangerRepereCamera();
     mModele.renderAll();
 
 }
@@ -35,7 +36,7 @@ void DisplayManager::Redimensionnement(GLint l,GLint h){
     mLargeurFenetre = l;
     mHauteurFenetre = h;
     // Surface de rendu (voir chapitres suivants)
-    glViewport((GLint)mCamera.mPosition[0],(GLint)mCamera.mPosition[1],(GLsizei)l,(GLsizei)h);
+    glViewport((GLint)mCamera.getPosition()[0],(GLint)mCamera.getPosition()[1],(GLsizei)l,(GLsizei)h);
     mCamera.Redimensionnement(l, h);
     
 }

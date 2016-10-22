@@ -1,5 +1,5 @@
-#ifndef SCENE_HPP
-#define SCENE_HPP
+#ifndef HEADER_SCENE_HPP
+#define HEADER_SCENE_HPP
 
 #include <string>
 #include <iostream>
@@ -17,7 +17,9 @@
 #define aisgl_max(x,y) (y>x?y:x)
 
 class Scene : public AbstractScene {
+
 	private :
+
 		const aiScene* mScene;
 		aiVector3D* mSceneMin;
 		aiVector3D* mSceneMax; 
@@ -29,6 +31,7 @@ class Scene : public AbstractScene {
 		void recursiveRender (const aiNode* nd);
 		
 	public:
+
 		Scene(const std::string path);
 		virtual ~Scene();
 		
