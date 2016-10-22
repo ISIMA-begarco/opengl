@@ -1,11 +1,11 @@
 /******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    * 
-*     http://malgouyres.org                                                    * 
-*     File: vue.hpp                                                            * 
-*                                                                              * 
-* The program is distributed under the terms of the GNU General Public License * 
-*                                                                              * 
-\******************************************************************************/ 
+*     Copyright (C) 2016 by Rémy Malgouyres                                    *
+*     http://malgouyres.org                                                    *
+*     File: vue.hpp                                                            *
+*                                                                              *
+* The program is distributed under the terms of the GNU General Public License *
+*                                                                              *
+\******************************************************************************/
 
 #ifndef HEADER_VUE_HPP
 #define HEADER_VUE_HPP
@@ -13,9 +13,10 @@
 #include <unistd.h>
 #include <GL/glut.h>
 
-#include "camera.hpp"
 #include "modele.hpp"
 #include "frames.hpp"
+#include "lookAtCamera.hpp"
+
 
 /**
  * CLASSE DE GESTION DE L'AFFICHAGE
@@ -27,7 +28,7 @@ class DisplayManager{
 
 		// Modèle de données à afficher
 		Modele mModele;
-		Camera mCamera;
+		LookAtCamera mCamera;
 
 		/** @brief  Constructeur prenant la géométrie de la fenêtre
 		  * Initialise les données nécessaires à l'affichage.*/

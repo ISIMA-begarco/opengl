@@ -1,11 +1,11 @@
 /******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    * 
-*     http://malgouyres.org                                                    * 
-*     File: main.cpp                                                           * 
-*                                                                              * 
-* The program is distributed under the terms of the GNU General Public License * 
-*                                                                              * 
-\******************************************************************************/ 
+*     Copyright (C) 2016 by Rémy Malgouyres                                    *
+*     http://malgouyres.org                                                    *
+*     File: main.cpp                                                           *
+*                                                                              *
+* The program is distributed under the terms of the GNU General Public License *
+*                                                                              *
+\******************************************************************************/
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -18,12 +18,10 @@
 #include "frames.hpp"
 #include "modele.hpp"
 #include "../cameraParams/transform.hpp"
-#include "camera.hpp"
 #include "vue.hpp"
 #include "mouse.hpp"
 #include "gui.hpp"
 #include "eventsHandling.cpp"
-#include "camera.hpp"
 
 /**
  * CLASSE TOUTES LES DONNÉES DE L'APPLICATION
@@ -37,10 +35,10 @@
 struct MainApplication{
   // Gestionnaire de GUI et Contexte OpenGL
   WrapperSDL mGuiManager;
-  
+
   // Variable globale initialisées par le constructeur par défaut
   DisplayManager mParamsAffichage;
-  
+
   /**
    * @param largeurFenetreInit largeur initiale de la fenêtre graphique
    * @param hauteurFenetreInit hauteur initiale de la fenêtre graphique
@@ -49,10 +47,10 @@ struct MainApplication{
 		  const char* windowTitle)
     : mGuiManager(largeurFenetreInit, hauteurFenetreInit, windowTitle),
       mParamsAffichage(largeurFenetreInit, hauteurFenetreInit)
-    { 
+    {
       mGuiManager.Init(&mParamsAffichage);
     }
-  
+
   /** Boucle d'attente des événements */
   void DoEventsLoop(){
     mGuiManager.DoEventsLoop(&mParamsAffichage);
@@ -64,7 +62,7 @@ struct MainApplication{
 /////////////////////////////////////////////////////////////////
 
 int main(int argc, char**argv)
-{  
+{
   MainApplication myApp(900, 900, "Mon Application SDL/OpenGL");
   glutInit(&argc, argv);
   myApp.DoEventsLoop();

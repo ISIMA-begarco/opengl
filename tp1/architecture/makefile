@@ -1,10 +1,10 @@
 ################################################################################
-#     Copyright (C) 2016 by Rémy Malgouyres                                    # 
-#     http://malgouyres.org                                                    # 
-#                                                                              # 
-# The program is distributed under the terms of the GNU General Public License # 
-#                                                                              # 
-################################################################################ 
+#     Copyright (C) 2016 by Rémy Malgouyres                                    #
+#     http://malgouyres.org                                                    #
+#                                                                              #
+# The program is distributed under the terms of the GNU General Public License #
+#                                                                              #
+################################################################################
 
 # definition des cibles particulieres
 .PHONY: clean
@@ -13,7 +13,8 @@
 CXX = g++
 LXX = -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp
 DXX = -pg
-OBJ = main.o camera.o modele.o gui.o vue.o frames.o scene.o noeud.o vecteur3D.o abstractCamera.o mouse.o computedScene.o
+OBJ = main.o modele.o gui.o vue.o frames.o scene.o noeud.o vecteur3D.o abstractCamera.o lookAtCamera.o transfoCamera.o mouse.o computedScene.o
+BUILD = ./obj
 APP = runDemo
 
 CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
@@ -38,48 +39,21 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
     -Wunused-value  -Wunused-variable  -Wvariadic-macros \
     -Wvolatile-register-var  -Wwrite-strings -Wfloat-equal \
    #-Waggregate-return -Winline -Wstrict-aliasing -Wstrict-aliasing=2 -Weffc++
-                
 
-all: runDemo
+
+all: dossier $(APP)
 
 $(APP) : $(OBJ)
-	$(CXX) $^ -o ./$@ $(CXXFLAGS) $(LXX)
+	cd $(BUILD); $(CXX) $^ -o ../$@ $(CXXFLAGS) $(LXX)
 
-main.o : main.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
+dossier :
+	mkdir $(BUILD)
 
-abstractCamera.o : abstractCamera.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
+%.o : %.cpp
+	$(CXX) -c $< -o $(BUILD)/$@ $(CXXFLAGS)
 
-gui.o : gui.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-vue.o : vue.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-camera.o : camera.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-scene.o : scene.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-computedScene.o : computedScene.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-noeud.o : noeud.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-vecteur3D.o : vecteur3D.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-mouse.o : mouse.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-frames.o : frames.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
-
-modele.o : modele.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)
+run :
+	./$(APP)
 
 clean:
-	rm -f $(APP); rm -rf *.bak; rm -rf *.o
+	rm -rf $(APP) $(BUILD)
