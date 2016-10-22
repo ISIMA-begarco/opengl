@@ -63,7 +63,7 @@ struct MainApplication{
 
 int main(int argc, char**argv)
 {
-  MainApplication myApp(900, 900, "Mon Application SDL/OpenGL");
+  MainApplication myApp(900, 900, "OpenGL de Pierre et Benoît");
   glutInit(&argc, argv);
   myApp.DoEventsLoop();
 

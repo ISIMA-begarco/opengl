@@ -41,13 +41,10 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
    #-Waggregate-return -Winline -Wstrict-aliasing -Wstrict-aliasing=2 -Weffc++
 
 
-all: dossier $(APP)
+all: $(APP)
 
 $(APP) : $(OBJ)
 	cd $(BUILD); $(CXX) $^ -o ../$@ $(CXXFLAGS) $(LXX)
-
-dossier :
-	mkdir $(BUILD)
 
 %.o : %.cpp
 	$(CXX) -c $< -o $(BUILD)/$@ $(CXXFLAGS)
@@ -56,4 +53,4 @@ run :
 	./$(APP)
 
 clean:
-	rm -rf $(APP) $(BUILD)
+	rm -rf $(APP) $(BUILD)/*

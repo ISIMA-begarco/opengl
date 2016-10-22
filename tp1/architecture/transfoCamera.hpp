@@ -15,8 +15,11 @@ class TransfoCamera : public AbstractCamera
 				double angleOuverture = 50);
         /** Default destructor */
         virtual ~TransfoCamera();
-    protected:
-    private:
+
+		virtual void ChangerRepereCamera(	double position[3],
+									double pointDeVisee[3],
+									double vecteurVertical[3]);
+		virtual void ChangerRepereCamera();
 };
 
 #endif // HEADER_TRANSFOCAMERA_HPP

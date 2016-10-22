@@ -12,3 +12,17 @@ TransfoCamera::~TransfoCamera()
 {
     //dtor
 }
+
+void TransfoCamera::ChangerRepereCamera(	double position[3],
+                            double pointDeVisee[3],
+                            double vecteurVertical[3]) {
+    double what = position[0] + pointDeVisee[0] + vecteurVertical[0];
+    if(what >= 0.0)
+    what++;
+    else
+    what--;
+}
+
+void TransfoCamera::ChangerRepereCamera() {
+    ChangerRepereCamera(this->mPosition, this->mVisee, this->mVertical);
+}
