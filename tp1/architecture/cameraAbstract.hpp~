@@ -1,9 +1,0 @@
-#ifndef HEADER_CAMERA_ABSTRACT_HPP
-#define HEADER_CAMERA_ABSTRACT_HPP
-
-class cameraAbstract {
-	virtual ~AbstractScene() {}
-};
-
-
-#endif
