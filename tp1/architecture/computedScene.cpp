@@ -38,7 +38,7 @@ void Voiture::drawRoue(){
 		 	12  	//stacks
 		 );
 	glPopMatrix();
-}		
+}
 
 void Voiture::drawEssieu(double longueur){
 	glPushMatrix();
@@ -52,19 +52,19 @@ void Voiture::drawEssieu(double longueur){
 		 	8  	//stacks
 		 );
 	glPopMatrix();
-	
+
 	// Roue gauche
 	glPushMatrix();
 		GeometricTransform::Translate(longueur/2, 0, 0);
 		drawRoue();
 	glPopMatrix();
-	
+
 	// Roue droite
 	glPushMatrix();
 		GeometricTransform::Translate(-longueur/2, 0, 0);
 		drawRoue();
 	glPopMatrix();
-}		
+}
 
 void Voiture::drawCorps(){
 	// Gros bloc
@@ -72,29 +72,29 @@ void Voiture::drawCorps(){
 		GeometricTransform::Scale(1,1,3);
 		glutWireCube(10);
 	glPopMatrix();
-	
+
 	// Petit bloc
 	glPushMatrix();
 		GeometricTransform::Translate(0, 8, -3);
 		GeometricTransform::Scale(1,1,2);
 		glutWireCube(8);
 	glPopMatrix();
-	
+
 	// Essieu arriere
 	glPushMatrix();
 		GeometricTransform::Translate(0, -5, -12);
 		drawEssieu(12);
 	glPopMatrix();
-	
+
 	// Essieu avant
 	glPushMatrix();
 		GeometricTransform::Translate(0, -5, 12);
 		drawEssieu(12);
 	glPopMatrix();
-	
+
 }
 
-void Voiture::render(){	
+void Voiture::render(){
 	drawCorps();
 
 	mStep = (mStep+1) % maxStep;

@@ -19,12 +19,12 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
   }
 
 void DisplayManager::Affichage(){
-	
+
     // Affichage des Frames par seconde (FPS)
     if (FramesData::Update()){
       fprintf(stderr, "%s\n", FramesData::getDescriptionFPS());
     }
-    
+
 	// On efface le buffer vidéo (fenêtre graphique)
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     mCamera.ChangerRepereCamera();
@@ -38,6 +38,5 @@ void DisplayManager::Redimensionnement(GLint l,GLint h){
     // Surface de rendu (voir chapitres suivants)
     glViewport((GLint)mCamera.getPosition()[0],(GLint)mCamera.getPosition()[1],(GLsizei)l,(GLsizei)h);
     mCamera.Redimensionnement(l, h);
-    
-}
 
+}

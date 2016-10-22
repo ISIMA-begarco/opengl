@@ -7,7 +7,7 @@ mCenter(new aiVector3D())
 {
 	/* we are taking one of the postprocessing presets to avoid
 	   spelling out 20+ single postprocessing flags here. */
-	this->mScene = aiImportFile(path.c_str(),aiProcessPreset_TargetRealtime_MaxQuality);
+	this->mScene = aiImportFileEx(path.c_str(),aiProcessPreset_TargetRealtime_MaxQuality|aiProcess_GenNormals, NULL);
 
 	if (this->mScene) {
 		this->getBoundindBox();
@@ -15,6 +15,13 @@ mCenter(new aiVector3D())
 		this->mCenter->y = (this->mSceneMin->y + this->mSceneMax->y) / 2.0f;
 		this->mCenter->z = (this->mSceneMin->z + this->mSceneMax->z) / 2.0f;
 	}
+
+	for(unsigned i=0;i<this->mScene->mNumMeshes;i++){
+		Maillage test(this->mScene->mMeshes[i]);
+		test.getVertices();
+		test.getNormals();
+	}
+
 }
 
 Scene::~Scene(){
@@ -84,7 +91,7 @@ void Scene::recursiveRender (const aiNode* nd)
 	aiTransposeMatrix4(&m);
 	glPushMatrix();
 	glMultMatrixf((float*)&m);
-	
+
 	/* draw all meshes assigned to this node */
 	for (unsigned n = 0; n < nd->mNumMeshes; ++n) {
 		const aiMesh* mesh = this->mScene->mMeshes[nd->mMeshes[n]];

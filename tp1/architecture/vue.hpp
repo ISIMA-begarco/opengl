@@ -16,6 +16,7 @@
 #include "modele.hpp"
 #include "frames.hpp"
 #include "transfoCamera.hpp"
+#include "lookAtCamera.hpp"
 
 
 /**
@@ -28,7 +29,7 @@ class DisplayManager{
 
 		// Modèle de données à afficher
 		Modele mModele;
-		TransfoCamera mCamera;
+		LookAtCamera mCamera;
 
 		/** @brief  Constructeur prenant la géométrie de la fenêtre
 		  * Initialise les données nécessaires à l'affichage.*/

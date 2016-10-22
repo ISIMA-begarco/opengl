@@ -11,13 +11,13 @@ class Noeud{
 
 	private:
 		aiNode* mNoeud;
-		
+
 	public:
 		Noeud();
 		Noeud(std::string name);
 		Noeud(aiNode* noeud);
 		virtual ~Noeud();
-				
+
 		Noeud findNode(std::string name);
 };
 
