@@ -1,3 +1,11 @@
+/**
+ * @file lookAtCamera.cpp
+ * @brief Classe de caméra utilisant gluLookAt
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "lookAtCamera.hpp"
 #include "../cameraParams/transform.hpp"
 #include <iostream>

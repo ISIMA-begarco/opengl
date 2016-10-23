@@ -113,6 +113,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8c611c3edf341892ceefebd9c3e00136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78714b95cdb2f63e76c9e122f41e6bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#a78714b95cdb2f63e76c9e122f41e6bbd">renderAll</a> ()</td></tr>
 <tr class="separator:a78714b95cdb2f63e76c9e122f41e6bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af105ed94c8a03a7283b4099ef1855976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#af105ed94c8a03a7283b4099ef1855976">changeBrillance</a> (float brillance)</td></tr>
+<tr class="separator:af105ed94c8a03a7283b4099ef1855976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab313a52585ff0db49e253b55ddbbc108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#ab313a52585ff0db49e253b55ddbbc108">changeRefAmbiante</a> (float refAmbiante)</td></tr>
+<tr class="separator:ab313a52585ff0db49e253b55ddbbc108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f02ee40382488479be64890e53ea348"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#a1f02ee40382488479be64890e53ea348">clear</a> ()</td></tr>
 <tr class="separator:a1f02ee40382488479be64890e53ea348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -122,6 +126,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a3ab26b711a9452193a341479b3294464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b1fde589f17e1f6a87c00022ae2821e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_abstract_scene.html">AbstractScene</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#a5b1fde589f17e1f6a87c00022ae2821e">mSceneList</a></td></tr>
 <tr class="separator:a5b1fde589f17e1f6a87c00022ae2821e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2565f8fda9456201336b8413ce07fe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#a0c2565f8fda9456201336b8413ce07fe">mBrillance</a></td></tr>
+<tr class="separator:a0c2565f8fda9456201336b8413ce07fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60784b5eb94976da411711a10046d1d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#ab60784b5eb94976da411711a10046d1d">mReflexionAmbiante</a></td></tr>
+<tr class="separator:ab60784b5eb94976da411711a10046d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f2f7153778090d3bcefc6db83a89e4"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_modele.html#af5f2f7153778090d3bcefc6db83a89e4">mMaterialAllScenes</a></td></tr>
+<tr class="separator:af5f2f7153778090d3bcefc6db83a89e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Modèle de données </p>
@@ -208,6 +218,38 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af105ed94c8a03a7283b4099ef1855976"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Modele::changeBrillance </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>brillance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab313a52585ff0db49e253b55ddbbc108"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Modele::changeRefAmbiante </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>refAmbiante</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1f02ee40382488479be64890e53ea348"></a>
 <div class="memitem">
 <div class="memproto">
@@ -271,12 +313,48 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0c2565f8fda9456201336b8413ce07fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Modele::mBrillance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af5f2f7153778090d3bcefc6db83a89e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material Modele::mMaterialAllScenes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3ab26b711a9452193a341479b3294464"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">float Modele::mNiveauGris</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab60784b5eb94976da411711a10046d1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Modele::mReflexionAmbiante</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -24,7 +24,7 @@ digraph "architecture/vecteur3D.hpp"
   Node10 [label="architecture/scene.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scene_8cpp.html"];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node11 [label="architecture/transfoCamera.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transfo_camera_8cpp.html"];
+  Node11 [label="architecture/transfoCamera.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transfo_camera_8cpp.html",tooltip="Classe de caméra utilisant des transformations. "];
   Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 [label="architecture/vecteur3D.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vecteur3_d_8cpp.html",tooltip="Classe de vecteur en trois dimensions. "];
 }

@@ -10,5 +10,5 @@ digraph "architecture/transfoCamera.hpp"
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="architecture/vue.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vue_8cpp.html",tooltip="Classe de gestion de l&#39;affichage. "];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="architecture/transfoCamera.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transfo_camera_8cpp.html"];
+  Node5 [label="architecture/transfoCamera.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transfo_camera_8cpp.html",tooltip="Classe de caméra utilisant des transformations. "];
 }

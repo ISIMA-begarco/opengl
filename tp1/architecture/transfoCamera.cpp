@@ -1,3 +1,11 @@
+/**
+ * @file transfoCamera.cpp
+ * @brief Classe de caméra utilisant des transformations
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "transfoCamera.hpp"
 #include "../cameraParams/transform.hpp"
 #include "vecteur3D.hpp"

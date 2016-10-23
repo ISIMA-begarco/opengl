@@ -23,6 +23,10 @@ void \hyperlink{class_modele_a8c611c3edf341892ceefebd9c3e00136}{render} (int i)
 \item 
 void \hyperlink{class_modele_a78714b95cdb2f63e76c9e122f41e6bbd}{render\+All} ()
 \item 
+void \hyperlink{class_modele_af105ed94c8a03a7283b4099ef1855976}{change\+Brillance} (float brillance)
+\item 
+void \hyperlink{class_modele_ab313a52585ff0db49e253b55ddbbc108}{change\+Ref\+Ambiante} (float ref\+Ambiante)
+\item 
 void \hyperlink{class_modele_a1f02ee40382488479be64890e53ea348}{clear} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
@@ -31,6 +35,12 @@ void \hyperlink{class_modele_a1f02ee40382488479be64890e53ea348}{clear} ()
 float \hyperlink{class_modele_a3ab26b711a9452193a341479b3294464}{m\+Niveau\+Gris}
 \item 
 std\+::vector$<$ \hyperlink{class_abstract_scene}{Abstract\+Scene} $\ast$ $>$ \hyperlink{class_modele_a5b1fde589f17e1f6a87c00022ae2821e}{m\+Scene\+List}
+\item 
+float \hyperlink{class_modele_a0c2565f8fda9456201336b8413ce07fe}{m\+Brillance}
+\item 
+float \hyperlink{class_modele_ab60784b5eb94976da411711a10046d1d}{m\+Reflexion\+Ambiante}
+\item 
+Material \hyperlink{class_modele_af5f2f7153778090d3bcefc6db83a89e4}{m\+Material\+All\+Scenes}
 \end{DoxyCompactItemize}
 
 
@@ -80,6 +90,20 @@ constructeur par défaut Initialise les données nécessaires à l\textquotesing
 \item[{double}]{vitesse}
 \end{DoxyParamCaption}
 )}\hypertarget{class_modele_a9f572a21d86fa69563b9020ddcf7eef9}{}\label{class_modele_a9f572a21d86fa69563b9020ddcf7eef9}
+\index{Modele@{Modele}!change\+Brillance@{change\+Brillance}}
+\index{change\+Brillance@{change\+Brillance}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{change\+Brillance(float brillance)}{changeBrillance(float brillance)}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::change\+Brillance (
+\begin{DoxyParamCaption}
+\item[{float}]{brillance}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_af105ed94c8a03a7283b4099ef1855976}{}\label{class_modele_af105ed94c8a03a7283b4099ef1855976}
+\index{Modele@{Modele}!change\+Ref\+Ambiante@{change\+Ref\+Ambiante}}
+\index{change\+Ref\+Ambiante@{change\+Ref\+Ambiante}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{change\+Ref\+Ambiante(float ref\+Ambiante)}{changeRefAmbiante(float refAmbiante)}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::change\+Ref\+Ambiante (
+\begin{DoxyParamCaption}
+\item[{float}]{ref\+Ambiante}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_ab313a52585ff0db49e253b55ddbbc108}{}\label{class_modele_ab313a52585ff0db49e253b55ddbbc108}
 \index{Modele@{Modele}!clear@{clear}}
 \index{clear@{clear}!Modele@{Modele}}
 \subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::clear (
@@ -111,9 +135,18 @@ constructeur par défaut Initialise les données nécessaires à l\textquotesing
 Mise à jour du modèle appelée à chaque événement timer 
 
 \subsection{Member Data Documentation}
+\index{Modele@{Modele}!m\+Brillance@{m\+Brillance}}
+\index{m\+Brillance@{m\+Brillance}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{m\+Brillance}{mBrillance}}]{\setlength{\rightskip}{0pt plus 5cm}float Modele\+::m\+Brillance}\hypertarget{class_modele_a0c2565f8fda9456201336b8413ce07fe}{}\label{class_modele_a0c2565f8fda9456201336b8413ce07fe}
+\index{Modele@{Modele}!m\+Material\+All\+Scenes@{m\+Material\+All\+Scenes}}
+\index{m\+Material\+All\+Scenes@{m\+Material\+All\+Scenes}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{m\+Material\+All\+Scenes}{mMaterialAllScenes}}]{\setlength{\rightskip}{0pt plus 5cm}Material Modele\+::m\+Material\+All\+Scenes}\hypertarget{class_modele_af5f2f7153778090d3bcefc6db83a89e4}{}\label{class_modele_af5f2f7153778090d3bcefc6db83a89e4}
 \index{Modele@{Modele}!m\+Niveau\+Gris@{m\+Niveau\+Gris}}
 \index{m\+Niveau\+Gris@{m\+Niveau\+Gris}!Modele@{Modele}}
 \subsubsection[{\texorpdfstring{m\+Niveau\+Gris}{mNiveauGris}}]{\setlength{\rightskip}{0pt plus 5cm}float Modele\+::m\+Niveau\+Gris}\hypertarget{class_modele_a3ab26b711a9452193a341479b3294464}{}\label{class_modele_a3ab26b711a9452193a341479b3294464}
+\index{Modele@{Modele}!m\+Reflexion\+Ambiante@{m\+Reflexion\+Ambiante}}
+\index{m\+Reflexion\+Ambiante@{m\+Reflexion\+Ambiante}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{m\+Reflexion\+Ambiante}{mReflexionAmbiante}}]{\setlength{\rightskip}{0pt plus 5cm}float Modele\+::m\+Reflexion\+Ambiante}\hypertarget{class_modele_ab60784b5eb94976da411711a10046d1d}{}\label{class_modele_ab60784b5eb94976da411711a10046d1d}
 \index{Modele@{Modele}!m\+Scene\+List@{m\+Scene\+List}}
 \index{m\+Scene\+List@{m\+Scene\+List}!Modele@{Modele}}
 \subsubsection[{\texorpdfstring{m\+Scene\+List}{mSceneList}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Abstract\+Scene} $\ast$$>$ Modele\+::m\+Scene\+List}\hypertarget{class_modele_a5b1fde589f17e1f6a87c00022ae2821e}{}\label{class_modele_a5b1fde589f17e1f6a87c00022ae2821e}

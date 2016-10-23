@@ -10,7 +10,7 @@ digraph "MainApplication"
   Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mParamsAffichage" ];
   Node4 [label="DisplayManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_display_manager.html",tooltip="Classe de gestion de l&#39;affichage. Classe de gestion de l&#39;affichage. "];
   Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mCamera" ];
-  Node5 [label="LookAtCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_look_at_camera.html"];
+  Node5 [label="LookAtCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_look_at_camera.html",tooltip="Classe de caméra utilisant gluLookAt Classe de caméra utilisant gluLookAt et héritant de AbstractCame..."];
   Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
   Node6 [label="AbstractCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_abstract_camera.html",tooltip="Classe de caméra abstraite Classe de caméra abstraite. "];
   Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mModele" ];

@@ -44,4 +44,6 @@ digraph "architecture/modele.cpp"
   Node15 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node15 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node17 [label="cmath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="../sourceShading/rendering\lModel.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }
