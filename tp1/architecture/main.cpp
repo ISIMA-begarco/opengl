@@ -1,11 +1,10 @@
-/******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    *
-*     http://malgouyres.org                                                    *
-*     File: main.cpp                                                           *
-*                                                                              *
-* The program is distributed under the terms of the GNU General Public License *
-*                                                                              *
-\******************************************************************************/
+/**
+ * @file main.cpp
+ * @brief Programme principal
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
 
 #include <stdlib.h>
 #include <stdio.h>

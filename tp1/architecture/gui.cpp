@@ -1,19 +1,27 @@
+/**
+ * @file gui.cpp
+ * @brief Wrapper SDL
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "gui.hpp"
 
 SDL_TimerID WrapperSDL::EventController::mTimerId;
 
 void WrapperSDL::EventController::Init(DisplayManager* p_ParamsAffichage) {
-	// Enregistrement d'un timer de raffraichissement de la vue 
+	// Enregistrement d'un timer de raffraichissement de la vue
 	mTimerId = SDL_AddTimer(20, CreateTimerRefreshFrame, (void*)p_ParamsAffichage);
 }
 
-void WrapperSDL::EventController::DoEventsLoop(SDL_Window *window, 
+void WrapperSDL::EventController::DoEventsLoop(SDL_Window *window,
 		     DisplayManager* p_ParamsAffichage) {
 	bool terminer=false;
-	SDL_Event evenement; // union contenant un évennement 
+	SDL_Event evenement; // union contenant un évennement
 
 	while(!terminer){
-		while (SDL_PollEvent(&evenement)){  // on défile les évennements 
+		while (SDL_PollEvent(&evenement)){  // on défile les évennements
 		  // Gestion de l'événement et modification des variables
 		  terminer = Handle_SDL_Event(&evenement, window, p_ParamsAffichage);
 		}
@@ -44,18 +52,18 @@ WrapperSDL::WindowManager::WindowManager(	int largeurFenetreInit,
 											int hauteurFenetreInit,
 	  										const char* windowTitle)
 	// Initialisation d'une fenêtre SDL
-	:mWindow(init_SDL_Window(largeurFenetreInit, hauteurFenetreInit, 
+	:mWindow(init_SDL_Window(largeurFenetreInit, hauteurFenetreInit,
 		                        windowTitle)),
-	// Création du contexte OpenGL associé à cette fenêtre 		
+	// Création du contexte OpenGL associé à cette fenêtre
 	mGlContext(new SDL_GLContext(SDL_GL_CreateContext(mWindow)))
 {}
 
 SDL_Window * WrapperSDL::WindowManager::init_SDL_Window(int windowWidth, int windowHeight, const char* windowTitle) {
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION,3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION,3);
-	SDL_Init(SDL_INIT_VIDEO);  
+	SDL_Init(SDL_INIT_VIDEO);
 
-	// Le double buffering permet les animations temps réel 
+	// Le double buffering permet les animations temps réel
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	SDL_Window *window = SDL_CreateWindow(windowTitle, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, windowWidth, windowHeight, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 	return window;
