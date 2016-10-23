@@ -1,12 +1,12 @@
-\hypertarget{abstract_camera_8cpp}{}\section{architecture/abstract\+Camera.cpp File Reference}
-\label{abstract_camera_8cpp}\index{architecture/abstract\+Camera.\+cpp@{architecture/abstract\+Camera.\+cpp}}
+\hypertarget{abstract_camera_8cpp}{}\section{src/abstract\+Camera.cpp File Reference}
+\label{abstract_camera_8cpp}\index{src/abstract\+Camera.\+cpp@{src/abstract\+Camera.\+cpp}}
 
 
 Classe abstraite de caméra.  
 
 
 {\ttfamily \#include \char`\"{}abstract\+Camera.\+hpp\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}../camera\+Params/transform.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}./camera\+Params/transform.\+hpp\char`\"{}}\\*
 Include dependency graph for abstract\+Camera.\+cpp\+:
 % FIG 0
 

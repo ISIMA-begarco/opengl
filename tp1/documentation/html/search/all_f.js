@@ -4,5 +4,8 @@ var searchData=
   ['transfocamera',['TransfoCamera',['../class_transfo_camera.html',1,'TransfoCamera'],['../class_transfo_camera.html#a41f26f1c44a8dfb19739bc1477a8a19e',1,'TransfoCamera::TransfoCamera()']]],
   ['transfocamera_2ecpp',['transfoCamera.cpp',['../transfo_camera_8cpp.html',1,'']]],
   ['transfocamera_2ehpp',['transfoCamera.hpp',['../transfo_camera_8hpp.html',1,'']]],
+  ['transform_2ecpp',['transform.cpp',['../transform_8cpp.html',1,'']]],
+  ['transform_2ehpp',['transform.hpp',['../transform_8hpp.html',1,'']]],
+  ['translate',['Translate',['../struct_geometric_transform.html#aa1ce970125c307eae8e67732abfc2223',1,'GeometricTransform']]],
   ['typerepere',['TypeRepere',['../class_abstract_camera.html#a4d3cc29d2eb150eada1bb387648eae98',1,'AbstractCamera']]]
 ];

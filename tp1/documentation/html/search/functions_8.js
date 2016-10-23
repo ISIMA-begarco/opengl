@@ -5,5 +5,6 @@ var searchData=
   ['mainapplication',['MainApplication',['../struct_main_application.html#ad1e259bb34972221793fefdb28967398',1,'MainApplication']]],
   ['managemouse',['manageMouse',['../events_handling_8cpp.html#a0ec9a5db4098a7dfa32386084e4eea67',1,'eventsHandling.cpp']]],
   ['managepressedkeys',['managePressedKeys',['../events_handling_8cpp.html#a097d525e851b25aa1aee029411df940b',1,'eventsHandling.cpp']]],
+  ['material',['Material',['../struct_material.html#ad2dfa8adf3cec0143e3f804c47588b8c',1,'Material']]],
   ['modele',['Modele',['../class_modele.html#ae9d6a289deaebe7e8eeda46693d79d23',1,'Modele']]]
 ];

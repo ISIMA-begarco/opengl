@@ -20,19 +20,21 @@ Collaboration diagram for Scene\+:
 virtual \hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene} ()
 \item 
 void \hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{render} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche la scene courante. \end{DoxyCompactList}\item 
 void \hyperlink{class_scene_af0747116905b9098ba3bd2c9d4b67162}{render} (\hyperlink{class_noeud}{Noeud} noeud)
 \item 
 \hyperlink{class_noeud}{Noeud} \hyperlink{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}{get\+Racine} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Recupere le noeud mere de la scene. \end{DoxyCompactList}\item 
 \hyperlink{class_vecteur3_d}{Vecteur3D} \hyperlink{class_scene_ada5afef61a8061abb6d3dfb38802f551}{get\+Center} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie le center de la scene. \end{DoxyCompactList}\item 
 std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_scene_a899e0ef799504383505743ebecc58406}{get\+Vertices} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie la liste des vertices de la scene. \end{DoxyCompactList}\item 
 std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}{get\+Normals} ()
-\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Revoie la liste des normales de la scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\hyperlink{class_scene}{Scene} chargee par fichier 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Scene@{Scene}!Scene@{Scene}}
@@ -59,6 +61,10 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_sc
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_ada5afef61a8061abb6d3dfb38802f551}{}\label{class_scene_ada5afef61a8061abb6d3dfb38802f551}
+
+
+Renvoie le center de la scene. 
+
 \index{Scene@{Scene}!get\+Normals@{get\+Normals}}
 \index{get\+Normals@{get\+Normals}!Scene@{Scene}}
 \subsubsection[{\texorpdfstring{get\+Normals()}{getNormals()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Vecteur3D} $>$ Scene\+::get\+Normals (
@@ -66,6 +72,10 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_sc
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}{}\label{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}
+
+
+Revoie la liste des normales de la scene. 
+
 \index{Scene@{Scene}!get\+Racine@{get\+Racine}}
 \index{get\+Racine@{get\+Racine}!Scene@{Scene}}
 \subsubsection[{\texorpdfstring{get\+Racine()}{getRacine()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Noeud} Scene\+::get\+Racine (
@@ -73,6 +83,13 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_sc
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}{}\label{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}
+
+
+Recupere le noeud mere de la scene. 
+
+\begin{DoxyReturn}{Returns}
+le \hyperlink{class_noeud}{Noeud} mere 
+\end{DoxyReturn}
 \index{Scene@{Scene}!get\+Vertices@{get\+Vertices}}
 \index{get\+Vertices@{get\+Vertices}!Scene@{Scene}}
 \subsubsection[{\texorpdfstring{get\+Vertices()}{getVertices()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Vecteur3D} $>$ Scene\+::get\+Vertices (
@@ -80,6 +97,10 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_sc
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_scene_a899e0ef799504383505743ebecc58406}{}\label{class_scene_a899e0ef799504383505743ebecc58406}
+
+
+Renvoie la liste des vertices de la scene. 
+
 \index{Scene@{Scene}!render@{render}}
 \index{render@{render}!Scene@{Scene}}
 \subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::render (
@@ -87,6 +108,10 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_sc
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{}\label{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}
+
+
+Affiche la scene courante. 
+
 
 
 Implements \hyperlink{class_abstract_scene_ae4f545c8335b65b42a6198ee09bf8084}{Abstract\+Scene}.
@@ -102,5 +127,5 @@ Implements \hyperlink{class_abstract_scene_ae4f545c8335b65b42a6198ee09bf8084}{Ab
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-architecture/\hyperlink{scene_8hpp}{scene.\+hpp}\item 
-architecture/\hyperlink{scene_8cpp}{scene.\+cpp}\end{DoxyCompactItemize}
+src/\hyperlink{scene_8hpp}{scene.\+hpp}\item 
+src/\hyperlink{scene_8cpp}{scene.\+cpp}\end{DoxyCompactItemize}

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['teapot',['Teapot',['../class_teapot.html',1,'']]],
-  ['transfocamera',['TransfoCamera',['../class_transfo_camera.html',1,'']]]
+  ['pointlightsource',['PointLightSource',['../struct_light_source_data_1_1_point_light_source.html',1,'LightSourceData']]]
 ];

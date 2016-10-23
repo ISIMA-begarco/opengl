@@ -1,0 +1,20 @@
+digraph "src/sourceShading/renderingModel.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/sourceShading/rendering\lModel.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="src/modele.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modele_8hpp.html",tooltip="Classe du modèle de MVC. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Programme principal. "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="src/vue.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vue_8hpp.html",tooltip="Classe de gestion de l&#39;affichage. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="src/vue.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vue_8cpp.html",tooltip="Classe de gestion de l&#39;affichage. "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="src/modele.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modele_8cpp.html",tooltip="Classe du modèle de MVC. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="src/sourceShading/light.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$light_8hpp.html"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

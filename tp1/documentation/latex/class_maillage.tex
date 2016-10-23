@@ -8,16 +8,19 @@
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_maillage_a296104d8e2eacc14ed75a6410c00ba59}{Maillage} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pointeur vers le mesh opengl. \end{DoxyCompactList}\item 
 \hyperlink{class_maillage_ad0d19d31a998c63802c6b6eeb4390894}{Maillage} (ai\+Mesh $\ast$maillage)
 \item 
 virtual \hyperlink{class_maillage_a6920b6d80a055589e19c684a924f1b0f}{$\sim$\+Maillage} ()
 \item 
 std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_maillage_ad77833666dce6bc9853c5b900d6a5da1}{get\+Vertices} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie la liste des vertices de la scene. \end{DoxyCompactList}\item 
 std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_maillage_a979dfc1cbfde99689d8784af28d71cc6}{get\+Normals} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Revoie la liste des normales de la scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Classe de maillage, c\textquotesingle{}est a dire un ensemble de vecteur3D representant un objet 3D ainsi que les vecteurs normaux associes 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Maillage@{Maillage}!Maillage@{Maillage}}
@@ -27,6 +30,10 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_ma
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_maillage_a296104d8e2eacc14ed75a6410c00ba59}{}\label{class_maillage_a296104d8e2eacc14ed75a6410c00ba59}
+
+
+Pointeur vers le mesh opengl. 
+
 \index{Maillage@{Maillage}!Maillage@{Maillage}}
 \index{Maillage@{Maillage}!Maillage@{Maillage}}
 \subsubsection[{\texorpdfstring{Maillage(ai\+Mesh $\ast$maillage)}{Maillage(aiMesh *maillage)}}]{\setlength{\rightskip}{0pt plus 5cm}Maillage\+::\+Maillage (
@@ -51,6 +58,10 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_ma
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_maillage_a979dfc1cbfde99689d8784af28d71cc6}{}\label{class_maillage_a979dfc1cbfde99689d8784af28d71cc6}
+
+
+Revoie la liste des normales de la scene. 
+
 \index{Maillage@{Maillage}!get\+Vertices@{get\+Vertices}}
 \index{get\+Vertices@{get\+Vertices}!Maillage@{Maillage}}
 \subsubsection[{\texorpdfstring{get\+Vertices()}{getVertices()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Vecteur3D} $>$ Maillage\+::get\+Vertices (
@@ -60,7 +71,11 @@ std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_ma
 )}\hypertarget{class_maillage_ad77833666dce6bc9853c5b900d6a5da1}{}\label{class_maillage_ad77833666dce6bc9853c5b900d6a5da1}
 
 
+Renvoie la liste des vertices de la scene. 
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-architecture/\hyperlink{maillage_8hpp}{maillage.\+hpp}\item 
-architecture/\hyperlink{maillage_8cpp}{maillage.\+cpp}\end{DoxyCompactItemize}
+src/\hyperlink{maillage_8hpp}{maillage.\+hpp}\item 
+src/\hyperlink{maillage_8cpp}{maillage.\+cpp}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['transfocamera_2ecpp',['transfoCamera.cpp',['../transfo_camera_8cpp.html',1,'']]],
-  ['transfocamera_2ehpp',['transfoCamera.hpp',['../transfo_camera_8hpp.html',1,'']]]
+  ['scene_2ecpp',['scene.cpp',['../scene_8cpp.html',1,'']]],
+  ['scene_2ehpp',['scene.hpp',['../scene_8hpp.html',1,'']]]
 ];

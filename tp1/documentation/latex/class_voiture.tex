@@ -16,19 +16,21 @@ Collaboration diagram for Voiture\+:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_voiture_a566a3faabc5c390003fa46988e5928a1}{Voiture} (double vitesse\+Roue=0.\+1)
-\item 
+\begin{DoxyCompactList}\small\item\em etat max de la rotaiton des roues \end{DoxyCompactList}\item 
 \hyperlink{class_voiture_afe85820a993b6908d0fdb524245e5133}{$\sim$\+Voiture} ()
 \item 
 void \hyperlink{class_voiture_a6232a9043c077a4f69e92b90566d9b78}{draw\+Roue} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Dessine une roue animee. \end{DoxyCompactList}\item 
 void \hyperlink{class_voiture_ab94ee125473d3b3d2b017e83e8be6f3f}{draw\+Essieu} (double longueur)
-\item 
+\begin{DoxyCompactList}\small\item\em dessine un essieu avec ses deux roues animees \end{DoxyCompactList}\item 
 void \hyperlink{class_voiture_a7fa87c8502621808711285bf09c4b82e}{draw\+Corps} ()
-\item 
+\begin{DoxyCompactList}\small\item\em dessine le corps de la voiture \end{DoxyCompactList}\item 
 void \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{render} ()
-\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Affiche la scene courante. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\hyperlink{class_scene}{Scene} renvoyant une voiture animee par transformation, calculee par Open\+GL 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Voiture@{Voiture}!Voiture@{Voiture}}
@@ -38,6 +40,10 @@ void \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{render} ()
 \item[{double}]{vitesse\+Roue = {\ttfamily 0.1}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_voiture_a566a3faabc5c390003fa46988e5928a1}{}\label{class_voiture_a566a3faabc5c390003fa46988e5928a1}
+
+
+etat max de la rotaiton des roues 
+
 \index{Voiture@{Voiture}!````~Voiture@{$\sim$\+Voiture}}
 \index{````~Voiture@{$\sim$\+Voiture}!Voiture@{Voiture}}
 \subsubsection[{\texorpdfstring{$\sim$\+Voiture()}{~Voiture()}}]{\setlength{\rightskip}{0pt plus 5cm}Voiture\+::$\sim$\+Voiture (
@@ -55,6 +61,10 @@ void \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{render} ()
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_voiture_a7fa87c8502621808711285bf09c4b82e}{}\label{class_voiture_a7fa87c8502621808711285bf09c4b82e}
+
+
+dessine le corps de la voiture 
+
 \index{Voiture@{Voiture}!draw\+Essieu@{draw\+Essieu}}
 \index{draw\+Essieu@{draw\+Essieu}!Voiture@{Voiture}}
 \subsubsection[{\texorpdfstring{draw\+Essieu(double longueur)}{drawEssieu(double longueur)}}]{\setlength{\rightskip}{0pt plus 5cm}void Voiture\+::draw\+Essieu (
@@ -62,6 +72,10 @@ void \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{render} ()
 \item[{double}]{longueur}
 \end{DoxyParamCaption}
 )}\hypertarget{class_voiture_ab94ee125473d3b3d2b017e83e8be6f3f}{}\label{class_voiture_ab94ee125473d3b3d2b017e83e8be6f3f}
+
+
+dessine un essieu avec ses deux roues animees 
+
 \index{Voiture@{Voiture}!draw\+Roue@{draw\+Roue}}
 \index{draw\+Roue@{draw\+Roue}!Voiture@{Voiture}}
 \subsubsection[{\texorpdfstring{draw\+Roue()}{drawRoue()}}]{\setlength{\rightskip}{0pt plus 5cm}void Voiture\+::draw\+Roue (
@@ -69,6 +83,10 @@ void \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{render} ()
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{class_voiture_a6232a9043c077a4f69e92b90566d9b78}{}\label{class_voiture_a6232a9043c077a4f69e92b90566d9b78}
+
+
+Dessine une roue animee. 
+
 \index{Voiture@{Voiture}!render@{render}}
 \index{render@{render}!Voiture@{Voiture}}
 \subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}void Voiture\+::render (
@@ -78,11 +96,15 @@ void \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{render} ()
 )\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{}\label{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}
 
 
+Affiche la scene courante. 
+
+
+
 Implements \hyperlink{class_abstract_scene_ae4f545c8335b65b42a6198ee09bf8084}{Abstract\+Scene}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-architecture/\hyperlink{computed_scene_8hpp}{computed\+Scene.\+hpp}\item 
-architecture/\hyperlink{computed_scene_8cpp}{computed\+Scene.\+cpp}\end{DoxyCompactItemize}
+src/\hyperlink{computed_scene_8hpp}{computed\+Scene.\+hpp}\item 
+src/\hyperlink{computed_scene_8cpp}{computed\+Scene.\+cpp}\end{DoxyCompactItemize}
