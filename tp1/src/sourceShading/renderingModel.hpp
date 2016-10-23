@@ -1,6 +1,6 @@
 /**
  * @file renderingModel.hpp
- * @brief Matériel et rendu
+ * @brief Fichier contenant les wrappers OpenGL gerant la lumiere (renderingModel) et les materiaux (Material)
  * @author Pierre Chevalier et Benoît Garçon
  * @version 1.0
  * @date Octobre 2016
