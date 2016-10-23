@@ -19,7 +19,7 @@ APP = runDemo
 
 CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
     -pedantic-errors -Wextra -Wcast-align \
-    -Wcast-qual  -Wchar-subscripts  -Wcomment -Wconversion \
+    -Wcast-qual  -Wchar-subscripts  -Wcomment \
     -Wdisabled-optimization \
     -Werror -Wformat -Wformat=2 \
     -Wformat-nonliteral -Wformat-security  \
@@ -38,7 +38,7 @@ CXXFLAGS =  -std=c++11 -Wall -pedantic -O2 \
     -Wunused-function  -Wunused-label  -Wunused-parameter \
     -Wunused-value  -Wunused-variable  -Wvariadic-macros \
     -Wvolatile-register-var  -Wwrite-strings -Wfloat-equal \
-   #-Waggregate-return -Winline -Wstrict-aliasing -Wstrict-aliasing=2 -Weffc++
+   #-Waggregate-return -Winline -Wstrict-aliasing -Wstrict-aliasing=2 -Weffc++  -Wconversion
 
 
 all: $(APP)
