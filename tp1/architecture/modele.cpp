@@ -1,6 +1,10 @@
 #include "modele.hpp"
 
-Modele::Modele() : mNiveauGris(0.0f), mSceneList() {
+Modele::Modele() : mNiveauGris(0.0f), mSceneList(), mBrillance(120.0f), mReflexionAmbiante(0.2f),
+	mMaterialAllScenes(mReflexionAmbiante,mReflexionAmbiante,mReflexionAmbiante,
+										1.0f,0.0f,1.0f,
+										1.0f,0.0f,1.0f,
+										mBrillance) {
 }
 
 void Modele::Update(){
@@ -38,9 +42,27 @@ void Modele::renderAll(){
 	}
 }
 
+void Modele::changeBrillance(float brillance){
+	if(brillance>=0.0f && brillance<128.0f){
+		mBrillance=brillance;
+		mMaterialAllScenes.mShininess[0] = mBrillance;
+		RenderingModel::ApplyMaterial(mMaterialAllScenes);
+	}
+}
+
+void Modele::changeRefAmbiante(float refAmbiante){
+	if(refAmbiante>=0.0f && refAmbiante<1.0f){
+		mReflexionAmbiante=refAmbiante;
+		mMaterialAllScenes.mAmbient[0] = mReflexionAmbiante;
+		mMaterialAllScenes.mAmbient[1] = mReflexionAmbiante;
+		mMaterialAllScenes.mAmbient[2] = mReflexionAmbiante;
+		RenderingModel::ApplyMaterial(mMaterialAllScenes);
+	}
+}
+
 void Modele::clear(){
 	for (auto it = mSceneList.begin() ; it != mSceneList.end(); ++it) {
 		delete (*it);
-	} 
+	}
 	mSceneList.clear();
 }

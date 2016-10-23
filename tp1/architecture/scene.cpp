@@ -7,7 +7,8 @@ mCenter(new aiVector3D())
 {
 	/* we are taking one of the postprocessing presets to avoid
 	   spelling out 20+ single postprocessing flags here. */
-	this->mScene = aiImportFileEx(path.c_str(),aiProcess_GenNormals, NULL); //aiProcessPreset_TargetRealtime_MaxQuality|
+	this->mScene = aiImportFileEx(path.c_str(),aiProcess_GenNormals, NULL);
+
 
 	if (this->mScene) {
 		this->getBoundindBox();

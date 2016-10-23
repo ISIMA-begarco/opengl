@@ -31,6 +31,7 @@ bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){
 
 	if(std::find(keys.begin(), keys.end(), SDLK_LSHIFT) != keys.end() ||
 		std::find(keys.begin(), keys.end(), SDLK_RSHIFT) != keys.end()){
+			// MAJ PRESSED
 		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
 			p_ParamsAffichage->mCamera.getPosition()[0] += VITESSEKEY;
 		}
@@ -46,6 +47,20 @@ bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){
 		if(std::find(keys.begin(), keys.end(), SDLK_a) != keys.end()){
 			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.getAngleOuverture() + VITESSEKEY);
 		}
+
+		if(std::find(keys.begin(), keys.end(), SDLK_i) != keys.end()){
+			p_ParamsAffichage->mLight.SetIntensities(p_ParamsAffichage->mLight.mIntensity+0.1f);
+			p_ParamsAffichage->mLight.ApplyLightIntensities();
+		}
+
+		if(std::find(keys.begin(), keys.end(), SDLK_b) != keys.end()){
+			p_ParamsAffichage->mModele.changeBrillance(p_ParamsAffichage->mModele.mBrillance + 8.0f);
+		}
+
+		if(std::find(keys.begin(), keys.end(), SDLK_o) != keys.end()){
+			p_ParamsAffichage->mModele.changeRefAmbiante(p_ParamsAffichage->mModele.mReflexionAmbiante + 0.1f);
+		}
+
 	}else{
 		if(std::find(keys.begin(), keys.end(), SDLK_x) != keys.end()){
 			p_ParamsAffichage->mCamera.getPosition()[0] -= VITESSEKEY;
@@ -62,6 +77,19 @@ bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){
 
 		if(std::find(keys.begin(), keys.end(), SDLK_a) != keys.end()){
 			p_ParamsAffichage->mCamera.ChangementAngle(p_ParamsAffichage->mCamera.getAngleOuverture() - VITESSEKEY);
+		}
+
+		if(std::find(keys.begin(), keys.end(), SDLK_i) != keys.end()){
+			p_ParamsAffichage->mLight.SetIntensities(p_ParamsAffichage->mLight.mIntensity-0.1f);
+			p_ParamsAffichage->mLight.ApplyLightIntensities();
+		}
+
+		if(std::find(keys.begin(), keys.end(), SDLK_b) != keys.end()){
+			p_ParamsAffichage->mModele.changeBrillance(p_ParamsAffichage->mModele.mBrillance - 8.0f);
+		}
+
+		if(std::find(keys.begin(), keys.end(), SDLK_o) != keys.end()){
+			p_ParamsAffichage->mModele.changeRefAmbiante(p_ParamsAffichage->mModele.mReflexionAmbiante - 0.1f);
 		}
 	}
 
