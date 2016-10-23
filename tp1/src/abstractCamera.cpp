@@ -60,40 +60,40 @@ void AbstractCamera::Zoumage(bool forward) {
 	}
 }
 
-void AbstractCamera::setPostion(double px,  double py, double pz) {
+void AbstractCamera::SetPostion(double px,  double py, double pz) {
 	this->mPosition[0] = px;
 	this->mPosition[1] = py;
 	this->mPosition[2] = pz;
 }
 
-void AbstractCamera::setVisee(double vx, double vy, double vz) {
+void AbstractCamera::SetVisee(double vx, double vy, double vz) {
 	this->mVisee[0] = vx;
 	this->mVisee[1] = vy;
 	this->mVisee[2] = vz;
 }
 
-void AbstractCamera::setVertical(double vertx, double verty, double vertz) {
+void AbstractCamera::SetVertical(double vertx, double verty, double vertz) {
 	this->mVertical[0] = vertx;
 	this->mVertical[1] = verty;
 	this->mVertical[2] = vertz;
 }
 
-void AbstractCamera::setAngleOuverture(double a) {
+void AbstractCamera::SetAngleOuverture(double a) {
 	this->mAngleOuverture = a;
 }
 
-double* AbstractCamera::getPosition() {
+double* AbstractCamera::GetPosition() {
 	return this->mPosition;
 }
 
-double* AbstractCamera::getVisee() {
+double* AbstractCamera::GetVisee() {
 	return this->mPosition;
 }
 
-double* AbstractCamera::getVertical() {
+double* AbstractCamera::GetVertical() {
 	return this->mPosition;
 }
 
-double AbstractCamera::getAngleOuverture() const {
+double AbstractCamera::GetAngleOuverture() const {
 	return this->mAngleOuverture;
 }

@@ -52,7 +52,7 @@ class AbstractCamera {
 		  */
 		void Redimensionnement(int w, int h);
 		/** @brief Changement de l'angle d'ouverture
-		  * @param float : angle
+		  * @param double : angle
 		  */
 		void ChangementAngle(double angleOuvertureY);
 		/** @brief Application de la projection
@@ -83,42 +83,42 @@ class AbstractCamera {
 		  * @param Nouvelle position
 		  * @return void
 		  */
-		void setPostion(double px,  double py, double pz);
+		void SetPostion(double px,  double py, double pz);
 		/** @brief Setter de la visée
 		  * @param Nouvelle position
 		  * @return void
 		  */
-		void setVisee(double vx, double vy, double vz);
+		void SetVisee(double vx, double vy, double vz);
 		/** @brief Setter de la verticale
 		  * @param Nouvelle position
 		  * @return void
 		  */
-		void setVertical(double vertx, double verty, double vertz);
+		void SetVertical(double vertx, double verty, double vertz);
 		/** @brief Setter de l'angle d'ouverture
 		  * @param Nouvel angle
 		  * @return void
 		  */
-		void setAngleOuverture(double a);
+		void SetAngleOuverture(double a);
 		/** @brief Getter de la position
 		  * @param void
 		  * @return position
 		  */
-		double* getPosition();
+		double* GetPosition();
 		/** @brief Getter de la visée
 		  * @param void
 		  * @return visée
 		  */
-		double* getVisee();
+		double* GetVisee();
 		/** @brief Getter de la verticale
 		  * @param void
 		  * @return verticale
 		  */
-		double* getVertical();
+		double* GetVertical();
 		/** @brief Getter de l'angle d'ouverture
 		  * @param void
 		  * @return angle d'ouverture
 		  */
-		double getAngleOuverture() const;
+		double GetAngleOuverture() const;
 };
 
 

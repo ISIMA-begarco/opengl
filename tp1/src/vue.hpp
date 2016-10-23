@@ -31,7 +31,7 @@ class DisplayManager{
 
 		// Modèle de données à afficher
 		Modele mModele;
-		LookAtCamera mCamera;
+		TransfoCamera mCamera;
 		LightSourceData mLight;
 
 		/** @brief  Constructeur prenant la géométrie de la fenêtre

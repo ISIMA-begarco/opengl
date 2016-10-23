@@ -13,12 +13,13 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     :mLargeurFenetre(largeurFenetre),
     mHauteurFenetre(hauteurFenetre),
     mModele(), // Construction du modèle
-    mCamera(3, 20, -50,
+    mCamera(-7, -30, -110,
     			0,0,0,
     			0,1,0,
-    			1,1000, 50),
+    			1,5000, 50,
+                0.0, 0.0),
     mLight()
-  {
+{
     FramesData::Init();
     RenderingModel::Init();
 
@@ -34,12 +35,11 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
 
     RenderingModel::ApplyMaterial (mModele.mMaterialAllScenes);
 
-   this->mModele.addScene("../testAssimp/dwarf.x");
-   //this->mModele.addTeapot(5);
-   //this->mModele.addSystemeSolaire(10);
-   //this->mModele.addVoiture(1.0);
-
-  }
+    this->mModele.addScene("../testAssimp/dwarf.x");
+    //this->mModele.addTeapot(5);
+    this->mModele.addSystemeSolaire(10);
+    //this->mModele.addVoiture(1.0);
+}
 
 void DisplayManager::Affichage(){
 
@@ -49,24 +49,21 @@ void DisplayManager::Affichage(){
     }
 
 	// On efface le buffer vidéo (fenêtre graphique)
+    glClearColor(0, 0, 0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     RenderingModel::InitView();
-
+    GeometricTransform::ClearModelView();
     mLight.ApplyLightPositions(AbstractCamera::TypeRepere::MONDE);
-
-
-
-
     mCamera.ChangerRepereCamera();
+    //GeometricTransform::ClearProjection();
     mModele.renderAll();
-
-
 }
 
 void DisplayManager::Redimensionnement(GLint l,GLint h){
     mLargeurFenetre = l;
     mHauteurFenetre = h;
     // Surface de rendu (voir chapitres suivants)
-    glViewport((GLint)mCamera.getPosition()[0],(GLint)mCamera.getPosition()[1],(GLsizei)l,(GLsizei)h);
+    glViewport((GLint)mCamera.GetPosition()[0],(GLint)mCamera.GetPosition()[1],(GLsizei)l,(GLsizei)h);
     mCamera.Redimensionnement(l, h);
 
 }

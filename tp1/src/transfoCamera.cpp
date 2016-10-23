@@ -17,8 +17,11 @@ TransfoCamera::TransfoCamera(double px, double py, double pz,
 					double vx, double vy, double vz,
 					double vertx, double verty, double vertz,
 					double zproche, double zeloigne,
-					double angleOuverture): AbstractCamera(	px,py,pz,vx,vy,vz,vertx,verty,vertz,
-															zproche,zeloigne,angleOuverture) {
+					double angleOuverture, double azimuth, double elevation)
+					: AbstractCamera(	px,py,pz,vx,vy,vz,vertx,verty,vertz,
+										zproche,zeloigne,angleOuverture) {
+	this->mAzimuth = azimuth;
+	this->mElevation = elevation;
 }
 
 TransfoCamera::~TransfoCamera()
@@ -33,7 +36,9 @@ void TransfoCamera::ChangerRepereCamera(	double pposition[3],
 	memcpy( mVisee ,  ppointDeVisee ,  3*sizeof ( double ) ) ;
 	memcpy( mVertical ,  pvecteurVertical ,  3*sizeof ( double ) ) ;
 
-	Vecteur3D position(pposition[0],pposition[1],pposition[2]);
+	this->ChangerRepereCamera();
+
+	/*Vecteur3D position(pposition[0],pposition[1],pposition[2]);
 	Vecteur3D pointDeVisee(ppointDeVisee[0],ppointDeVisee[1],ppointDeVisee[2]);
 	Vecteur3D direction(ppointDeVisee[0]-pposition[0],ppointDeVisee[1]-pposition[1],ppointDeVisee[2]-pposition[2]);
 	Vecteur3D vecteurVertical(pvecteurVertical[0],pvecteurVertical[1],pvecteurVertical[2]);
@@ -75,7 +80,7 @@ void TransfoCamera::ChangerRepereCamera(	double pposition[3],
 	mat[14] = (dirNorm.Dot(position));
 	mat[15] = 1.0;
 
-    glMultMatrixf(&mat[0]);
+    glMultMatrixf(&mat[0]);*/
 
 /*
 	double 	dirX = mVisee[0]-mPosition[0],
@@ -94,5 +99,24 @@ void TransfoCamera::ChangerRepereCamera(	double pposition[3],
 }
 
 void TransfoCamera::ChangerRepereCamera() {
-    ChangerRepereCamera(this->mPosition, this->mVisee, this->mVertical);
+	glMatrixMode(GL_MODELVIEW);
+	GeometricTransform::Translate(mPosition[0], mPosition[1], mPosition[2]);
+	GeometricTransform::Rotate(1.0, 0.0, 0.0, mElevation);
+	GeometricTransform::Rotate(0.0, 1.0, 0.0, mAzimuth);
+}
+
+void TransfoCamera::SetAzimuth(double a) {
+	this->mAzimuth = a;
+}
+
+void TransfoCamera::SetElevation(double e) {
+	this->mElevation = e;
+}
+
+double TransfoCamera::GetAzimuth(void) const {
+	return this->mAzimuth;
+}
+
+double TransfoCamera::GetElevation(void) const {
+	return this->mElevation;
 }
