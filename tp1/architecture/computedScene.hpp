@@ -1,3 +1,12 @@
+/**
+ * @file computedScene.hpp
+ * @brief Scene chargee calculee en temps reel par openGL
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
+
 #ifndef HEADER_COMPUTED_SCENE_HPP
 #define HEADER_COMPUTED_SCENE_HPP
 

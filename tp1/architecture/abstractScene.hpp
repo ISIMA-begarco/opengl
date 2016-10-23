@@ -1,3 +1,11 @@
+/**
+ * @file abstractScene.hpp
+ * @brief Classe abstraite de scene
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #ifndef ABSTRACT_SCENE_HPP
 #define ABSTRACT_SCENE_HPP
 

@@ -1,3 +1,12 @@
+/**
+ * @file scene.hpp
+ * @brief Scene chargee par fichier
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
+
 #ifndef HEADER_SCENE_HPP
 #define HEADER_SCENE_HPP
 
@@ -18,7 +27,7 @@
 #define aisgl_max(x,y) (y>x?y:x)
 
 /**
- * Scene charge par fichier
+ * Scene chargee par fichier
  */
 class Scene : public AbstractScene {
 

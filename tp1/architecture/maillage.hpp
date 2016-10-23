@@ -1,3 +1,12 @@
+/**
+ * @file maillage.hpp
+ * @brief Classe de maillage
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
+
 #ifndef HEADER_MAILLAGE_HPP
 #define HEADER_MAILLAGE_HPP
 

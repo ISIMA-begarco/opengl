@@ -1,3 +1,11 @@
+/**
+ * @file noeud.hpp
+ * @brief Classe de noeud
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #ifndef NOEUD_HPP
 #define NOEUD_HPP
 
