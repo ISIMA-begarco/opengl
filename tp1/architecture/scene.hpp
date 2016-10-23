@@ -17,18 +17,35 @@
 #define aisgl_min(x,y) (x<y?x:y)
 #define aisgl_max(x,y) (y>x?y:x)
 
+/**
+ * Scene charge par fichier
+ */
 class Scene : public AbstractScene {
 
 	private :
 
-		const aiScene* mScene;
-		aiVector3D* mSceneMin;
-		aiVector3D* mSceneMax;
-		aiVector3D* mCenter;
+		const aiScene* mScene;	/// Pointeur vers la scene opengl
+		aiVector3D* mSceneMin;	/// Pointeur vers la position (opengl) min de la scene
+		aiVector3D* mSceneMax; 	/// Pointeur vers la position (opengl) max de la scene
+		aiVector3D* mCenter;		/// Pointeur vers la position (opengl) centre de la scene
 
+
+		/**
+		 * @brief recupere les enfants d'un noeud precis (fonction recursive)
+		 * @param nd Noeud ou chercher les enfants
+		 * @param matrice 4x4 pour transformation
+		 */
 		void getBoundindBoxForNode (const aiNode* nd, aiMatrix4x4* trafo);
+
+		/**
+		 * @brief Recupere les noeuds charges
+		 */
 		void getBoundindBox ();
 
+		/**
+		 * @brief Affiche les points du noeud de maniere recursive
+		 * @param nd Noeud ou commencer l'affichage
+		 */
 		void recursiveRender (const aiNode* nd);
 
 	public:
@@ -38,13 +55,28 @@ class Scene : public AbstractScene {
 
 		void render ();
 		void render (Noeud noeud);
+
+		/**
+		 * @brief Recupere le noeud mere de la scene
+		 * @return le Noeud mere
+		 */
 		Noeud getRacine();
 
+		/**
+		 * @brief Renvoie le center de la scene
+		 */
 		Vecteur3D getCenter(){
 			return Vecteur3D(mCenter);
 		}
 
+		/**
+		 * @brief Renvoie la liste des vertices de la scene
+		 */
 		std::vector<Vecteur3D> getVertices();
+
+		/**
+		 * @brief Revoie la liste des normales de la scene
+		 */
 		std::vector<Vecteur3D> getNormals();
 };
 
