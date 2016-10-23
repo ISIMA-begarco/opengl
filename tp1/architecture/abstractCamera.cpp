@@ -16,7 +16,7 @@ AbstractCamera::AbstractCamera(double px, double py, double pz,
 	this->mVisee[2] = vz;
 	this->mVertical[0] = vertx;
 	this->mVertical[1] = verty;
-	this->mVertical[2] = vertz;	
+	this->mVertical[2] = vertz;
 }
 
 AbstractCamera::~AbstractCamera() {
