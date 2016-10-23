@@ -117,13 +117,8 @@ bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){
 }
 
 void manageMouse(DisplayManager *p_ParamsAffichage){
-<<<<<<< HEAD
-	p_ParamsAffichage->mCamera.getVisee()[0] += ((MouseData::pmousex - MouseData::mousex)/(double)p_ParamsAffichage->mLargeurFenetre)*VITESSEMOU;
-	p_ParamsAffichage->mCamera.getVisee()[2] += ((MouseData::pmousey - MouseData::mousey)/(double)p_ParamsAffichage->mHauteurFenetre)*VITESSEMOU;
-=======
 	p_ParamsAffichage->mCamera.getVisee()[0] += ((float)(MouseData::pmousex - MouseData::mousex)/(float)(p_ParamsAffichage->mLargeurFenetre))*(float)VITESSEMOU;
 	p_ParamsAffichage->mCamera.getVisee()[2] += ((float)(MouseData::pmousey - MouseData::mousey)/(float)(p_ParamsAffichage->mHauteurFenetre))*(float)VITESSEMOU;
->>>>>>> 9b41c8c9d8c20071639fb1725fe1164a4b7367a6
 }
 
 bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_Window *window,
