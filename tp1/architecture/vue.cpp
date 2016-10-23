@@ -12,16 +12,25 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     mLight()
   {
     FramesData::Init();
+    RenderingModel::Init();
+
     mCamera.Redimensionnement(largeurFenetre, hauteurFenetre);
-    mLight.AddSource(AbstractCamera::TypeRepere::CAMERA,1,
+    mLight.AddSource(AbstractCamera::TypeRepere::CAMERA,GL_LIGHT0,
           40, 20, -40,
-          50,50,50,
-          50,50,50);
+          mLight.mIntensity, mLight.mIntensity, mLight.mIntensity,
+          mLight.mIntensity, mLight.mIntensity, mLight.mIntensity);
+    mLight.ApplyLightPositions(AbstractCamera::TypeRepere::CAMERA);
+    mLight.ApplyLightIntensities();
+
+    glDisable(GL_COLOR_MATERIAL);
+
+    RenderingModel::ApplyMaterial (mModele.mMaterialAllScenes);
 
    this->mModele.addScene("../testAssimp/dwarf.x");
    //this->mModele.addTeapot(5);
    //this->mModele.addSystemeSolaire(10);
    //this->mModele.addVoiture(1.0);
+
   }
 
 void DisplayManager::Affichage(){
@@ -32,12 +41,16 @@ void DisplayManager::Affichage(){
     }
 
 	// On efface le buffer vidéo (fenêtre graphique)
-    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+    RenderingModel::InitView();
+
+    mLight.ApplyLightPositions(AbstractCamera::TypeRepere::MONDE);
+
+
+
+
     mCamera.ChangerRepereCamera();
     mModele.renderAll();
 
-    mLight.ApplyLightPositions(AbstractCamera::TypeRepere::CAMERA);
-    mLight.ApplyLightIntensities();
 
 }
 

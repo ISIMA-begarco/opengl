@@ -18,17 +18,20 @@
 struct LightSourceData{
     /** Classe représentant une source lumineuse */
   struct PointLightSource{
-    int mLightId; // GL_LIGHT0, GL_LIGHT1, etc.
+    int mLightId; /// ATTENTION NE FONCTIONNE QU'AVEC GL_LIGHT0, GL_LIGHT1, etc.
+    float mIntensity;
+
     float mLightPosition[4] = {0.0f,0.0f,10.0f,0.0f};
     float mDiffuseIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité diffuse
     float mSpecularIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité spéculaire
 
+
     /** Constructeur initialisant toutes les propriétés de la source */
-    PointLightSource(int lightId,
+    PointLightSource(int lightId, float intensity,
                 float lightPositionX, float lightPositionY, float lightPositionZ,
                 float diffuseIntensityR, float diffuseIntensityG, float diffuseIntensityB,
                 float specularIntensityR, float specularIntensityG, float specularIntensityB)
-      :mLightId(lightId)
+      :mLightId(lightId), mIntensity(intensity)
     {
       mLightPosition[0] = lightPositionX;
       mLightPosition[1] = lightPositionY;
@@ -59,19 +62,35 @@ struct LightSourceData{
     void Disable() const {
         RenderingModel::DisablePointLight(mLightId);
     }
+
+    void setIntensity(float newIntensity){
+      if(newIntensity>=0 && newIntensity<1.0){
+        mIntensity=newIntensity;
+        mDiffuseIntensity[0] = newIntensity;
+        mDiffuseIntensity[1] = newIntensity;
+        mDiffuseIntensity[2] = newIntensity;
+        mSpecularIntensity[0] = newIntensity;
+        mSpecularIntensity[1] = newIntensity;
+        mSpecularIntensity[2] = newIntensity;
+      }
+    }
   };
+
 
   std::vector<PointLightSource> mSourcesRepereCamera;
   std::vector<PointLightSource> mSourcesRepereMonde;
+  float mIntensity;
 
   /** Constructeur par défaut (ne crée aucune source lumineuse) */
   LightSourceData()
   :mSourcesRepereCamera(),
-  mSourcesRepereMonde()
+  mSourcesRepereMonde(),
+  mIntensity(0.4f)
    {}
 
   /** Destructeur */
   ~LightSourceData() = default;
+
 
   /** Obtient l'ensemble des sources à placer dans un certain repère
    * @param reverse true pour les sources de l'autre repère que typeRepere **/
@@ -105,7 +124,7 @@ struct LightSourceData{
         }
     }
 
-    GetSourcesByRepere(typeRepere).push_back(PointLightSource(lightId,
+    GetSourcesByRepere(typeRepere).push_back(PointLightSource(lightId, mIntensity,
                 lightPositionX, lightPositionY, lightPositionZ,
                 diffuseIntensityR, diffuseIntensityG, diffuseIntensityB,
                 specularIntensityR, specularIntensityG, specularIntensityB));
@@ -140,6 +159,21 @@ struct LightSourceData{
     auto sources = GetSourcesByRepere(typeRepere);
     for (auto it = sources.cbegin() ; it != sources.cend() ; ++it){
       it->ApplyPosition();
+    }
+  }
+
+  /** Applique les intensités de toutes les sources de la scène */
+  void SetIntensities(float intensity){
+    if(intensity>=0 && intensity<1.0){
+      mIntensity = intensity;
+      auto& sourcesCamera = mSourcesRepereCamera;
+      for (auto it = sourcesCamera.begin() ; it != sourcesCamera.end() ; ++it){
+        it->setIntensity(intensity);
+      }
+      auto& sourcesMonde = mSourcesRepereMonde;
+      for (auto it = sourcesMonde.begin() ; it != sourcesMonde.end() ; ++it){
+        it->setIntensity(intensity);
+      }
     }
   }
 
