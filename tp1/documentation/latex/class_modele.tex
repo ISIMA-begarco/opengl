@@ -1,0 +1,125 @@
+\hypertarget{class_modele}{}\section{Modele Class Reference}
+\label{class_modele}\index{Modele@{Modele}}
+
+
+{\ttfamily \#include $<$modele.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_modele_ae9d6a289deaebe7e8eeda46693d79d23}{Modele} ()
+\begin{DoxyCompactList}\small\item\em constructeur par défaut Initialise les données nécessaires à l\textquotesingle{}affichage. \end{DoxyCompactList}\item 
+void \hyperlink{class_modele_a4e09a90f4eac78fa17d362fe4ff23b2f}{Update} ()
+\item 
+void \hyperlink{class_modele_a3a5fdb6f258abb35347ba0610eef5ff2}{add\+Teapot} (int size)
+\item 
+void \hyperlink{class_modele_a01924068a9a20616cdfe667caaa0e0e5}{add\+Systeme\+Solaire} (int size\+Sun)
+\item 
+void \hyperlink{class_modele_a9f572a21d86fa69563b9020ddcf7eef9}{add\+Voiture} (double vitesse)
+\item 
+void \hyperlink{class_modele_a2b9ce0869e6965e9247eaa91587d37b7}{add\+Scene} (std\+::string path)
+\item 
+void \hyperlink{class_modele_a8c611c3edf341892ceefebd9c3e00136}{render} (int i)
+\item 
+void \hyperlink{class_modele_a78714b95cdb2f63e76c9e122f41e6bbd}{render\+All} ()
+\item 
+void \hyperlink{class_modele_a1f02ee40382488479be64890e53ea348}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_modele_a3ab26b711a9452193a341479b3294464}{m\+Niveau\+Gris}
+\item 
+std\+::vector$<$ \hyperlink{class_abstract_scene}{Abstract\+Scene} $\ast$ $>$ \hyperlink{class_modele_a5b1fde589f17e1f6a87c00022ae2821e}{m\+Scene\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Modèle de données 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Modele@{Modele}!Modele@{Modele}}
+\index{Modele@{Modele}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{Modele()}{Modele()}}]{\setlength{\rightskip}{0pt plus 5cm}Modele\+::\+Modele (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_ae9d6a289deaebe7e8eeda46693d79d23}{}\label{class_modele_ae9d6a289deaebe7e8eeda46693d79d23}
+
+
+constructeur par défaut Initialise les données nécessaires à l\textquotesingle{}affichage. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Modele@{Modele}!add\+Scene@{add\+Scene}}
+\index{add\+Scene@{add\+Scene}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{add\+Scene(std\+::string path)}{addScene(std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::add\+Scene (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a2b9ce0869e6965e9247eaa91587d37b7}{}\label{class_modele_a2b9ce0869e6965e9247eaa91587d37b7}
+\index{Modele@{Modele}!add\+Systeme\+Solaire@{add\+Systeme\+Solaire}}
+\index{add\+Systeme\+Solaire@{add\+Systeme\+Solaire}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{add\+Systeme\+Solaire(int size\+Sun)}{addSystemeSolaire(int sizeSun)}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::add\+Systeme\+Solaire (
+\begin{DoxyParamCaption}
+\item[{int}]{size\+Sun}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a01924068a9a20616cdfe667caaa0e0e5}{}\label{class_modele_a01924068a9a20616cdfe667caaa0e0e5}
+\index{Modele@{Modele}!add\+Teapot@{add\+Teapot}}
+\index{add\+Teapot@{add\+Teapot}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{add\+Teapot(int size)}{addTeapot(int size)}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::add\+Teapot (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a3a5fdb6f258abb35347ba0610eef5ff2}{}\label{class_modele_a3a5fdb6f258abb35347ba0610eef5ff2}
+\index{Modele@{Modele}!add\+Voiture@{add\+Voiture}}
+\index{add\+Voiture@{add\+Voiture}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{add\+Voiture(double vitesse)}{addVoiture(double vitesse)}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::add\+Voiture (
+\begin{DoxyParamCaption}
+\item[{double}]{vitesse}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a9f572a21d86fa69563b9020ddcf7eef9}{}\label{class_modele_a9f572a21d86fa69563b9020ddcf7eef9}
+\index{Modele@{Modele}!clear@{clear}}
+\index{clear@{clear}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a1f02ee40382488479be64890e53ea348}{}\label{class_modele_a1f02ee40382488479be64890e53ea348}
+\index{Modele@{Modele}!render@{render}}
+\index{render@{render}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{render(int i)}{render(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::render (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a8c611c3edf341892ceefebd9c3e00136}{}\label{class_modele_a8c611c3edf341892ceefebd9c3e00136}
+\index{Modele@{Modele}!render\+All@{render\+All}}
+\index{render\+All@{render\+All}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{render\+All()}{renderAll()}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::render\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a78714b95cdb2f63e76c9e122f41e6bbd}{}\label{class_modele_a78714b95cdb2f63e76c9e122f41e6bbd}
+\index{Modele@{Modele}!Update@{Update}}
+\index{Update@{Update}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}void Modele\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_modele_a4e09a90f4eac78fa17d362fe4ff23b2f}{}\label{class_modele_a4e09a90f4eac78fa17d362fe4ff23b2f}
+Mise à jour du modèle appelée à chaque événement timer 
+
+\subsection{Member Data Documentation}
+\index{Modele@{Modele}!m\+Niveau\+Gris@{m\+Niveau\+Gris}}
+\index{m\+Niveau\+Gris@{m\+Niveau\+Gris}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{m\+Niveau\+Gris}{mNiveauGris}}]{\setlength{\rightskip}{0pt plus 5cm}float Modele\+::m\+Niveau\+Gris}\hypertarget{class_modele_a3ab26b711a9452193a341479b3294464}{}\label{class_modele_a3ab26b711a9452193a341479b3294464}
+\index{Modele@{Modele}!m\+Scene\+List@{m\+Scene\+List}}
+\index{m\+Scene\+List@{m\+Scene\+List}!Modele@{Modele}}
+\subsubsection[{\texorpdfstring{m\+Scene\+List}{mSceneList}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Abstract\+Scene} $\ast$$>$ Modele\+::m\+Scene\+List}\hypertarget{class_modele_a5b1fde589f17e1f6a87c00022ae2821e}{}\label{class_modele_a5b1fde589f17e1f6a87c00022ae2821e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+architecture/\hyperlink{modele_8hpp}{modele.\+hpp}\item 
+architecture/\hyperlink{modele_8cpp}{modele.\+cpp}\end{DoxyCompactItemize}

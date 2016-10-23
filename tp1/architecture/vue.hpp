@@ -1,11 +1,10 @@
-/******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    *
-*     http://malgouyres.org                                                    *
-*     File: vue.hpp                                                            *
-*                                                                              *
-* The program is distributed under the terms of the GNU General Public License *
-*                                                                              *
-\******************************************************************************/
+/**
+ * @file vue.hpp
+ * @brief Classe de gestion de l'affichage
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
 
 #ifndef HEADER_VUE_HPP
 #define HEADER_VUE_HPP
@@ -22,7 +21,8 @@
 
 
 /**
- * CLASSE DE GESTION DE L'AFFICHAGE
+ * @brief Classe de gestion de l'affichage.
+ * Classe de gestion de l'affichage.
  */
 class DisplayManager{
 	public:

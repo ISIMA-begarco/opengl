@@ -1,0 +1,85 @@
+\hypertarget{class_frames_data}{}\section{Frames\+Data Class Reference}
+\label{class_frames_data}\index{Frames\+Data@{Frames\+Data}}
+
+
+{\ttfamily \#include $<$frames.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_frames_data_adb376443cd35cdf789334e5216799632}{Init} ()
+\item 
+static bool \hyperlink{class_frames_data_a0a13292d2ffde616533d2185de424af1}{Update} ()
+\item 
+static const char $\ast$ \hyperlink{class_frames_data_a2e4c0df27e34dd492dae0b3c674838aa}{get\+Description\+F\+PS} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_frames_data_a56de1cc7ef9d170fe22887138d8addbf}{m\+Nb\+Seconds} = 0
+\item 
+static int \hyperlink{class_frames_data_a10cfddde5c0b9b229af867f2ed7af153}{m\+Nb\+Frames} =0
+\item 
+static int \hyperlink{class_frames_data_ad0b7497c5a449779d7dd01de39f592d0}{m\+Last\+Nb\+Frames} =0
+\item 
+static int \hyperlink{class_frames_data_ac0c60108ce1672499d5d69d9c8ea9111}{m\+Next\+Due\+Frame\+Date} = 0
+\item 
+static int \hyperlink{class_frames_data_a6a6d7c603d09b1ba203e72a82d499eae}{m\+Fps} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+O\+N\+NÉ\+ES P\+O\+UR LE T\+I\+M\+ER ET LE C\+A\+L\+C\+UL D\+ES F\+R\+A\+M\+ES P\+ER S\+E\+C\+O\+N\+DS 
+
+\subsection{Member Function Documentation}
+\index{Frames\+Data@{Frames\+Data}!get\+Description\+F\+PS@{get\+Description\+F\+PS}}
+\index{get\+Description\+F\+PS@{get\+Description\+F\+PS}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{get\+Description\+F\+P\+S()}{getDescriptionFPS()}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Frames\+Data\+::get\+Description\+F\+PS (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_a2e4c0df27e34dd492dae0b3c674838aa}{}\label{class_frames_data_a2e4c0df27e34dd492dae0b3c674838aa}
+\begin{DoxyReturn}{Returns}
+description des numéro de frame, durée, et F\+PS 
+\end{DoxyReturn}
+\index{Frames\+Data@{Frames\+Data}!Init@{Init}}
+\index{Init@{Init}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}void Frames\+Data\+::\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_adb376443cd35cdf789334e5216799632}{}\label{class_frames_data_adb376443cd35cdf789334e5216799632}
+\index{Frames\+Data@{Frames\+Data}!Update@{Update}}
+\index{Update@{Update}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{Update()}{Update()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Frames\+Data\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_a0a13292d2ffde616533d2185de424af1}{}\label{class_frames_data_a0a13292d2ffde616533d2185de424af1}
+Met à jour l\textquotesingle{}information du Frame Rate \begin{DoxyReturn}{Returns}
+true si une mise à jour a eu lieu (chaque seconde) 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Frames\+Data@{Frames\+Data}!m\+Fps@{m\+Fps}}
+\index{m\+Fps@{m\+Fps}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{m\+Fps}{mFps}}]{\setlength{\rightskip}{0pt plus 5cm}int Frames\+Data\+::m\+Fps = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_a6a6d7c603d09b1ba203e72a82d499eae}{}\label{class_frames_data_a6a6d7c603d09b1ba203e72a82d499eae}
+\index{Frames\+Data@{Frames\+Data}!m\+Last\+Nb\+Frames@{m\+Last\+Nb\+Frames}}
+\index{m\+Last\+Nb\+Frames@{m\+Last\+Nb\+Frames}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{m\+Last\+Nb\+Frames}{mLastNbFrames}}]{\setlength{\rightskip}{0pt plus 5cm}int Frames\+Data\+::m\+Last\+Nb\+Frames =0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_ad0b7497c5a449779d7dd01de39f592d0}{}\label{class_frames_data_ad0b7497c5a449779d7dd01de39f592d0}
+\index{Frames\+Data@{Frames\+Data}!m\+Nb\+Frames@{m\+Nb\+Frames}}
+\index{m\+Nb\+Frames@{m\+Nb\+Frames}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{m\+Nb\+Frames}{mNbFrames}}]{\setlength{\rightskip}{0pt plus 5cm}int Frames\+Data\+::m\+Nb\+Frames =0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_a10cfddde5c0b9b229af867f2ed7af153}{}\label{class_frames_data_a10cfddde5c0b9b229af867f2ed7af153}
+\index{Frames\+Data@{Frames\+Data}!m\+Nb\+Seconds@{m\+Nb\+Seconds}}
+\index{m\+Nb\+Seconds@{m\+Nb\+Seconds}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{m\+Nb\+Seconds}{mNbSeconds}}]{\setlength{\rightskip}{0pt plus 5cm}int Frames\+Data\+::m\+Nb\+Seconds = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_a56de1cc7ef9d170fe22887138d8addbf}{}\label{class_frames_data_a56de1cc7ef9d170fe22887138d8addbf}
+\index{Frames\+Data@{Frames\+Data}!m\+Next\+Due\+Frame\+Date@{m\+Next\+Due\+Frame\+Date}}
+\index{m\+Next\+Due\+Frame\+Date@{m\+Next\+Due\+Frame\+Date}!Frames\+Data@{Frames\+Data}}
+\subsubsection[{\texorpdfstring{m\+Next\+Due\+Frame\+Date}{mNextDueFrameDate}}]{\setlength{\rightskip}{0pt plus 5cm}int Frames\+Data\+::m\+Next\+Due\+Frame\+Date = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_frames_data_ac0c60108ce1672499d5d69d9c8ea9111}{}\label{class_frames_data_ac0c60108ce1672499d5d69d9c8ea9111}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+architecture/\hyperlink{frames_8hpp}{frames.\+hpp}\item 
+architecture/\hyperlink{frames_8cpp}{frames.\+cpp}\end{DoxyCompactItemize}

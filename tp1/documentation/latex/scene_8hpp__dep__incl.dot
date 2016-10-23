@@ -1,0 +1,19 @@
+digraph "architecture/scene.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="architecture/scene.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="architecture/modele.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modele_8hpp.html"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="architecture/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="architecture/vue.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vue_8hpp.html",tooltip="Classe de gestion de l&#39;affichage. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="architecture/vue.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vue_8cpp.html",tooltip="Classe de gestion de l&#39;affichage. "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="architecture/modele.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modele_8cpp.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="architecture/scene.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scene_8cpp.html"];
+}

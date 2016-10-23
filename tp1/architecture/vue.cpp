@@ -1,3 +1,11 @@
+/**
+ * @file vue.cpp
+ * @brief Classe de gestion de l'affichage
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "vue.hpp"
 #include <cstdio>
 

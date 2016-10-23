@@ -1,0 +1,25 @@
+\hypertarget{abstract_camera_8cpp}{}\section{architecture/abstract\+Camera.cpp File Reference}
+\label{abstract_camera_8cpp}\index{architecture/abstract\+Camera.\+cpp@{architecture/abstract\+Camera.\+cpp}}
+
+
+Classe abstraite de caméra.  
+
+
+{\ttfamily \#include \char`\"{}abstract\+Camera.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../camera\+Params/transform.\+hpp\char`\"{}}\\*
+Include dependency graph for abstract\+Camera.\+cpp\+:
+% FIG 0
+
+
+\subsection{Detailed Description}
+Classe abstraite de caméra. 
+
+\begin{DoxyAuthor}{Author}
+Pierre Chevalier et Benoît Garçon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Octobre 2016 
+\end{DoxyDate}

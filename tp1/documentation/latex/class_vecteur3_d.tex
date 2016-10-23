@@ -1,0 +1,239 @@
+\hypertarget{class_vecteur3_d}{}\section{Vecteur3D Class Reference}
+\label{class_vecteur3_d}\index{Vecteur3D@{Vecteur3D}}
+
+
+Classe pour un vecteur 3D Cette classe encapsule les ai\+Vector3D.  
+
+
+
+
+{\ttfamily \#include $<$vecteur3\+D.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vecteur3_d_aa2e1f3f01cadb1a3489ab0a5ee469b01}{Vecteur3D} (float x=0.\+0, float y=0.\+0, float z=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_vecteur3_d_ad7960e596005df06dc7404f0ebb4ad89}{Vecteur3D} (const \hyperlink{class_vecteur3_d}{Vecteur3D} \&vec)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_vecteur3_d_a5f4633710eef6f25175fb811bf811112}{$\sim$\+Vecteur3D} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+float \hyperlink{class_vecteur3_d_a3a5374f1fd023d46a517f0875ed0d865}{GetX} () const 
+\begin{DoxyCompactList}\small\item\em Getter pour la coordonnée X. \end{DoxyCompactList}\item 
+float \hyperlink{class_vecteur3_d_a160e036f4b71271fd375bc14b2e1e78c}{GetY} () const 
+\begin{DoxyCompactList}\small\item\em Getter pour la coordonnée Y. \end{DoxyCompactList}\item 
+float \hyperlink{class_vecteur3_d_a001bd37a2d98c071b59d168057735eeb}{GetZ} () const 
+\begin{DoxyCompactList}\small\item\em Getter pour la coordonnée Z. \end{DoxyCompactList}\item 
+void \hyperlink{class_vecteur3_d_a9e987e98ee43903a5281752bd310a764}{SetX} (float)
+\begin{DoxyCompactList}\small\item\em Setter pour la coordonnée X. \end{DoxyCompactList}\item 
+void \hyperlink{class_vecteur3_d_aaef5dfb35864a47ac7eb986cead20c71}{SetY} (float)
+\begin{DoxyCompactList}\small\item\em Setter pour la coordonnée Y. \end{DoxyCompactList}\item 
+void \hyperlink{class_vecteur3_d_a0b20935a9e30452ea51da98fc8878181}{SetZ} (float)
+\begin{DoxyCompactList}\small\item\em Setter pour la coordonnée Z. \end{DoxyCompactList}\item 
+\hyperlink{class_vecteur3_d}{Vecteur3D} \hyperlink{class_vecteur3_d_a3da112b573b37eb696dd17c7f3a4230f}{Normalize} () const 
+\begin{DoxyCompactList}\small\item\em Calcul le vecteur normalisé \end{DoxyCompactList}\item 
+\hyperlink{class_vecteur3_d}{Vecteur3D} \hyperlink{class_vecteur3_d_a7050066f71a250c11b81e58e1466b389}{Cross} (\hyperlink{class_vecteur3_d}{Vecteur3D} v) const 
+\begin{DoxyCompactList}\small\item\em Calcul le produit vectoriel. \end{DoxyCompactList}\item 
+float \hyperlink{class_vecteur3_d_aa428d49b67ee120ae871cec35fd43805}{Dot} (\hyperlink{class_vecteur3_d}{Vecteur3D} \&v) const 
+\begin{DoxyCompactList}\small\item\em Calcul le produit scalaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe pour un vecteur 3D Cette classe encapsule les ai\+Vector3D. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Vecteur3D@{Vecteur3D}!Vecteur3D@{Vecteur3D}}
+\index{Vecteur3D@{Vecteur3D}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Vecteur3\+D(float x=0.\+0, float y=0.\+0, float z=0.\+0)}{Vecteur3D(float x=0.0, float y=0.0, float z=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}Vecteur3\+D\+::\+Vecteur3D (
+\begin{DoxyParamCaption}
+\item[{float}]{x = {\ttfamily 0.0}, }
+\item[{float}]{y = {\ttfamily 0.0}, }
+\item[{float}]{z = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vecteur3_d_aa2e1f3f01cadb1a3489ab0a5ee469b01}{}\label{class_vecteur3_d_aa2e1f3f01cadb1a3489ab0a5ee469b01}
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cooronnée} & x (0 par défaut) \\
+\hline
+{\em Cooronnée} & y (0 par défaut) \\
+\hline
+{\em Cooronnée} & z (0 par défaut) \\
+\hline
+\end{DoxyParams}
+\index{Vecteur3D@{Vecteur3D}!Vecteur3D@{Vecteur3D}}
+\index{Vecteur3D@{Vecteur3D}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Vecteur3\+D(const Vecteur3\+D \&vec)}{Vecteur3D(const Vecteur3D &vec)}}]{\setlength{\rightskip}{0pt plus 5cm}Vecteur3\+D\+::\+Vecteur3D (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vecteur3D} \&}]{vec}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vecteur3_d_ad7960e596005df06dc7404f0ebb4ad89}{}\label{class_vecteur3_d_ad7960e596005df06dc7404f0ebb4ad89}
+
+
+Constructeur par copie. 
+
+\index{Vecteur3D@{Vecteur3D}!````~Vecteur3D@{$\sim$\+Vecteur3D}}
+\index{````~Vecteur3D@{$\sim$\+Vecteur3D}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{$\sim$\+Vecteur3\+D()}{~Vecteur3D()}}]{\setlength{\rightskip}{0pt plus 5cm}Vecteur3\+D\+::$\sim$\+Vecteur3D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_vecteur3_d_a5f4633710eef6f25175fb811bf811112}{}\label{class_vecteur3_d_a5f4633710eef6f25175fb811bf811112}
+
+
+Destructeur. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Vecteur3D@{Vecteur3D}!Cross@{Cross}}
+\index{Cross@{Cross}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Cross(\+Vecteur3\+D v) const }{Cross(Vecteur3D v) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vecteur3D} Vecteur3\+D\+::\+Cross (
+\begin{DoxyParamCaption}
+\item[{{\bf Vecteur3D}}]{v}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_vecteur3_d_a7050066f71a250c11b81e58e1466b389}{}\label{class_vecteur3_d_a7050066f71a250c11b81e58e1466b389}
+
+
+Calcul le produit vectoriel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & \hyperlink{class_vecteur3_d}{Vecteur3D} pour le produit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un \hyperlink{class_vecteur3_d}{Vecteur3D} contenant le vecteur produit. 
+\end{DoxyReturn}
+\index{Vecteur3D@{Vecteur3D}!Dot@{Dot}}
+\index{Dot@{Dot}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Dot(\+Vecteur3\+D \&v) const }{Dot(Vecteur3D &v) const }}]{\setlength{\rightskip}{0pt plus 5cm}float Vecteur3\+D\+::\+Dot (
+\begin{DoxyParamCaption}
+\item[{{\bf Vecteur3D} \&}]{v}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_vecteur3_d_aa428d49b67ee120ae871cec35fd43805}{}\label{class_vecteur3_d_aa428d49b67ee120ae871cec35fd43805}
+
+
+Calcul le produit scalaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & \hyperlink{class_vecteur3_d}{Vecteur3D} pour le produit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un float contenant le résultat. 
+\end{DoxyReturn}
+\index{Vecteur3D@{Vecteur3D}!GetX@{GetX}}
+\index{GetX@{GetX}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Get\+X() const }{GetX() const }}]{\setlength{\rightskip}{0pt plus 5cm}float Vecteur3\+D\+::\+GetX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_vecteur3_d_a3a5374f1fd023d46a517f0875ed0d865}{}\label{class_vecteur3_d_a3a5374f1fd023d46a517f0875ed0d865}
+
+
+Getter pour la coordonnée X. 
+
+\begin{DoxyReturn}{Returns}
+Un float. 
+\end{DoxyReturn}
+\index{Vecteur3D@{Vecteur3D}!GetY@{GetY}}
+\index{GetY@{GetY}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Get\+Y() const }{GetY() const }}]{\setlength{\rightskip}{0pt plus 5cm}float Vecteur3\+D\+::\+GetY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_vecteur3_d_a160e036f4b71271fd375bc14b2e1e78c}{}\label{class_vecteur3_d_a160e036f4b71271fd375bc14b2e1e78c}
+
+
+Getter pour la coordonnée Y. 
+
+\begin{DoxyReturn}{Returns}
+Un float. 
+\end{DoxyReturn}
+\index{Vecteur3D@{Vecteur3D}!GetZ@{GetZ}}
+\index{GetZ@{GetZ}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Get\+Z() const }{GetZ() const }}]{\setlength{\rightskip}{0pt plus 5cm}float Vecteur3\+D\+::\+GetZ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_vecteur3_d_a001bd37a2d98c071b59d168057735eeb}{}\label{class_vecteur3_d_a001bd37a2d98c071b59d168057735eeb}
+
+
+Getter pour la coordonnée Z. 
+
+\begin{DoxyReturn}{Returns}
+Un float. 
+\end{DoxyReturn}
+\index{Vecteur3D@{Vecteur3D}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Normalize() const }{Normalize() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vecteur3D} Vecteur3\+D\+::\+Normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_vecteur3_d_a3da112b573b37eb696dd17c7f3a4230f}{}\label{class_vecteur3_d_a3da112b573b37eb696dd17c7f3a4230f}
+
+
+Calcul le vecteur normalisé 
+
+\begin{DoxyReturn}{Returns}
+Un \hyperlink{class_vecteur3_d}{Vecteur3D} contenant le vecteur normalisé. 
+\end{DoxyReturn}
+\index{Vecteur3D@{Vecteur3D}!SetX@{SetX}}
+\index{SetX@{SetX}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Set\+X(float)}{SetX(float)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vecteur3\+D\+::\+SetX (
+\begin{DoxyParamCaption}
+\item[{float}]{newX}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vecteur3_d_a9e987e98ee43903a5281752bd310a764}{}\label{class_vecteur3_d_a9e987e98ee43903a5281752bd310a764}
+
+
+Setter pour la coordonnée X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & float. \\
+\hline
+\end{DoxyParams}
+\index{Vecteur3D@{Vecteur3D}!SetY@{SetY}}
+\index{SetY@{SetY}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Set\+Y(float)}{SetY(float)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vecteur3\+D\+::\+SetY (
+\begin{DoxyParamCaption}
+\item[{float}]{newY}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vecteur3_d_aaef5dfb35864a47ac7eb986cead20c71}{}\label{class_vecteur3_d_aaef5dfb35864a47ac7eb986cead20c71}
+
+
+Setter pour la coordonnée Y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & float. \\
+\hline
+\end{DoxyParams}
+\index{Vecteur3D@{Vecteur3D}!SetZ@{SetZ}}
+\index{SetZ@{SetZ}!Vecteur3D@{Vecteur3D}}
+\subsubsection[{\texorpdfstring{Set\+Z(float)}{SetZ(float)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vecteur3\+D\+::\+SetZ (
+\begin{DoxyParamCaption}
+\item[{float}]{newZ}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vecteur3_d_a0b20935a9e30452ea51da98fc8878181}{}\label{class_vecteur3_d_a0b20935a9e30452ea51da98fc8878181}
+
+
+Setter pour la coordonnée Z. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & float. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+architecture/\hyperlink{vecteur3_d_8hpp}{vecteur3\+D.\+hpp}\item 
+architecture/\hyperlink{vecteur3_d_8cpp}{vecteur3\+D.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{struct_wrapper_s_d_l_1_1_event_controller}{}\section{Wrapper\+S\+DL\+:\+:Event\+Controller Struct Reference}
+\label{struct_wrapper_s_d_l_1_1_event_controller}\index{Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}}
+
+
+{\ttfamily \#include $<$gui.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{struct_wrapper_s_d_l_1_1_event_controller_a1d120644a13d32238f3372b601a67f80}{Init} (\hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\item 
+static void \hyperlink{struct_wrapper_s_d_l_1_1_event_controller_a04b13cf306ca88f74c92efb91f4586a3}{Do\+Events\+Loop} (S\+D\+L\+\_\+\+Window $\ast$window, \hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\item 
+static bool \hyperlink{struct_wrapper_s_d_l_1_1_event_controller_a07cffdf5cf9e8ed68e645239602819d4}{Handle\+\_\+\+S\+D\+L\+\_\+\+Event} (S\+D\+L\+\_\+\+Event $\ast$p\+\_\+evenement, S\+D\+L\+\_\+\+Window $\ast$window, \hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\begin{DoxyCompactList}\small\item\em Gestion d\textquotesingle{}un événement S\+DL extrait de la file. \end{DoxyCompactList}\item 
+static Uint32 \hyperlink{struct_wrapper_s_d_l_1_1_event_controller_ad4516dc1813e1ab583659ae8386b84af}{Create\+Timer\+Refresh\+Frame} (Uint32 interval, void $\ast$p\+\_\+\+Display\+Manager)
+\begin{DoxyCompactList}\small\item\em Callback du timer de raffraichissement de la vue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static S\+D\+L\+\_\+\+Timer\+ID \hyperlink{struct_wrapper_s_d_l_1_1_event_controller_a9d7e9e2326802d622fc1bd9e5a22677b}{m\+Timer\+Id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe Controleur d\textquotesingle{}événements 
+
+\subsection{Member Function Documentation}
+\index{Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}!Create\+Timer\+Refresh\+Frame@{Create\+Timer\+Refresh\+Frame}}
+\index{Create\+Timer\+Refresh\+Frame@{Create\+Timer\+Refresh\+Frame}!Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}}
+\subsubsection[{\texorpdfstring{Create\+Timer\+Refresh\+Frame(\+Uint32 interval, void $\ast$p\+\_\+\+Display\+Manager)}{CreateTimerRefreshFrame(Uint32 interval, void *p_DisplayManager)}}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 Wrapper\+S\+D\+L\+::\+Event\+Controller\+::\+Create\+Timer\+Refresh\+Frame (
+\begin{DoxyParamCaption}
+\item[{Uint32}]{interval, }
+\item[{void $\ast$}]{p\+\_\+\+Display\+Manager}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{struct_wrapper_s_d_l_1_1_event_controller_ad4516dc1813e1ab583659ae8386b84af}{}\label{struct_wrapper_s_d_l_1_1_event_controller_ad4516dc1813e1ab583659ae8386b84af}
+
+
+Callback du timer de raffraichissement de la vue. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://sdl.beuc.net/sdl.wiki/SDL_AddTimer}{\tt http\+://sdl.\+beuc.\+net/sdl.\+wiki/\+S\+D\+L\+\_\+\+Add\+Timer} 
+\end{DoxySeeAlso}
+\index{Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}!Do\+Events\+Loop@{Do\+Events\+Loop}}
+\index{Do\+Events\+Loop@{Do\+Events\+Loop}!Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}}
+\subsubsection[{\texorpdfstring{Do\+Events\+Loop(\+S\+D\+L\+\_\+\+Window $\ast$window, Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{DoEventsLoop(SDL_Window *window, DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Wrapper\+S\+D\+L\+::\+Event\+Controller\+::\+Do\+Events\+Loop (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Window $\ast$}]{window, }
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{struct_wrapper_s_d_l_1_1_event_controller_a04b13cf306ca88f74c92efb91f4586a3}{}\label{struct_wrapper_s_d_l_1_1_event_controller_a04b13cf306ca88f74c92efb91f4586a3}
+Boucle d\textquotesingle{}attente des événements 
+\begin{DoxyParams}{Parameters}
+{\em window} & Fenêtre S\+DL (pour gérer les S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+NT) \\
+\hline
+{\em p\+\_\+\+Params\+Affichage} & instance de la classe Vue \\
+\hline
+\end{DoxyParams}
+\index{Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}!Handle\+\_\+\+S\+D\+L\+\_\+\+Event@{Handle\+\_\+\+S\+D\+L\+\_\+\+Event}}
+\index{Handle\+\_\+\+S\+D\+L\+\_\+\+Event@{Handle\+\_\+\+S\+D\+L\+\_\+\+Event}!Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}}
+\subsubsection[{\texorpdfstring{Handle\+\_\+\+S\+D\+L\+\_\+\+Event(\+S\+D\+L\+\_\+\+Event $\ast$p\+\_\+evenement, S\+D\+L\+\_\+\+Window $\ast$window, Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{Handle_SDL_Event(SDL_Event *p_evenement, SDL_Window *window, DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Wrapper\+S\+D\+L\+::\+Event\+Controller\+::\+Handle\+\_\+\+S\+D\+L\+\_\+\+Event (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Event $\ast$}]{p\+\_\+evenement, }
+\item[{S\+D\+L\+\_\+\+Window $\ast$}]{window, }
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{struct_wrapper_s_d_l_1_1_event_controller_a07cffdf5cf9e8ed68e645239602819d4}{}\label{struct_wrapper_s_d_l_1_1_event_controller_a07cffdf5cf9e8ed68e645239602819d4}
+
+
+Gestion d\textquotesingle{}un événement S\+DL extrait de la file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+evenement} & données de l\textquotesingle{}événement \\
+\hline
+{\em window} & Fenêtre S\+DL (pour gérer les S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+NT) \\
+\hline
+{\em p\+\_\+\+Params\+Affichage} & instance de la classe Vue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}événement est S\+D\+L\+\_\+\+Q\+U\+IT (fermeture de la fenêtre) 
+\end{DoxyReturn}
+\index{Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}!Init@{Init}}
+\index{Init@{Init}!Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}}
+\subsubsection[{\texorpdfstring{Init(\+Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{Init(DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Wrapper\+S\+D\+L\+::\+Event\+Controller\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{struct_wrapper_s_d_l_1_1_event_controller_a1d120644a13d32238f3372b601a67f80}{}\label{struct_wrapper_s_d_l_1_1_event_controller_a1d120644a13d32238f3372b601a67f80}
+Initialisation du timer 
+
+\subsection{Member Data Documentation}
+\index{Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}!m\+Timer\+Id@{m\+Timer\+Id}}
+\index{m\+Timer\+Id@{m\+Timer\+Id}!Wrapper\+S\+D\+L\+::\+Event\+Controller@{Wrapper\+S\+D\+L\+::\+Event\+Controller}}
+\subsubsection[{\texorpdfstring{m\+Timer\+Id}{mTimerId}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Timer\+ID Wrapper\+S\+D\+L\+::\+Event\+Controller\+::m\+Timer\+Id\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{struct_wrapper_s_d_l_1_1_event_controller_a9d7e9e2326802d622fc1bd9e5a22677b}{}\label{struct_wrapper_s_d_l_1_1_event_controller_a9d7e9e2326802d622fc1bd9e5a22677b}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+architecture/\hyperlink{gui_8hpp}{gui.\+hpp}\item 
+architecture/\hyperlink{events_handling_8cpp}{events\+Handling.\+cpp}\item 
+architecture/\hyperlink{gui_8cpp}{gui.\+cpp}\end{DoxyCompactItemize}

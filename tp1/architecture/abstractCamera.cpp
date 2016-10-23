@@ -1,3 +1,11 @@
+/**
+ * @file abstractCamera.cpp
+ * @brief Classe abstraite de caméra
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "abstractCamera.hpp"
 #include "../cameraParams/transform.hpp"
 
