@@ -13,7 +13,7 @@
 CXX = g++
 LXX = -lSDL2 -lGL -lGLU  -lSDL2_ttf -lglut -lassimp
 DXX = -pg
-OBJ = main.o modele.o gui.o vue.o frames.o scene.o noeud.o vecteur3D.o abstractCamera.o lookAtCamera.o transfoCamera.o mouse.o computedScene.o maillage.o light.o
+OBJ = main.o modele.o gui.o vue.o frames.o scene.o noeud.o vecteur3D.o abstractCamera.o lookAtCamera.o transfoCamera.o mouse.o computedScene.o maillage.o
 BUILD = ./obj
 APP = runDemo
 

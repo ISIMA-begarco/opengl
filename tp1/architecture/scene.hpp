@@ -43,6 +43,9 @@ class Scene : public AbstractScene {
 		Vecteur3D getCenter(){
 			return Vecteur3D(mCenter);
 		}
+
+		std::vector<Vecteur3D> getVertices();
+		std::vector<Vecteur3D> getNormals();
 };
 
 #endif

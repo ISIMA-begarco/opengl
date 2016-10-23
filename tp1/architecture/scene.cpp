@@ -16,12 +16,6 @@ mCenter(new aiVector3D())
 		this->mCenter->z = (this->mSceneMin->z + this->mSceneMax->z) / 2.0f;
 	}
 
-	for(unsigned i=0;i<this->mScene->mNumMeshes;i++){
-		Maillage test(this->mScene->mMeshes[i]);
-		test.getVertices();
-		test.getNormals();
-	}
-
 }
 
 Scene::~Scene(){
@@ -142,4 +136,26 @@ void Scene::recursiveRender (const aiNode* nd)
 
 Noeud Scene::getRacine(){
 	return Noeud(this->mScene->mRootNode);
+}
+
+std::vector<Vecteur3D> Scene::getVertices(){
+	std::vector<Vecteur3D> vertices;
+	std::vector<Vecteur3D> temp;
+	for(unsigned i=0;i<this->mScene->mNumMeshes;i++){
+		Maillage maillage(this->mScene->mMeshes[i]);
+		temp = maillage.getVertices();
+		vertices.insert( vertices.end(), temp.begin(), temp.end() );
+	}
+	return vertices;
+}
+
+std::vector<Vecteur3D> Scene::getNormals(){
+	std::vector<Vecteur3D> normals;
+	std::vector<Vecteur3D> temp;
+	for(unsigned i=0;i<this->mScene->mNumMeshes;i++){
+		Maillage maillage(this->mScene->mMeshes[i]);
+		temp = maillage.getNormals();
+		normals.insert( normals.end(), temp.begin(), temp.end() );
+	}
+	return normals;
 }

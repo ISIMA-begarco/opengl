@@ -8,10 +8,16 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     mCamera(3, 20, -50,
     			0,0,0,
     			0,1,0,
-    			1,1000, 50)
+    			1,1000, 50),
+    mLight()
   {
     FramesData::Init();
     mCamera.Redimensionnement(largeurFenetre, hauteurFenetre);
+    mLight.AddSource(AbstractCamera::TypeRepere::CAMERA,1,
+          40, 20, -40,
+          50,50,50,
+          50,50,50);
+
    this->mModele.addScene("../testAssimp/dwarf.x");
    //this->mModele.addTeapot(5);
    //this->mModele.addSystemeSolaire(10);
@@ -29,6 +35,9 @@ void DisplayManager::Affichage(){
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     mCamera.ChangerRepereCamera();
     mModele.renderAll();
+
+    mLight.ApplyLightPositions(AbstractCamera::TypeRepere::CAMERA);
+    mLight.ApplyLightIntensities();
 
 }
 

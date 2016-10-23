@@ -14,6 +14,10 @@ class AbstractCamera {
 		double mAspect;
 
 	public:
+		/** Types de repères support é s ( repères du monde et de l a camé ra ) */
+		enum TypeRepere{
+			MONDE = 0 , CAMERA = 1
+		};
 
 		AbstractCamera(	double px, double py, double pz,
 					double vx, double vy, double vz,

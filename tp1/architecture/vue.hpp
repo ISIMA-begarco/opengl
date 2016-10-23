@@ -17,6 +17,8 @@
 #include "frames.hpp"
 #include "transfoCamera.hpp"
 #include "lookAtCamera.hpp"
+#include "../sourceShading/light.hpp"
+
 
 
 /**
@@ -30,6 +32,7 @@ class DisplayManager{
 		// Modèle de données à afficher
 		Modele mModele;
 		LookAtCamera mCamera;
+		LightSourceData mLight;
 
 		/** @brief  Constructeur prenant la géométrie de la fenêtre
 		  * Initialise les données nécessaires à l'affichage.*/

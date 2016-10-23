@@ -16,7 +16,7 @@ AbstractCamera::AbstractCamera(double px, double py, double pz,
 	this->mVisee[2] = vz;
 	this->mVertical[0] = vertx;
 	this->mVertical[1] = verty;
-	this->mVertical[2] = vertz;
+	this->mVertical[2] = vertz;	
 }
 
 AbstractCamera::~AbstractCamera() {
@@ -57,17 +57,17 @@ void AbstractCamera::setPostion(double px,  double py, double pz) {
 	this->mPosition[1] = py;
 	this->mPosition[2] = pz;
 }
- 
+
 void AbstractCamera::setVisee(double vx, double vy, double vz) {
 	this->mVisee[0] = vx;
 	this->mVisee[1] = vy;
 	this->mVisee[2] = vz;
 }
- 
+
 void AbstractCamera::setVertical(double vertx, double verty, double vertz) {
 	this->mVertical[0] = vertx;
 	this->mVertical[1] = verty;
-	this->mVertical[2] = vertz; 
+	this->mVertical[2] = vertz;
 }
 
 void AbstractCamera::setAngleOuverture(double a) {
