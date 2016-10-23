@@ -40,7 +40,7 @@ digraph "src/modele.cpp"
   Node15 [label="computedScene.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$computed_scene_8hpp.html",tooltip="Scene chargee calculee en temps reel par openGL. "];
   Node15 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
   Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
-  Node16 [label="./cameraParams/transform.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transform_8hpp.html"];
+  Node16 [label="./cameraParams/transform.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transform_8hpp.html",tooltip="Diverses transformations. "];
   Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
   Node17 [label="SDL2/SDL.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node16 -> Node18 [color="midnightblue",fontsize="10",style="solid"];
@@ -50,5 +50,5 @@ digraph "src/modele.cpp"
   Node15 -> Node19 [color="midnightblue",fontsize="10",style="solid"];
   Node19 [label="cmath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node2 -> Node20 [color="midnightblue",fontsize="10",style="solid"];
-  Node20 [label="./sourceShading/rendering\lModel.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rendering_model_8hpp.html"];
+  Node20 [label="./sourceShading/rendering\lModel.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rendering_model_8hpp.html",tooltip="Fichier contenant les wrappers OpenGL gerant la lumiere (renderingModel) et les materiaux (Material) ..."];
 }

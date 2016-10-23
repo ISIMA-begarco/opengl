@@ -15,6 +15,6 @@ digraph "src/sourceShading/renderingModel.hpp"
   Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
   Node6 [label="src/modele.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modele_8cpp.html",tooltip="Classe du modèle de MVC. "];
   Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node7 [label="src/sourceShading/light.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$light_8hpp.html"];
+  Node7 [label="src/sourceShading/light.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$light_8hpp.html",tooltip="Classes de lumière. "];
   Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
 }

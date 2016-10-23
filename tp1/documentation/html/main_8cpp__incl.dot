@@ -51,7 +51,7 @@ digraph "src/main.cpp"
   Node20 [label="computedScene.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$computed_scene_8hpp.html",tooltip="Scene chargee calculee en temps reel par openGL. "];
   Node20 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node20 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node21 [label="./cameraParams/transform.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transform_8hpp.html"];
+  Node21 [label="./cameraParams/transform.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$transform_8hpp.html",tooltip="Diverses transformations. "];
   Node21 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node21 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node21 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -59,7 +59,7 @@ digraph "src/main.cpp"
   Node20 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node22 [label="cmath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node8 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node23 [label="./sourceShading/rendering\lModel.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rendering_model_8hpp.html"];
+  Node23 [label="./sourceShading/rendering\lModel.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rendering_model_8hpp.html",tooltip="Fichier contenant les wrappers OpenGL gerant la lumiere (renderingModel) et les materiaux (Material) ..."];
   Node1 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node24 [label="vue.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vue_8hpp.html",tooltip="Classe de gestion de l&#39;affichage. "];
@@ -76,7 +76,7 @@ digraph "src/main.cpp"
   Node28 [label="lookAtCamera.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$look_at_camera_8hpp.html",tooltip="Classe de caméra utilisant gluLookAt. "];
   Node28 -> Node27 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node24 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node29 [label="./sourceShading/light.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$light_8hpp.html"];
+  Node29 [label="./sourceShading/light.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$light_8hpp.html",tooltip="Classes de lumière. "];
   Node29 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node29 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
