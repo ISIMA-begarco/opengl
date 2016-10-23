@@ -1,11 +1,10 @@
-/******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    * 
-*     http://malgouyres.org                                                    * 
-*     File: gui.hpp                                                            * 
-*                                                                              * 
-* The program is distributed under the terms of the GNU General Public License * 
-*                                                                              * 
-\******************************************************************************/ 
+/**
+ * @file gui.hpp
+ * @brief Wrapper SDL
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
 
 #ifndef HEADER_GUI_HPP
 #define HEADER_GUI_HPP
@@ -31,7 +30,7 @@ struct WrapperSDL{
 		 * @param window Fenêtre SDL (pour gérer les SDL_WINDOWEVENT)
 		 * @param p_ParamsAffichage instance de la classe Vue
 		 **/
-		static void DoEventsLoop(SDL_Window *window, 
+		static void DoEventsLoop(SDL_Window *window,
 					 DisplayManager* p_ParamsAffichage);
 
 		/**
@@ -62,7 +61,7 @@ struct WrapperSDL{
 		WindowManager(int largeurFenetreInit, int hauteurFenetreInit,
 			  const char* windowTitle);
 
-		/** @brief Fonction d'initialisation de la fenêtre SDL 
+		/** @brief Fonction d'initialisation de la fenêtre SDL
 		  @param windowWidth largeur de la fenêtre en pixels
 		  @param windowWidth largeur de la fenêtre en pixels
 		  @param windowTitle Titre de la fenêtre dans sa barre de titre
@@ -76,7 +75,7 @@ struct WrapperSDL{
 		/** Destruction : Libération des ressources SDL */
 		~WindowManager();
 	};
-	  
+
 	/** Boucle d'attente des événements */
 	void DoEventsLoop(DisplayManager* p_ParamsAffichage);
 

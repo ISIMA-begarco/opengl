@@ -1,11 +1,10 @@
-/******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    *
-*     http://malgouyres.org                                                    *
-*     File: eventsHandling.cpp                                                 *
-*                                                                              *
-* The program is distributed under the terms of the GNU General Public License *
-*                                                                              *
-\******************************************************************************/
+/**
+ * @file eventHandling.cpp
+ * @brief Classe de gestion des évènements
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
 
 #include "gui.hpp"
 #include <list>
@@ -116,11 +115,16 @@ bool managePressedKeys(std::list<int> keys, DisplayManager *p_ParamsAffichage){
 	return res;
 }
 
+/** @brief Gère le déplacement de la souris
+  * @param Le display manager
+  */
 void manageMouse(DisplayManager *p_ParamsAffichage){
 	p_ParamsAffichage->mCamera.getVisee()[0] += ((float)(MouseData::pmousex - MouseData::mousex)/(float)(p_ParamsAffichage->mLargeurFenetre))*(float)VITESSEMOU;
 	p_ParamsAffichage->mCamera.getVisee()[2] += ((float)(MouseData::pmousey - MouseData::mousey)/(float)(p_ParamsAffichage->mHauteurFenetre))*(float)VITESSEMOU;
 }
 
+/** @brief Capture des évènements SDL
+  */
 bool WrapperSDL::EventController::Handle_SDL_Event(SDL_Event *p_evenement, SDL_Window *window,
 		      DisplayManager *p_ParamsAffichage){
 	static std::list<int> keys;

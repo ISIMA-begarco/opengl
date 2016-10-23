@@ -1,11 +1,10 @@
-/******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    * 
-*     http://malgouyres.org                                                    * 
-*     File: frames.hpp                                                         * 
-*                                                                              * 
-* The program is distributed under the terms of the GNU General Public License * 
-*                                                                              * 
-\******************************************************************************/ 
+/**
+ * @file frames.hpp
+ * @brief Classe de gestion des frames
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
 
 #ifndef HEADER_FRAMES_HPP
 #define HEADER_FRAMES_HPP
@@ -19,8 +18,8 @@ class FramesData {
 
 		static int mNbSeconds; // compteur de secondes
 		static int mNbFrames;
-		static int mLastNbFrames; // compteur de frames 
-		static int mNextDueFrameDate; // pour timer affichage 
+		static int mLastNbFrames; // compteur de frames
+		static int mNextDueFrameDate; // pour timer affichage
 		static int mFps; // frames par secondes
 
 		private: static char mDescriptionFPS[200];

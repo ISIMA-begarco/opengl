@@ -1,3 +1,11 @@
+/**
+ * @file modele.cpp
+ * @brief Classe du modèle de MVC
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "modele.hpp"
 
 Modele::Modele() : mNiveauGris(0.0f), mSceneList(), mBrillance(120.0f), mReflexionAmbiante(0.2f),

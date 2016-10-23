@@ -1,11 +1,10 @@
-/******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    * 
-*     http://malgouyres.org                                                    * 
-*     File: mouse.hpp                                                          * 
-*                                                                              * 
-* The program is distributed under the terms of the GNU General Public License * 
-*                                                                              * 
-\******************************************************************************/ 
+/**
+ * @file mouse.hpp
+ * @brief Classe de gestion de la souris
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
 
 #ifndef HEADER_MOUSE_HPP
 #define HEADER_MOUSE_HPP
@@ -15,16 +14,27 @@
  */
 class MouseData{
 	public:
-		// Variables globales pour gestion de la souris
-		static int mousex; // mémorise la dernière position de la souris 
-		static int mousey; // mémorise la dernière position de la souris 
-		static int pmousex; // mémorise la precedente position de la souris 
-		static int pmousey; // mémorise la precedente position de la souris 
-		static bool leftButtonPressed; // État des boutons de la souris
-		static bool middleButtonPressed; // État des boutons de la souris
-		static bool rightButtonPressed; // État des boutons de la souris
-		static float vitesse; // facteur vitesse de la souris
+		/// mémorise la dernière position de la souris
+		static int mousex;
+		/// mémorise la dernière position de la souris
+		static int mousey;
+		/// mémorise la precedente position de la souris
+		static int pmousex;
+		/// mémorise la precedente position de la souris
+		static int pmousey;
+		/// État des boutons de la souris
+		static bool leftButtonPressed;
+		/// État des boutons de la souris
+		static bool middleButtonPressed;
+		/// État des boutons de la souris
+		static bool rightButtonPressed;
+		/// facteur vitesse de la souris
+		static float vitesse;
 
+		/** @brief Mise à jour des coordonnées de la souris
+		  * @param Coordonnée x
+		  * @param Coordonnée y
+		  */
 		static void updatePosition(int x, int y);
 };
 

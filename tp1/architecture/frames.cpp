@@ -1,14 +1,22 @@
+/**
+ * @file frames.cpp
+ * @brief Classe de gestion des frames
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "frames.hpp"
 #include <cstdio>
 #include <cstring>
 #include <SDL2/SDL.h>
 
 // Initialisation des données de classe
-int FramesData::mNbSeconds = 0; 
+int FramesData::mNbSeconds = 0;
 int FramesData::mNbFrames=0;
-int FramesData::mLastNbFrames=0; // compteur de frames 
-int FramesData::mNextDueFrameDate = 0; // pour timer affichage 
-int FramesData::mFps = 0; // pour timer affichage 
+int FramesData::mLastNbFrames=0; // compteur de frames
+int FramesData::mNextDueFrameDate = 0; // pour timer affichage
+int FramesData::mFps = 0; // pour timer affichage
 char FramesData::mDescriptionFPS[200];
 
 
@@ -19,8 +27,8 @@ void FramesData::Init(){
 bool FramesData::Update(){
 	mNbFrames++;
 
-	// gestion des frames par secondes (ici 50 fps) 
-	int currentTime = SDL_GetTicks(); // date courante en milliseconde 
+	// gestion des frames par secondes (ici 50 fps)
+	int currentTime = SDL_GetTicks(); // date courante en milliseconde
 	if (currentTime/1000 > mNbSeconds){
 		mFps = mNbFrames-mLastNbFrames;
 		mLastNbFrames = mNbFrames;
