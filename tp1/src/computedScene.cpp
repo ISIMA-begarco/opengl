@@ -5,25 +5,29 @@ void Teapot::render(){
 }
 
 void SystemeSolaire::render(){	
-	// Soleil
-	glutSolidSphere(mRayonSoleil, 15, 15);
+	glPushMatrix();
 
-	// Planete
-	// Rotation superieur
-	GeometricTransform::Rotate(0, 1, 0, mRevolutionSun);
+		// Soleil
+		glutSolidSphere(mRayonSoleil, 15, 15);
 
-	// Translation de la petite planete
-	GeometricTransform::Translate(-mRayonSoleil*3, 0, 0);
+		// Planete
+		// Rotation superieur
+		GeometricTransform::Rotate(0, 1, 0, mRevolutionSun);
 
-	// Rotation de la planete meme
-	GeometricTransform::Rotate(0, 1, 0, mRevolutionSelf);
+		// Translation de la petite planete
+		GeometricTransform::Translate(-mRayonSoleil*3, 0, 0);
 
-	// Affichafe de la planete
-	glutSolidSphere(mRayonSoleil/2, 10, 10);
+		// Rotation de la planete meme
+		GeometricTransform::Rotate(0, 1, 0, mRevolutionSelf);
 
-	// Update
-	mRevolutionSelf=fmod((mRevolutionSelf+inc*4),360.0);
-	mRevolutionSun=fmod((mRevolutionSun+inc),360.0);
+		// Affichafe de la planete
+//		glutSolidSphere(mRayonSoleil/2, 10, 10);
+		glutSolidTeapot(mRayonSoleil/2);
+
+		// Update
+		mRevolutionSelf=fmod((mRevolutionSelf+inc*4),360.0);
+		mRevolutionSun=fmod((mRevolutionSun+inc),360.0);
+	glPopMatrix();
 }
 
 void Voiture::drawRoue(){

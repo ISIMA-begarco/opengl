@@ -35,10 +35,10 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
 
     RenderingModel::ApplyMaterial (mModele.mMaterialAllScenes);
 
-    this->mModele.addScene("../testAssimp/dwarf.x");
-    //this->mModele.addTeapot(5);
+ //   this->mModele.addScene("../testAssimp/dwarf.x");
     this->mModele.addSystemeSolaire(10);
-    //this->mModele.addVoiture(1.0);
+//	   this->mModele.addTeapot(7);
+//    this->mModele.addVoiture(1.0);
 }
 
 void DisplayManager::Affichage(){

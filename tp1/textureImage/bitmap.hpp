@@ -1,11 +1,11 @@
 /******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    * 
-*     http://malgouyres.org                                                    * 
-*     File: bitmap.hpp                                                         * 
-*                                                                              * 
-* The program is distributed under the terms of the GNU General Public License * 
-*                                                                              * 
-\******************************************************************************/ 
+*     Copyright (C) 2016 by Rémy Malgouyres                                    *
+*     http://malgouyres.org                                                    *
+*     File: bitmap.hpp                                                         *
+*                                                                              *
+* The program is distributed under the terms of the GNU General Public License *
+*                                                                              *
+\******************************************************************************/
 
 #ifndef HEADER_BITMAP_HPP
 #define HEADER_BITMAP_HPP
@@ -21,7 +21,7 @@ class PixelsBuffer{
   int mScanLineWidth; // Largeur d'une scanline doit être multiple de 4
 		      // = width*bytesPerPixel + ((4-(width*bytesPerPixel)%4)%4);
   std::vector<unsigned char> mPixels; // couleurs des pixels dans un tableau contigu.
-  
+
   /** Constructeur par défaut */
   PixelsBuffer()
   :mWidth(0),
@@ -30,9 +30,9 @@ class PixelsBuffer{
     mScanLineWidth(0),
     mPixels()
   {}
-  
+
   public:
-  
+
   /** Constructeur avec fond blanc */
   PixelsBuffer(int width, int height, int bytesPerPixel)
   :mWidth(width),
@@ -41,7 +41,7 @@ class PixelsBuffer{
     mScanLineWidth(width*bytesPerPixel + (4-(width*bytesPerPixel)%4)%4),
     mPixels(mScanLineWidth*height, 0xff)
   {}
-  
+
   /** Constructeur en copiant un buffer */
   PixelsBuffer(int width, int height, int bytesPerPixel, unsigned char* data)
   :mWidth(width),
@@ -52,7 +52,7 @@ class PixelsBuffer{
   {
     memcpy(mPixels.data(), data, mScanLineWidth*height);
   }
-  
+
   /** Modifie la taille du buffer
    * @return true si la dimension du buffer suffit
    **/
@@ -63,31 +63,32 @@ class PixelsBuffer{
     mScanLineWidth = width*bytesPerPixel + (4-(width*bytesPerPixel)%4)%4;
     mPixels = std::vector<unsigned char>(mScanLineWidth*height, 0xff);
   }
-  
+
   /** Width accessor */
   int GetWidth(){
     return mWidth;
   }
-  
+
   /** Height accessor */
   int GetHeight(){
     return mHeight;
   }
-  
+
   /** Bytes Per Pixel accessor */
   int GetBytesPerPixel(){
     return mBytesPerPixel;
   }
-  
+
   /** Set pixelsvalues */
   void SetPixelBytes(int x, int y, unsigned char *array){
     int startByte = x*mScanLineWidth + y*mBytesPerPixel;
     memcpy(mPixels.data()+startByte, array, mBytesPerPixel);
   }
-  
+
   /** Acces raw pointer to pixels */
   unsigned char* GetRawData(){
     return mPixels.data();
   }
 };
+
 #endif
