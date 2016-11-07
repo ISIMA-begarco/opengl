@@ -26,6 +26,12 @@
  */
 class DisplayManager{
 	public:
+		double mRevolutionLight;
+		double mMovingLightX;
+		double mMovingLightY;
+		double mMovingLightZ;
+		double mMovingLightIntensity;
+
 		GLint mLargeurFenetre; // Largeur de la vue
 		GLint mHauteurFenetre; // Hauteur de la vue
 

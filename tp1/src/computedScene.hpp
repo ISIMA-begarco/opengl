@@ -80,4 +80,22 @@ class Voiture : public AbstractScene {
 		void render();
 };
 
+/**
+*	Scene renvoyant un cylindre anime par transformation,
+*  calculee par OpenGL
+*/
+class Cylindre : public AbstractScene {
+	private:
+		double mRayon;
+		double mHauteur;
+		int mNbMeridien;
+
+	public:
+		Cylindre(double pRayon, double pHauteur, int pNbMeridien)
+						: mRayon(pRayon), mHauteur(pHauteur), mNbMeridien(pNbMeridien) {}
+		~Cylindre() {}
+
+		void render();
+};
+
 #endif

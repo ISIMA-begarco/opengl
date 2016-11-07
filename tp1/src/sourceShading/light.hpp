@@ -24,6 +24,7 @@ struct LightSourceData{
     float mDiffuseIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité diffuse
     float mSpecularIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité spéculaire
 
+    PointLightSource(){}
 
     /** Constructeur initialisant toutes les propriétés de la source */
     PointLightSource(int lightId, float intensity,
@@ -72,6 +73,12 @@ struct LightSourceData{
         mSpecularIntensity[1] = newIntensity;
         mSpecularIntensity[2] = newIntensity;
       }
+    }
+
+    void setPosition(float lightPositionX, float lightPositionY, float lightPositionZ){
+      mLightPosition[0] = lightPositionX;
+      mLightPosition[1] = lightPositionY;
+      mLightPosition[2] = lightPositionZ;
     }
   };
 
@@ -174,6 +181,29 @@ struct LightSourceData{
         it->setIntensity(intensity);
       }
     }
+  }
+
+  PointLightSource* getById(int lightId){
+    PointLightSource* point=NULL;
+    auto& sourcesCamera = mSourcesRepereCamera;
+    for (auto it = sourcesCamera.begin() ; it != sourcesCamera.end() ; ++it){
+      if(it->mLightId == lightId){
+        point = &(*it);
+      }
+    }
+    auto& sourcesMonde = mSourcesRepereMonde;
+    for (auto it = sourcesMonde.begin() ; it != sourcesMonde.end() ; ++it){
+      if(it->mLightId == lightId){
+        point = &(*it);
+      }
+    }
+    return point;
+  }
+
+  void SetPosition(int lightId, float lightPositionX, float lightPositionY, float lightPositionZ){
+    PointLightSource* point = getById(lightId);
+    point->setPosition(lightPositionX,lightPositionY,lightPositionZ);
+    point->ApplyPosition();
   }
 
   /** Applique les intensités de toutes les sources de la scène */

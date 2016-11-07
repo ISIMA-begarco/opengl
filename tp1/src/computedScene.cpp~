@@ -4,7 +4,7 @@ void Teapot::render(){
  	glutSolidTeapot(this->mSize);
 }
 
-void SystemeSolaire::render(){
+void SystemeSolaire::render(){	
 	glPushMatrix();
 
 		// Soleil
@@ -20,9 +20,9 @@ void SystemeSolaire::render(){
 		// Rotation de la planete meme
 		GeometricTransform::Rotate(0, 1, 0, mRevolutionSelf);
 
-		// Affichage de la planete
+		// Affichafe de la planete
 //		glutSolidSphere(mRayonSoleil/2, 10, 10);
-		glutSolidTeapot(mRayonSoleil/2);
+		glutSolidSphere(mRayonSoleil/2, 10, 10);
 
 		// Update
 		mRevolutionSelf=fmod((mRevolutionSelf+inc*4),360.0);
@@ -102,9 +102,4 @@ void Voiture::render(){
 	drawCorps();
 
 	mStep = (mStep+1) % maxStep;
-}
-
-void Cylindre::render() {
-  glPushMatrix();
-  glPopMatrix();
 }
