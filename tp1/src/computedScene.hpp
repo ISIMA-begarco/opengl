@@ -15,6 +15,9 @@
 
 #include <iostream>
 #include <cmath>
+#include <vector>
+
+#include "vecteur3D.hpp"
 
 /**
 *	Scene renvoyant une teiere calculee par OpenGL
@@ -89,10 +92,10 @@ class Cylindre : public AbstractScene {
 		double mRayon;
 		double mHauteur;
 		int mNbMeridien;
+		std::vector<Vecteur3D> mSommets;
 
 	public:
-		Cylindre(double pRayon, double pHauteur, int pNbMeridien)
-						: mRayon(pRayon), mHauteur(pHauteur), mNbMeridien(pNbMeridien) {}
+		Cylindre(double pRayon, double pHauteur, int pNbMeridien);
 		~Cylindre() {}
 
 		void render();

@@ -34,6 +34,10 @@ void Modele::addVoiture(double vitesse){
 	this->mSceneList.push_back(new Voiture(vitesse));
 }
 
+void Modele::addCylindre(double pRayon, double pHauteur, int pNbMeridien){
+	this->mSceneList.push_back(new Cylindre(pRayon, pHauteur, pNbMeridien));
+}
+
 void Modele::addScene(std::string path){
 	this->mSceneList.push_back(new Scene(path));
 }

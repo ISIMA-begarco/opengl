@@ -104,7 +104,27 @@ void Voiture::render(){
 	mStep = (mStep+1) % maxStep;
 }
 
+Cylindre::Cylindre(double pRayon, double pHauteur, int pNbMeridien)
+        : mRayon(pRayon), mHauteur(pHauteur), mNbMeridien(pNbMeridien) {
+
+  float falala = 2*M_PI/this->mNbMeridien;
+  float demiHauteur = this->mHauteur/2;
+  for (int i=0 ; i<this->mNbMeridien+1 ; i++) {
+    float fololo = i*falala;
+    float folocos = this->mRayon*cos(fololo);
+    float folosin = this->mRayon*sin(fololo);
+    mSommets.push_back(Vecteur3D(folocos, folosin, demiHauteur));
+    mSommets.push_back(Vecteur3D(folocos, folosin, -demiHauteur));
+  }
+
+}
+
 void Cylindre::render() {
   glPushMatrix();
+    glBegin(GL_QUAD_STRIP);
+    for (unsigned i=0 ; i<this->mSommets.size() ; i++) {
+      glVertex3f(mSommets[i].GetX(),mSommets[i].GetY(),mSommets[i].GetZ());
+    }
+    glEnd();
   glPopMatrix();
 }

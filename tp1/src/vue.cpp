@@ -36,7 +36,7 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
           40, 20, -40,
           mLight.mIntensity, mLight.mIntensity, mLight.mIntensity,
           mLight.mIntensity, mLight.mIntensity, mLight.mIntensity);
-          
+
     mLight.ApplyLightPositions(AbstractCamera::TypeRepere::CAMERA);
 
     // Light qui tourne
@@ -53,7 +53,8 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     RenderingModel::ApplyMaterial (mModele.mMaterialAllScenes);
 
  //   this->mModele.addScene("../testAssimp/dwarf.x");
-    this->mModele.addSystemeSolaire(10);
+//    this->mModele.addSystemeSolaire(10);
+    this->mModele.addCylindre(3,10,600);
 //	   this->mModele.addTeapot(7);
 //    this->mModele.addVoiture(1.0);
 }

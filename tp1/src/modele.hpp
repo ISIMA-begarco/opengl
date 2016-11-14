@@ -57,6 +57,12 @@ class Modele{
 		  * @return void
 		  */
 		void addVoiture(double vitesse);
+		/** @brief Ajout d'un cylindre
+		  * @param rayon du cylindre
+			* @param hauteur du cylindre
+			* @param nombre de meridiens
+			*/
+		void addCylindre(double pRayon, double pHauteur, int pNbMeridien);
 		/** @brief Ajout d'une scène chargée
 		  * @param Chemin vers le fichier
 		  * @return void
