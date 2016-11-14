@@ -9,6 +9,8 @@
 #ifndef HEADER_ABSTRACT_CAMERA_HPP
 #define HEADER_ABSTRACT_CAMERA_HPP
 
+#include "textureImage/textureManager.hpp"
+
 /**
   *	@brief Classe de caméra abstraite
   * Classe de caméra abstraite

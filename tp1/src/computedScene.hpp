@@ -16,6 +16,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <string>
 
 #include "vecteur3D.hpp"
 
@@ -95,7 +96,7 @@ class Cylindre : public AbstractScene {
 		std::vector<Vecteur3D> mSommets;
 
 	public:
-		Cylindre(double pRayon, double pHauteur, int pNbMeridien);
+		Cylindre(double pRayon, double pHauteur, int pNbMeridien, std::string = "");
 		~Cylindre() {}
 
 		void render();

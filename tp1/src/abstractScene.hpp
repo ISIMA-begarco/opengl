@@ -13,6 +13,9 @@
 * Classe mere des types de scenes disponibles
 */
 class AbstractScene {
+	protected:
+		TextureManager mTexture;
+
 	public:
 		virtual ~AbstractScene() {}
 
