@@ -12,9 +12,10 @@
 DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     :
     mRevolutionLight(0.0),
-    mMovingLightX(40.0),
-    mMovingLightY(20.0),
-    mMovingLightZ(-40.0),
+    // Bonne position pour un nain 40 20 -40
+    mMovingLightX(120.0),
+    mMovingLightY(60.0),
+    mMovingLightZ(-120.0),
     mMovingLightIntensity(0.6),
     mLargeurFenetre(largeurFenetre),
     mHauteurFenetre(hauteurFenetre),
@@ -32,8 +33,9 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     mCamera.Redimensionnement(largeurFenetre, hauteurFenetre);
 
     // Light fixe
+
     mLight.AddSource(AbstractCamera::TypeRepere::CAMERA,GL_LIGHT0,
-          40, 20, -40,
+          0, 0, 0,
           mLight.mIntensity, mLight.mIntensity, mLight.mIntensity,
           mLight.mIntensity, mLight.mIntensity, mLight.mIntensity);
 
@@ -54,7 +56,9 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
 
  //   this->mModele.addScene("../testAssimp/dwarf.x");
 //    this->mModele.addSystemeSolaire(10);
-    this->mModele.addCylindre(3,10,600);
+//    this->mModele.addCylindre(30,40,600);
+//    this->mModele.addScene("../testAssimp/dwarf.x");
+      this->mModele.addScene("../fichiers3DS/greek_sculpture.3ds");
 //	   this->mModele.addTeapot(7);
 //    this->mModele.addVoiture(1.0);
 }

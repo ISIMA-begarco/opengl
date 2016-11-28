@@ -226,4 +226,5 @@ struct LightSourceData{
     }
   }
 };
+
 #endif

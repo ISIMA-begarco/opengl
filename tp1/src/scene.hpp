@@ -31,7 +31,7 @@
  */
 class Scene : public AbstractScene {
 
-	private :
+	private:
 
 		const aiScene* mScene;	/// Pointeur vers la scene opengl
 		aiVector3D* mSceneMin;	/// Pointeur vers la position (opengl) min de la scene
@@ -56,6 +56,12 @@ class Scene : public AbstractScene {
 		 * @param nd Noeud ou commencer l'affichage
 		 */
 		void recursiveRender (const aiNode* nd);
+
+
+		void color4_to_float4(const aiColor4D *c, float f[4]);
+		void set_float4(float f[4], float a, float b, float c, float d);
+
+		void apply_material(const aiMaterial *mtl);
 
 	public:
 

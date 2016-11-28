@@ -309,7 +309,7 @@ int loadasset (const char* path)
 {
 	/* we are taking one of the postprocessing presets to avoid
 	   spelling out 20+ single postprocessing flags here. */
-	scene = aiImportFile(path,aiProcessPreset_TargetRealtime_MaxQuality);
+	scene = aiImportFile(path,aiProcessPreset_TargetRealtime_MaxQuality | aiProcess_GenSmoothNormals);
 
 	if (scene) {
 		get_bounding_box(&scene_min,&scene_max);

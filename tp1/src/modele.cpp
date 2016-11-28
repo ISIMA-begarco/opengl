@@ -10,8 +10,8 @@
 
 Modele::Modele() : mNiveauGris(0.0f), mSceneList(), mBrillance(120.0f), mReflexionAmbiante(0.2f),
 	mMaterialAllScenes(mReflexionAmbiante,mReflexionAmbiante,mReflexionAmbiante,
-										1.0f,0.0f,1.0f,
-										1.0f,0.0f,1.0f,
+										1.0f,1.0f,1.0f,
+										1.0f,1.0f,1.0f,
 										mBrillance) {
 }
 

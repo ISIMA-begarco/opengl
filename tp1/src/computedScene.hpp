@@ -28,10 +28,10 @@ class Teapot : public AbstractScene {
 		int mSize;
 
 	public:
-		Teapot(int size): mSize(size){}
+		Teapot(int size): AbstractScene(), mSize(size){}
 		~Teapot() {}
 
-		void render();
+		virtual void render();
 };
 
 /**
@@ -96,7 +96,7 @@ class Cylindre : public AbstractScene {
 		std::vector<Vecteur3D> mSommets;
 
 	public:
-		Cylindre(double pRayon, double pHauteur, int pNbMeridien, std::string = "");
+		Cylindre(double pRayon, double pHauteur, int pNbMeridien, const  char* = "../jp.bmp");
 		~Cylindre() {}
 
 		void render();

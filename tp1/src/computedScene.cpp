@@ -104,8 +104,8 @@ void Voiture::render(){
 	mStep = (mStep+1) % maxStep;
 }
 
-Cylindre::Cylindre(double pRayon, double pHauteur, int pNbMeridien, std::string pPath)
-        : mTexture(pPath.c_str()), mRayon(pRayon), mHauteur(pHauteur), mNbMeridien(pNbMeridien) {
+Cylindre::Cylindre(double pRayon, double pHauteur, int pNbMeridien, const  char* pPath)
+        : AbstractScene(pPath), mRayon(pRayon), mHauteur(pHauteur), mNbMeridien(pNbMeridien) {
 
   float falala = 2*M_PI/this->mNbMeridien;
   float demiHauteur = this->mHauteur/2;
@@ -121,10 +121,11 @@ Cylindre::Cylindre(double pRayon, double pHauteur, int pNbMeridien, std::string 
 
 void Cylindre::render() {
   glPushMatrix();
+    glEnable(GL_TEXTURE_2D);
     glBegin(GL_QUAD_STRIP);
     mTexture.SelectTexture2D();
     for (unsigned i=0 ; i<this->mSommets.size() ; i++) {
-      glTexCoord2f ( (int)(i%4/2), i%2 )
+      glTexCoord2f ( ((int)((this->mSommets.size()-i)/2))/(float)(mNbMeridien), i%2 );
       glVertex3f(mSommets[i].GetX(),mSommets[i].GetY(),mSommets[i].GetZ());
     }
     glEnd();

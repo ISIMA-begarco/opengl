@@ -6,8 +6,8 @@
  * @date Octobre 2016
  */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include <cstdlib>
+#include <cstdio>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
