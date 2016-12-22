@@ -1,0 +1,115 @@
+\hypertarget{class_transfo_camera}{}\section{Transfo\+Camera Class Reference}
+\label{class_transfo_camera}\index{Transfo\+Camera@{Transfo\+Camera}}
+
+
+{\ttfamily \#include $<$transfo\+Camera.\+hpp$>$}
+
+
+
+Inheritance diagram for Transfo\+Camera\+:
+% FIG 0
+
+
+Collaboration diagram for Transfo\+Camera\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_transfo_camera_a41f26f1c44a8dfb19739bc1477a8a19e}{Transfo\+Camera} (double px, double py, double pz, double vx, double vy, double vz, double vertx, double verty, double vertz, double zproche=1, double zeloigne=500, double angle\+Ouverture=50)
+\item 
+virtual \hyperlink{class_transfo_camera_af1f4189a386127ee63b29b392c0a8b41}{$\sim$\+Transfo\+Camera} ()
+\item 
+virtual void \hyperlink{class_transfo_camera_af56c28b564652b71b7040084aaec8ff9}{Changer\+Repere\+Camera} (double position\mbox{[}3\mbox{]}, double point\+De\+Visee\mbox{[}3\mbox{]}, double vecteur\+Vertical\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Changement du repère de la caméra. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_transfo_camera_a1d02bd6398256954713d1c239d2ebcba}{Changer\+Repere\+Camera} ()
+\begin{DoxyCompactList}\small\item\em Changement du repère de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Transfo\+Camera@{Transfo\+Camera}!Transfo\+Camera@{Transfo\+Camera}}
+\index{Transfo\+Camera@{Transfo\+Camera}!Transfo\+Camera@{Transfo\+Camera}}
+\subsubsection[{\texorpdfstring{Transfo\+Camera(double px, double py, double pz, double vx, double vy, double vz, double vertx, double verty, double vertz, double zproche=1, double zeloigne=500, double angle\+Ouverture=50)}{TransfoCamera(double px, double py, double pz, double vx, double vy, double vz, double vertx, double verty, double vertz, double zproche=1, double zeloigne=500, double angleOuverture=50)}}]{\setlength{\rightskip}{0pt plus 5cm}Transfo\+Camera\+::\+Transfo\+Camera (
+\begin{DoxyParamCaption}
+\item[{double}]{px, }
+\item[{double}]{py, }
+\item[{double}]{pz, }
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{double}]{vz, }
+\item[{double}]{vertx, }
+\item[{double}]{verty, }
+\item[{double}]{vertz, }
+\item[{double}]{zproche = {\ttfamily 1}, }
+\item[{double}]{zeloigne = {\ttfamily 500}, }
+\item[{double}]{angle\+Ouverture = {\ttfamily 50}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transfo_camera_a41f26f1c44a8dfb19739bc1477a8a19e}{}\label{class_transfo_camera_a41f26f1c44a8dfb19739bc1477a8a19e}
+\textquotesingle{}Default\textquotesingle{} constructor \index{Transfo\+Camera@{Transfo\+Camera}!````~Transfo\+Camera@{$\sim$\+Transfo\+Camera}}
+\index{````~Transfo\+Camera@{$\sim$\+Transfo\+Camera}!Transfo\+Camera@{Transfo\+Camera}}
+\subsubsection[{\texorpdfstring{$\sim$\+Transfo\+Camera()}{~TransfoCamera()}}]{\setlength{\rightskip}{0pt plus 5cm}Transfo\+Camera\+::$\sim$\+Transfo\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_transfo_camera_af1f4189a386127ee63b29b392c0a8b41}{}\label{class_transfo_camera_af1f4189a386127ee63b29b392c0a8b41}
+Default destructor 
+
+\subsection{Member Function Documentation}
+\index{Transfo\+Camera@{Transfo\+Camera}!Changer\+Repere\+Camera@{Changer\+Repere\+Camera}}
+\index{Changer\+Repere\+Camera@{Changer\+Repere\+Camera}!Transfo\+Camera@{Transfo\+Camera}}
+\subsubsection[{\texorpdfstring{Changer\+Repere\+Camera(double position[3], double point\+De\+Visee[3], double vecteur\+Vertical[3])}{ChangerRepereCamera(double position[3], double pointDeVisee[3], double vecteurVertical[3])}}]{\setlength{\rightskip}{0pt plus 5cm}void Transfo\+Camera\+::\+Changer\+Repere\+Camera (
+\begin{DoxyParamCaption}
+\item[{double}]{position\mbox{[}3\mbox{]}, }
+\item[{double}]{point\+De\+Visee\mbox{[}3\mbox{]}, }
+\item[{double}]{vecteur\+Vertical\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_transfo_camera_af56c28b564652b71b7040084aaec8ff9}{}\label{class_transfo_camera_af56c28b564652b71b7040084aaec8ff9}
+
+
+Changement du repère de la caméra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double\mbox{[}$\,$\mbox{]}} & position de la caméra \\
+\hline
+{\em double\mbox{[}$\,$\mbox{]}} & point de visée de la caméra \\
+\hline
+{\em double\mbox{[}$\,$\mbox{]}} & vertical de la caméra \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_camera_aeaa6522c54a923a50137d2c0ca54238b}{Abstract\+Camera}.
+
+\index{Transfo\+Camera@{Transfo\+Camera}!Changer\+Repere\+Camera@{Changer\+Repere\+Camera}}
+\index{Changer\+Repere\+Camera@{Changer\+Repere\+Camera}!Transfo\+Camera@{Transfo\+Camera}}
+\subsubsection[{\texorpdfstring{Changer\+Repere\+Camera()}{ChangerRepereCamera()}}]{\setlength{\rightskip}{0pt plus 5cm}void Transfo\+Camera\+::\+Changer\+Repere\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_transfo_camera_a1d02bd6398256954713d1c239d2ebcba}{}\label{class_transfo_camera_a1d02bd6398256954713d1c239d2ebcba}
+
+
+Changement du repère de la caméra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_abstract_camera_a4bfcc6ed8980d64cf1d43d7dcb60129b}{Abstract\+Camera}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{transfo_camera_8hpp}{transfo\+Camera.\+hpp}\item 
+src/\hyperlink{transfo_camera_8cpp}{transfo\+Camera.\+cpp}\end{DoxyCompactItemize}

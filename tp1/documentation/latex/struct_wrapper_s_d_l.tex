@@ -1,0 +1,75 @@
+\hypertarget{struct_wrapper_s_d_l}{}\section{Wrapper\+S\+DL Struct Reference}
+\label{struct_wrapper_s_d_l}\index{Wrapper\+S\+DL@{Wrapper\+S\+DL}}
+
+
+{\ttfamily \#include $<$gui.\+hpp$>$}
+
+
+
+Collaboration diagram for Wrapper\+S\+DL\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_wrapper_s_d_l_1_1_event_controller}{Event\+Controller}
+\item 
+struct \hyperlink{struct_wrapper_s_d_l_1_1_window_manager}{Window\+Manager}
+\begin{DoxyCompactList}\small\item\em Classe gestionnaire de la fenêtre graphique et du contexte Open\+GL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_wrapper_s_d_l_a22e3212f89893ca93010a76df861726b}{Do\+Events\+Loop} (\hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\item 
+\hyperlink{struct_wrapper_s_d_l_ae0484ea23c2afaae3cdc6ec0a425bdeb}{Wrapper\+S\+DL} (int largeur\+Fenetre\+Init, int hauteur\+Fenetre\+Init, const char $\ast$window\+Title)
+\item 
+void \hyperlink{struct_wrapper_s_d_l_a6731fd378a5431029257edae59bbb6d1}{Init} (\hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_wrapper_s_d_l_1_1_window_manager}{Window\+Manager} \hyperlink{struct_wrapper_s_d_l_a5a50735f512fac9cdae12eb6602589cb}{m\+Window\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe Wrapper pour S\+DL et assurant les fonctionnalités de la G\+UI 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Wrapper\+S\+DL@{Wrapper\+S\+DL}!Wrapper\+S\+DL@{Wrapper\+S\+DL}}
+\index{Wrapper\+S\+DL@{Wrapper\+S\+DL}!Wrapper\+S\+DL@{Wrapper\+S\+DL}}
+\subsubsection[{\texorpdfstring{Wrapper\+S\+D\+L(int largeur\+Fenetre\+Init, int hauteur\+Fenetre\+Init, const char $\ast$window\+Title)}{WrapperSDL(int largeurFenetreInit, int hauteurFenetreInit, const char *windowTitle)}}]{\setlength{\rightskip}{0pt plus 5cm}Wrapper\+S\+D\+L\+::\+Wrapper\+S\+DL (
+\begin{DoxyParamCaption}
+\item[{int}]{largeur\+Fenetre\+Init, }
+\item[{int}]{hauteur\+Fenetre\+Init, }
+\item[{const char $\ast$}]{window\+Title}
+\end{DoxyParamCaption}
+)}\hypertarget{struct_wrapper_s_d_l_ae0484ea23c2afaae3cdc6ec0a425bdeb}{}\label{struct_wrapper_s_d_l_ae0484ea23c2afaae3cdc6ec0a425bdeb}
+Construit la fenêtre graphique au dimensions, ainsi que le contexte Open\+GL 
+
+\subsection{Member Function Documentation}
+\index{Wrapper\+S\+DL@{Wrapper\+S\+DL}!Do\+Events\+Loop@{Do\+Events\+Loop}}
+\index{Do\+Events\+Loop@{Do\+Events\+Loop}!Wrapper\+S\+DL@{Wrapper\+S\+DL}}
+\subsubsection[{\texorpdfstring{Do\+Events\+Loop(\+Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{DoEventsLoop(DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Wrapper\+S\+D\+L\+::\+Do\+Events\+Loop (
+\begin{DoxyParamCaption}
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)}\hypertarget{struct_wrapper_s_d_l_a22e3212f89893ca93010a76df861726b}{}\label{struct_wrapper_s_d_l_a22e3212f89893ca93010a76df861726b}
+Boucle d\textquotesingle{}attente des événements \index{Wrapper\+S\+DL@{Wrapper\+S\+DL}!Init@{Init}}
+\index{Init@{Init}!Wrapper\+S\+DL@{Wrapper\+S\+DL}}
+\subsubsection[{\texorpdfstring{Init(\+Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{Init(DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}void Wrapper\+S\+D\+L\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)}\hypertarget{struct_wrapper_s_d_l_a6731fd378a5431029257edae59bbb6d1}{}\label{struct_wrapper_s_d_l_a6731fd378a5431029257edae59bbb6d1}
+Initialisation de l\textquotesingle{}instance contenant les données pour implémenter les événements (vue, modèle...) 
+
+\subsection{Member Data Documentation}
+\index{Wrapper\+S\+DL@{Wrapper\+S\+DL}!m\+Window\+Manager@{m\+Window\+Manager}}
+\index{m\+Window\+Manager@{m\+Window\+Manager}!Wrapper\+S\+DL@{Wrapper\+S\+DL}}
+\subsubsection[{\texorpdfstring{m\+Window\+Manager}{mWindowManager}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Window\+Manager} Wrapper\+S\+D\+L\+::m\+Window\+Manager}\hypertarget{struct_wrapper_s_d_l_a5a50735f512fac9cdae12eb6602589cb}{}\label{struct_wrapper_s_d_l_a5a50735f512fac9cdae12eb6602589cb}
+Instance de la classe gérant la fenêtre graphique 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{gui_8hpp}{gui.\+hpp}\item 
+src/\hyperlink{gui_8cpp}{gui.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{class_display_manager}{}\section{Display\+Manager Class Reference}
+\label{class_display_manager}\index{Display\+Manager@{Display\+Manager}}
+
+
+Classe de gestion de l\textquotesingle{}affichage. Classe de gestion de l\textquotesingle{}affichage.  
+
+
+
+
+{\ttfamily \#include $<$vue.\+hpp$>$}
+
+
+
+Collaboration diagram for Display\+Manager\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_display_manager_abf11523503126b8ee8ed26d79aba9974}{Display\+Manager} (G\+Lint largeur\+Fenetre, G\+Lint hauteur\+Fenetre)
+\begin{DoxyCompactList}\small\item\em Constructeur prenant la géométrie de la fenêtre Initialise les données nécessaires à l\textquotesingle{}affichage. \end{DoxyCompactList}\item 
+void \hyperlink{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}{Affichage} ()
+\item 
+void \hyperlink{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}{Redimensionnement} (G\+Lint l, G\+Lint h)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lint \hyperlink{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}{m\+Largeur\+Fenetre}
+\item 
+G\+Lint \hyperlink{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}{m\+Hauteur\+Fenetre}
+\item 
+\hyperlink{class_modele}{Modele} \hyperlink{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}{m\+Modele}
+\item 
+\hyperlink{class_look_at_camera}{Look\+At\+Camera} \hyperlink{class_display_manager_a17dd81e3974b51416a35c7e9d9232a60}{m\+Camera}
+\item 
+\hyperlink{struct_light_source_data}{Light\+Source\+Data} \hyperlink{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}{m\+Light}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de gestion de l\textquotesingle{}affichage. Classe de gestion de l\textquotesingle{}affichage. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Display\+Manager@{Display\+Manager}!Display\+Manager@{Display\+Manager}}
+\index{Display\+Manager@{Display\+Manager}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{Display\+Manager(\+G\+Lint largeur\+Fenetre, G\+Lint hauteur\+Fenetre)}{DisplayManager(GLint largeurFenetre, GLint hauteurFenetre)}}]{\setlength{\rightskip}{0pt plus 5cm}Display\+Manager\+::\+Display\+Manager (
+\begin{DoxyParamCaption}
+\item[{G\+Lint}]{largeur\+Fenetre, }
+\item[{G\+Lint}]{hauteur\+Fenetre}
+\end{DoxyParamCaption}
+)}\hypertarget{class_display_manager_abf11523503126b8ee8ed26d79aba9974}{}\label{class_display_manager_abf11523503126b8ee8ed26d79aba9974}
+
+
+Constructeur prenant la géométrie de la fenêtre Initialise les données nécessaires à l\textquotesingle{}affichage. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Display\+Manager@{Display\+Manager}!Affichage@{Affichage}}
+\index{Affichage@{Affichage}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{Affichage()}{Affichage()}}]{\setlength{\rightskip}{0pt plus 5cm}void Display\+Manager\+::\+Affichage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}{}\label{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}
+Méthode d\textquotesingle{}affichage \index{Display\+Manager@{Display\+Manager}!Redimensionnement@{Redimensionnement}}
+\index{Redimensionnement@{Redimensionnement}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{Redimensionnement(\+G\+Lint l, G\+Lint h)}{Redimensionnement(GLint l, GLint h)}}]{\setlength{\rightskip}{0pt plus 5cm}void Display\+Manager\+::\+Redimensionnement (
+\begin{DoxyParamCaption}
+\item[{G\+Lint}]{l, }
+\item[{G\+Lint}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}{}\label{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}
+Réglage du cadrage pour la vue Doit être rappelée si la taille de la vue change (S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+NT) 
+\begin{DoxyParams}{Parameters}
+{\em l} & largeur de la (nouvelle) vue \\
+\hline
+{\em h} & hauteur de la (nouvelle) vue \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Display\+Manager@{Display\+Manager}!m\+Camera@{m\+Camera}}
+\index{m\+Camera@{m\+Camera}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{m\+Camera}{mCamera}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Look\+At\+Camera} Display\+Manager\+::m\+Camera}\hypertarget{class_display_manager_a17dd81e3974b51416a35c7e9d9232a60}{}\label{class_display_manager_a17dd81e3974b51416a35c7e9d9232a60}
+\index{Display\+Manager@{Display\+Manager}!m\+Hauteur\+Fenetre@{m\+Hauteur\+Fenetre}}
+\index{m\+Hauteur\+Fenetre@{m\+Hauteur\+Fenetre}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{m\+Hauteur\+Fenetre}{mHauteurFenetre}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Display\+Manager\+::m\+Hauteur\+Fenetre}\hypertarget{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}{}\label{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}
+\index{Display\+Manager@{Display\+Manager}!m\+Largeur\+Fenetre@{m\+Largeur\+Fenetre}}
+\index{m\+Largeur\+Fenetre@{m\+Largeur\+Fenetre}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{m\+Largeur\+Fenetre}{mLargeurFenetre}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Display\+Manager\+::m\+Largeur\+Fenetre}\hypertarget{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}{}\label{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}
+\index{Display\+Manager@{Display\+Manager}!m\+Light@{m\+Light}}
+\index{m\+Light@{m\+Light}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{m\+Light}{mLight}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Light\+Source\+Data} Display\+Manager\+::m\+Light}\hypertarget{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}{}\label{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}
+\index{Display\+Manager@{Display\+Manager}!m\+Modele@{m\+Modele}}
+\index{m\+Modele@{m\+Modele}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{\texorpdfstring{m\+Modele}{mModele}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Modele} Display\+Manager\+::m\+Modele}\hypertarget{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}{}\label{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{vue_8hpp}{vue.\+hpp}\item 
+src/\hyperlink{vue_8cpp}{vue.\+cpp}\end{DoxyCompactItemize}

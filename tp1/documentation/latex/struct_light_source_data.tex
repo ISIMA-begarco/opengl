@@ -1,0 +1,152 @@
+\hypertarget{struct_light_source_data}{}\section{Light\+Source\+Data Struct Reference}
+\label{struct_light_source_data}\index{Light\+Source\+Data@{Light\+Source\+Data}}
+
+
+{\ttfamily \#include $<$light.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_light_source_data_1_1_point_light_source}{Point\+Light\+Source}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_light_source_data_a0862cd4423045f379a724594f5a7f7f2}{Light\+Source\+Data} ()
+\item 
+\hyperlink{struct_light_source_data_a6b7b1d0213c0aa6eccf9a521794aca9f}{$\sim$\+Light\+Source\+Data} ()=default
+\item 
+std\+::vector$<$ \hyperlink{struct_light_source_data_1_1_point_light_source}{Point\+Light\+Source} $>$ \& \hyperlink{struct_light_source_data_a4243a55e8ef7a65d58403bc7be09e7db}{Get\+Sources\+By\+Repere} (\hyperlink{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98}{Abstract\+Camera\+::\+Type\+Repere} type\+Repere, bool reverse=false)
+\item 
+bool \hyperlink{struct_light_source_data_a575b34d80813c9057e8e4bdbc60e53c1}{Add\+Source} (\hyperlink{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98}{Abstract\+Camera\+::\+Type\+Repere} type\+Repere, int light\+Id, float light\+PositionX, float light\+PositionY, float light\+PositionZ, float diffuse\+IntensityR, float diffuse\+IntensityG, float diffuse\+IntensityB, float specular\+IntensityR, float specular\+IntensityG, float specular\+IntensityB)
+\item 
+bool \hyperlink{struct_light_source_data_a586f688bed495b5e65c44a7abb3a4aa5}{Delete\+Source} (int light\+Id)
+\item 
+void \hyperlink{struct_light_source_data_a3e8626770e095c13a5516d98e4fe4979}{Apply\+Light\+Positions} (\hyperlink{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98}{Abstract\+Camera\+::\+Type\+Repere} type\+Repere)
+\item 
+void \hyperlink{struct_light_source_data_a1a6b5906207c5db3d0b31b39df05ee2d}{Set\+Intensities} (float intensity)
+\item 
+void \hyperlink{struct_light_source_data_a9127f39068b76f1f68e86d8f393f5bb8}{Apply\+Light\+Intensities} ()
+\item 
+void \hyperlink{struct_light_source_data_a2544f01b74dd0fb023b9edbee74181f8}{Disbale\+Light\+Sources} (\hyperlink{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98}{Abstract\+Camera\+::\+Type\+Repere} type\+Repere)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{struct_light_source_data_1_1_point_light_source}{Point\+Light\+Source} $>$ \hyperlink{struct_light_source_data_a417d68f7115516f98c7e73f2c842bdfe}{m\+Sources\+Repere\+Camera}
+\item 
+std\+::vector$<$ \hyperlink{struct_light_source_data_1_1_point_light_source}{Point\+Light\+Source} $>$ \hyperlink{struct_light_source_data_a0a57718838c562b42402e732685fd334}{m\+Sources\+Repere\+Monde}
+\item 
+float \hyperlink{struct_light_source_data_a7571892de2637c65348ab3fc7308ba7d}{m\+Intensity}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+MÉ\+T\+H\+O\+D\+ES C\+O\+N\+C\+E\+R\+N\+A\+NT L\+ES M\+O\+DÈ\+L\+ES DE S\+O\+U\+R\+C\+ES L\+U\+M\+I\+N\+E\+U\+S\+ES 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!Light\+Source\+Data@{Light\+Source\+Data}}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Light\+Source\+Data()}{LightSourceData()}}]{\setlength{\rightskip}{0pt plus 5cm}Light\+Source\+Data\+::\+Light\+Source\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a0862cd4423045f379a724594f5a7f7f2}{}\label{struct_light_source_data_a0862cd4423045f379a724594f5a7f7f2}
+Constructeur par défaut (ne crée aucune source lumineuse) \index{Light\+Source\+Data@{Light\+Source\+Data}!````~Light\+Source\+Data@{$\sim$\+Light\+Source\+Data}}
+\index{````~Light\+Source\+Data@{$\sim$\+Light\+Source\+Data}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{$\sim$\+Light\+Source\+Data()=default}{~LightSourceData()=default}}]{\setlength{\rightskip}{0pt plus 5cm}Light\+Source\+Data\+::$\sim$\+Light\+Source\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{struct_light_source_data_a6b7b1d0213c0aa6eccf9a521794aca9f}{}\label{struct_light_source_data_a6b7b1d0213c0aa6eccf9a521794aca9f}
+Destructeur 
+
+\subsection{Member Function Documentation}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!Add\+Source@{Add\+Source}}
+\index{Add\+Source@{Add\+Source}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Add\+Source(\+Abstract\+Camera\+::\+Type\+Repere type\+Repere, int light\+Id, float light\+Position\+X, float light\+Position\+Y, float light\+Position\+Z, float diffuse\+Intensity\+R, float diffuse\+Intensity\+G, float diffuse\+Intensity\+B, float specular\+Intensity\+R, float specular\+Intensity\+G, float specular\+Intensity\+B)}{AddSource(AbstractCamera::TypeRepere typeRepere, int lightId, float lightPositionX, float lightPositionY, float lightPositionZ, float diffuseIntensityR, float diffuseIntensityG, float diffuseIntensityB, float specularIntensityR, float specularIntensityG, float specularIntensityB)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Light\+Source\+Data\+::\+Add\+Source (
+\begin{DoxyParamCaption}
+\item[{{\bf Abstract\+Camera\+::\+Type\+Repere}}]{type\+Repere, }
+\item[{int}]{light\+Id, }
+\item[{float}]{light\+PositionX, }
+\item[{float}]{light\+PositionY, }
+\item[{float}]{light\+PositionZ, }
+\item[{float}]{diffuse\+IntensityR, }
+\item[{float}]{diffuse\+IntensityG, }
+\item[{float}]{diffuse\+IntensityB, }
+\item[{float}]{specular\+IntensityR, }
+\item[{float}]{specular\+IntensityG, }
+\item[{float}]{specular\+IntensityB}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a575b34d80813c9057e8e4bdbc60e53c1}{}\label{struct_light_source_data_a575b34d80813c9057e8e4bdbc60e53c1}
+Ajoute une source lumineuse dans un certain repère \begin{DoxyReturn}{Returns}
+true en case de succès, false en cas d\textquotesingle{}ID light\+Id déjà pris 
+\end{DoxyReturn}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!Apply\+Light\+Intensities@{Apply\+Light\+Intensities}}
+\index{Apply\+Light\+Intensities@{Apply\+Light\+Intensities}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Apply\+Light\+Intensities()}{ApplyLightIntensities()}}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Apply\+Light\+Intensities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a9127f39068b76f1f68e86d8f393f5bb8}{}\label{struct_light_source_data_a9127f39068b76f1f68e86d8f393f5bb8}
+Applique les intensités de toutes les sources de la scène \index{Light\+Source\+Data@{Light\+Source\+Data}!Apply\+Light\+Positions@{Apply\+Light\+Positions}}
+\index{Apply\+Light\+Positions@{Apply\+Light\+Positions}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Apply\+Light\+Positions(\+Abstract\+Camera\+::\+Type\+Repere type\+Repere)}{ApplyLightPositions(AbstractCamera::TypeRepere typeRepere)}}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Apply\+Light\+Positions (
+\begin{DoxyParamCaption}
+\item[{{\bf Abstract\+Camera\+::\+Type\+Repere}}]{type\+Repere}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a3e8626770e095c13a5516d98e4fe4979}{}\label{struct_light_source_data_a3e8626770e095c13a5516d98e4fe4979}
+Positionner les sources qui se trouvent dans un certain repère \index{Light\+Source\+Data@{Light\+Source\+Data}!Delete\+Source@{Delete\+Source}}
+\index{Delete\+Source@{Delete\+Source}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Delete\+Source(int light\+Id)}{DeleteSource(int lightId)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Light\+Source\+Data\+::\+Delete\+Source (
+\begin{DoxyParamCaption}
+\item[{int}]{light\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a586f688bed495b5e65c44a7abb3a4aa5}{}\label{struct_light_source_data_a586f688bed495b5e65c44a7abb3a4aa5}
+Supprime une source lumineuse dans un certain repère La méthode est un peu lourde pour garder des tableaux contigus. \begin{DoxyReturn}{Returns}
+true en case de succès, false en case d\textquotesingle{}ID inexistant 
+\end{DoxyReturn}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!Disbale\+Light\+Sources@{Disbale\+Light\+Sources}}
+\index{Disbale\+Light\+Sources@{Disbale\+Light\+Sources}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Disbale\+Light\+Sources(\+Abstract\+Camera\+::\+Type\+Repere type\+Repere)}{DisbaleLightSources(AbstractCamera::TypeRepere typeRepere)}}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Disbale\+Light\+Sources (
+\begin{DoxyParamCaption}
+\item[{{\bf Abstract\+Camera\+::\+Type\+Repere}}]{type\+Repere}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a2544f01b74dd0fb023b9edbee74181f8}{}\label{struct_light_source_data_a2544f01b74dd0fb023b9edbee74181f8}
+Applique les intensités de toutes les sources de la scène \index{Light\+Source\+Data@{Light\+Source\+Data}!Get\+Sources\+By\+Repere@{Get\+Sources\+By\+Repere}}
+\index{Get\+Sources\+By\+Repere@{Get\+Sources\+By\+Repere}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Get\+Sources\+By\+Repere(\+Abstract\+Camera\+::\+Type\+Repere type\+Repere, bool reverse=false)}{GetSourcesByRepere(AbstractCamera::TypeRepere typeRepere, bool reverse=false)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Point\+Light\+Source}$>$\& Light\+Source\+Data\+::\+Get\+Sources\+By\+Repere (
+\begin{DoxyParamCaption}
+\item[{{\bf Abstract\+Camera\+::\+Type\+Repere}}]{type\+Repere, }
+\item[{bool}]{reverse = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a4243a55e8ef7a65d58403bc7be09e7db}{}\label{struct_light_source_data_a4243a55e8ef7a65d58403bc7be09e7db}
+Obtient l\textquotesingle{}ensemble des sources à placer dans un certain repère 
+\begin{DoxyParams}{Parameters}
+{\em reverse} & true pour les sources de l\textquotesingle{}autre repère que type\+Repere \\
+\hline
+\end{DoxyParams}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!Set\+Intensities@{Set\+Intensities}}
+\index{Set\+Intensities@{Set\+Intensities}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{Set\+Intensities(float intensity)}{SetIntensities(float intensity)}}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Set\+Intensities (
+\begin{DoxyParamCaption}
+\item[{float}]{intensity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_a1a6b5906207c5db3d0b31b39df05ee2d}{}\label{struct_light_source_data_a1a6b5906207c5db3d0b31b39df05ee2d}
+Applique les intensités de toutes les sources de la scène 
+
+\subsection{Member Data Documentation}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!m\+Intensity@{m\+Intensity}}
+\index{m\+Intensity@{m\+Intensity}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{m\+Intensity}{mIntensity}}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::m\+Intensity}\hypertarget{struct_light_source_data_a7571892de2637c65348ab3fc7308ba7d}{}\label{struct_light_source_data_a7571892de2637c65348ab3fc7308ba7d}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!m\+Sources\+Repere\+Camera@{m\+Sources\+Repere\+Camera}}
+\index{m\+Sources\+Repere\+Camera@{m\+Sources\+Repere\+Camera}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{m\+Sources\+Repere\+Camera}{mSourcesRepereCamera}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Point\+Light\+Source}$>$ Light\+Source\+Data\+::m\+Sources\+Repere\+Camera}\hypertarget{struct_light_source_data_a417d68f7115516f98c7e73f2c842bdfe}{}\label{struct_light_source_data_a417d68f7115516f98c7e73f2c842bdfe}
+\index{Light\+Source\+Data@{Light\+Source\+Data}!m\+Sources\+Repere\+Monde@{m\+Sources\+Repere\+Monde}}
+\index{m\+Sources\+Repere\+Monde@{m\+Sources\+Repere\+Monde}!Light\+Source\+Data@{Light\+Source\+Data}}
+\subsubsection[{\texorpdfstring{m\+Sources\+Repere\+Monde}{mSourcesRepereMonde}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Point\+Light\+Source}$>$ Light\+Source\+Data\+::m\+Sources\+Repere\+Monde}\hypertarget{struct_light_source_data_a0a57718838c562b42402e732685fd334}{}\label{struct_light_source_data_a0a57718838c562b42402e732685fd334}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/source\+Shading/\hyperlink{light_8hpp}{light.\+hpp}\end{DoxyCompactItemize}

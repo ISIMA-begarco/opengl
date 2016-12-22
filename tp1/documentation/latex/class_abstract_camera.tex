@@ -1,0 +1,468 @@
+\hypertarget{class_abstract_camera}{}\section{Abstract\+Camera Class Reference}
+\label{class_abstract_camera}\index{Abstract\+Camera@{Abstract\+Camera}}
+
+
+Classe de caméra abstraite Classe de caméra abstraite.  
+
+
+
+
+{\ttfamily \#include $<$abstract\+Camera.\+hpp$>$}
+
+
+
+Inheritance diagram for Abstract\+Camera\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98}{Type\+Repere} \{ \hyperlink{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98a4136744a39efe4b86f6743eecc488eb8}{M\+O\+N\+DE} = 0, 
+\hyperlink{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98a7fc33f57f9cabf6771b5fdfa9c64494c}{C\+A\+M\+E\+RA} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_abstract_camera_a66df51ce45fb8be484c56161fe326129}{Abstract\+Camera} (double px, double py, double pz, double vx, double vy, double vz, double vertx, double verty, double vertz, double zproche=1, double zeloigne=500, double angle\+Ouverture=50)
+\item 
+virtual \hyperlink{class_abstract_camera_addf550f9f41d04bd6651b19d795bdabe}{$\sim$\+Abstract\+Camera} ()
+\item 
+void \hyperlink{class_abstract_camera_a7231574aecbb95374f3b6f82349608a4}{Redimensionnement} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Redimensionnement de la fenêtre. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_camera_a14ae54182b566740e1285ad33dfc6b2b}{Changement\+Angle} (double angle\+OuvertureY)
+\begin{DoxyCompactList}\small\item\em Changement de l\textquotesingle{}angle d\textquotesingle{}ouverture. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_camera_a2685cf0a29e7dac3ca7c8b6d6b545810}{Apply\+Perspective\+Projection} (double angle\+OuvertureY, double aspect, double z\+Proche, double z\+Eloigne)
+\begin{DoxyCompactList}\small\item\em Application de la projection. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_abstract_camera_aeaa6522c54a923a50137d2c0ca54238b}{Changer\+Repere\+Camera} (double position\mbox{[}3\mbox{]}, double point\+De\+Visee\mbox{[}3\mbox{]}, double vecteur\+Vertical\mbox{[}3\mbox{]})=0
+\begin{DoxyCompactList}\small\item\em Changement du repère de la caméra. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_abstract_camera_a4bfcc6ed8980d64cf1d43d7dcb60129b}{Changer\+Repere\+Camera} ()=0
+\begin{DoxyCompactList}\small\item\em Changement du repère de la caméra. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_camera_a658752e59c42aacadb3e05b811c5b733}{Zoumage} (bool forward)
+\begin{DoxyCompactList}\small\item\em Zoom de la caméra. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_camera_a4bb45e9a3775b226b55a4bda90225fea}{set\+Postion} (double px, double py, double pz)
+\begin{DoxyCompactList}\small\item\em Setter de la position. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_camera_ab6c48b6b2dcca743e826c9ca4c22940a}{set\+Visee} (double vx, double vy, double vz)
+\begin{DoxyCompactList}\small\item\em Setter de la visée. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_camera_a0a17e0970ff82be9528a72ee427468ac}{set\+Vertical} (double vertx, double verty, double vertz)
+\begin{DoxyCompactList}\small\item\em Setter de la verticale. \end{DoxyCompactList}\item 
+void \hyperlink{class_abstract_camera_ae9bdb1abdae4301b45d43225911c210a}{set\+Angle\+Ouverture} (double a)
+\begin{DoxyCompactList}\small\item\em Setter de l\textquotesingle{}angle d\textquotesingle{}ouverture. \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{class_abstract_camera_a5cca3eaaa1f344ff1f32e63a37fc1d71}{get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Getter de la position. \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{class_abstract_camera_abfcc9c4b7966c4f82cbeec8ab6c26cfb}{get\+Visee} ()
+\begin{DoxyCompactList}\small\item\em Getter de la visée. \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{class_abstract_camera_aff23298b11dca5e8cdcd671ef2f1bed4}{get\+Vertical} ()
+\begin{DoxyCompactList}\small\item\em Getter de la verticale. \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_camera_abcc835cc1c56fdd987b03c51b0e3fa73}{get\+Angle\+Ouverture} () const 
+\begin{DoxyCompactList}\small\item\em Getter de l\textquotesingle{}angle d\textquotesingle{}ouverture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_abstract_camera_aacd5e7f2d881e719f254a1d6e2904b91}{m\+Position} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Position de la caméra. \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_camera_a5c7db642de2add50fad69539a8b220d8}{m\+Visee} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Point de visée de la caméra. \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_camera_a64675d12169d6383a9371d7fd710a441}{m\+Vertical} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Vecteur vertical de la caméra. \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_camera_a408e219c2aed42b6aa4f9198c252d10a}{m\+Z\+\_\+proche}
+\begin{DoxyCompactList}\small\item\em Distance du plan proche. \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_camera_a8e076553a55c8e2f19948bdf4ea01be1}{m\+Z\+\_\+eloigne}
+\begin{DoxyCompactList}\small\item\em Distance du plan éloigné \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_camera_a5facdc9b6a67be951f8adea9d7ed8756}{m\+Angle\+Ouverture}
+\begin{DoxyCompactList}\small\item\em Angle d\textquotesingle{}ouverture de la caméra. \end{DoxyCompactList}\item 
+double \hyperlink{class_abstract_camera_a84ea352c679449eeef49d92274bfc9e0}{m\+Aspect}
+\begin{DoxyCompactList}\small\item\em Aspect de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de caméra abstraite Classe de caméra abstraite. 
+
+\subsection{Member Enumeration Documentation}
+\index{Abstract\+Camera@{Abstract\+Camera}!Type\+Repere@{Type\+Repere}}
+\index{Type\+Repere@{Type\+Repere}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Type\+Repere}{TypeRepere}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Abstract\+Camera\+::\+Type\+Repere}}\hypertarget{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98}{}\label{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98}
+Types de repères supportés ( repères du monde et de l a camé ra ) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+O\+N\+DE@{M\+O\+N\+DE}!Abstract\+Camera@{Abstract\+Camera}}\index{Abstract\+Camera@{Abstract\+Camera}!M\+O\+N\+DE@{M\+O\+N\+DE}}\item[{\em 
+M\+O\+N\+DE\hypertarget{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98a4136744a39efe4b86f6743eecc488eb8}{}\label{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98a4136744a39efe4b86f6743eecc488eb8}
+}]\index{C\+A\+M\+E\+RA@{C\+A\+M\+E\+RA}!Abstract\+Camera@{Abstract\+Camera}}\index{Abstract\+Camera@{Abstract\+Camera}!C\+A\+M\+E\+RA@{C\+A\+M\+E\+RA}}\item[{\em 
+C\+A\+M\+E\+RA\hypertarget{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98a7fc33f57f9cabf6771b5fdfa9c64494c}{}\label{class_abstract_camera_a4d3cc29d2eb150eada1bb387648eae98a7fc33f57f9cabf6771b5fdfa9c64494c}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Abstract\+Camera@{Abstract\+Camera}!Abstract\+Camera@{Abstract\+Camera}}
+\index{Abstract\+Camera@{Abstract\+Camera}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Abstract\+Camera(double px, double py, double pz, double vx, double vy, double vz, double vertx, double verty, double vertz, double zproche=1, double zeloigne=500, double angle\+Ouverture=50)}{AbstractCamera(double px, double py, double pz, double vx, double vy, double vz, double vertx, double verty, double vertz, double zproche=1, double zeloigne=500, double angleOuverture=50)}}]{\setlength{\rightskip}{0pt plus 5cm}Abstract\+Camera\+::\+Abstract\+Camera (
+\begin{DoxyParamCaption}
+\item[{double}]{px, }
+\item[{double}]{py, }
+\item[{double}]{pz, }
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{double}]{vz, }
+\item[{double}]{vertx, }
+\item[{double}]{verty, }
+\item[{double}]{vertz, }
+\item[{double}]{zproche = {\ttfamily 1}, }
+\item[{double}]{zeloigne = {\ttfamily 500}, }
+\item[{double}]{angle\+Ouverture = {\ttfamily 50}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a66df51ce45fb8be484c56161fe326129}{}\label{class_abstract_camera_a66df51ce45fb8be484c56161fe326129}
+Constructeur \index{Abstract\+Camera@{Abstract\+Camera}!````~Abstract\+Camera@{$\sim$\+Abstract\+Camera}}
+\index{````~Abstract\+Camera@{$\sim$\+Abstract\+Camera}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{$\sim$\+Abstract\+Camera()}{~AbstractCamera()}}]{\setlength{\rightskip}{0pt plus 5cm}Abstract\+Camera\+::$\sim$\+Abstract\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_abstract_camera_addf550f9f41d04bd6651b19d795bdabe}{}\label{class_abstract_camera_addf550f9f41d04bd6651b19d795bdabe}
+Destructeur 
+
+\subsection{Member Function Documentation}
+\index{Abstract\+Camera@{Abstract\+Camera}!Apply\+Perspective\+Projection@{Apply\+Perspective\+Projection}}
+\index{Apply\+Perspective\+Projection@{Apply\+Perspective\+Projection}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Apply\+Perspective\+Projection(double angle\+Ouverture\+Y, double aspect, double z\+Proche, double z\+Eloigne)}{ApplyPerspectiveProjection(double angleOuvertureY, double aspect, double zProche, double zEloigne)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::\+Apply\+Perspective\+Projection (
+\begin{DoxyParamCaption}
+\item[{double}]{angle\+OuvertureY, }
+\item[{double}]{aspect, }
+\item[{double}]{z\+Proche, }
+\item[{double}]{z\+Eloigne}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a2685cf0a29e7dac3ca7c8b6d6b545810}{}\label{class_abstract_camera_a2685cf0a29e7dac3ca7c8b6d6b545810}
+
+
+Application de la projection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & \\
+\hline
+{\em double} & \\
+\hline
+{\em double} & \\
+\hline
+{\em double} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!Changement\+Angle@{Changement\+Angle}}
+\index{Changement\+Angle@{Changement\+Angle}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Changement\+Angle(double angle\+Ouverture\+Y)}{ChangementAngle(double angleOuvertureY)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::\+Changement\+Angle (
+\begin{DoxyParamCaption}
+\item[{double}]{angle\+OuvertureY}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a14ae54182b566740e1285ad33dfc6b2b}{}\label{class_abstract_camera_a14ae54182b566740e1285ad33dfc6b2b}
+
+
+Changement de l\textquotesingle{}angle d\textquotesingle{}ouverture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & \+: angle \\
+\hline
+\end{DoxyParams}
+\index{Abstract\+Camera@{Abstract\+Camera}!Changer\+Repere\+Camera@{Changer\+Repere\+Camera}}
+\index{Changer\+Repere\+Camera@{Changer\+Repere\+Camera}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Changer\+Repere\+Camera(double position[3], double point\+De\+Visee[3], double vecteur\+Vertical[3])=0}{ChangerRepereCamera(double position[3], double pointDeVisee[3], double vecteurVertical[3])=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Camera\+::\+Changer\+Repere\+Camera (
+\begin{DoxyParamCaption}
+\item[{double}]{position\mbox{[}3\mbox{]}, }
+\item[{double}]{point\+De\+Visee\mbox{[}3\mbox{]}, }
+\item[{double}]{vecteur\+Vertical\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_abstract_camera_aeaa6522c54a923a50137d2c0ca54238b}{}\label{class_abstract_camera_aeaa6522c54a923a50137d2c0ca54238b}
+
+
+Changement du repère de la caméra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double\mbox{[}$\,$\mbox{]}} & position de la caméra \\
+\hline
+{\em double\mbox{[}$\,$\mbox{]}} & point de visée de la caméra \\
+\hline
+{\em double\mbox{[}$\,$\mbox{]}} & vertical de la caméra \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_look_at_camera_a0904e7cb4cc17c9d8dd54d8a394eb9cc}{Look\+At\+Camera}, and \hyperlink{class_transfo_camera_af56c28b564652b71b7040084aaec8ff9}{Transfo\+Camera}.
+
+\index{Abstract\+Camera@{Abstract\+Camera}!Changer\+Repere\+Camera@{Changer\+Repere\+Camera}}
+\index{Changer\+Repere\+Camera@{Changer\+Repere\+Camera}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Changer\+Repere\+Camera()=0}{ChangerRepereCamera()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Camera\+::\+Changer\+Repere\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_abstract_camera_a4bfcc6ed8980d64cf1d43d7dcb60129b}{}\label{class_abstract_camera_a4bfcc6ed8980d64cf1d43d7dcb60129b}
+
+
+Changement du repère de la caméra. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_look_at_camera_ac8ff2cf45773bf8f27fa9972e1f48c5d}{Look\+At\+Camera}, and \hyperlink{class_transfo_camera_a1d02bd6398256954713d1c239d2ebcba}{Transfo\+Camera}.
+
+\index{Abstract\+Camera@{Abstract\+Camera}!get\+Angle\+Ouverture@{get\+Angle\+Ouverture}}
+\index{get\+Angle\+Ouverture@{get\+Angle\+Ouverture}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{get\+Angle\+Ouverture() const }{getAngleOuverture() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::get\+Angle\+Ouverture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_abstract_camera_abcc835cc1c56fdd987b03c51b0e3fa73}{}\label{class_abstract_camera_abcc835cc1c56fdd987b03c51b0e3fa73}
+
+
+Getter de l\textquotesingle{}angle d\textquotesingle{}ouverture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+angle d\textquotesingle{}ouverture 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{get\+Position()}{getPosition()}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Abstract\+Camera\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a5cca3eaaa1f344ff1f32e63a37fc1d71}{}\label{class_abstract_camera_a5cca3eaaa1f344ff1f32e63a37fc1d71}
+
+
+Getter de la position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!get\+Vertical@{get\+Vertical}}
+\index{get\+Vertical@{get\+Vertical}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{get\+Vertical()}{getVertical()}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Abstract\+Camera\+::get\+Vertical (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_aff23298b11dca5e8cdcd671ef2f1bed4}{}\label{class_abstract_camera_aff23298b11dca5e8cdcd671ef2f1bed4}
+
+
+Getter de la verticale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verticale 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!get\+Visee@{get\+Visee}}
+\index{get\+Visee@{get\+Visee}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{get\+Visee()}{getVisee()}}]{\setlength{\rightskip}{0pt plus 5cm}double $\ast$ Abstract\+Camera\+::get\+Visee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_abfcc9c4b7966c4f82cbeec8ab6c26cfb}{}\label{class_abstract_camera_abfcc9c4b7966c4f82cbeec8ab6c26cfb}
+
+
+Getter de la visée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+visée 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!Redimensionnement@{Redimensionnement}}
+\index{Redimensionnement@{Redimensionnement}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Redimensionnement(int w, int h)}{Redimensionnement(int w, int h)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::\+Redimensionnement (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a7231574aecbb95374f3b6f82349608a4}{}\label{class_abstract_camera_a7231574aecbb95374f3b6f82349608a4}
+
+
+Redimensionnement de la fenêtre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Largeur} & de la fenêtre \\
+\hline
+{\em Hauteur} & de la fenêtre \\
+\hline
+\end{DoxyParams}
+\index{Abstract\+Camera@{Abstract\+Camera}!set\+Angle\+Ouverture@{set\+Angle\+Ouverture}}
+\index{set\+Angle\+Ouverture@{set\+Angle\+Ouverture}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{set\+Angle\+Ouverture(double a)}{setAngleOuverture(double a)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::set\+Angle\+Ouverture (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_ae9bdb1abdae4301b45d43225911c210a}{}\label{class_abstract_camera_ae9bdb1abdae4301b45d43225911c210a}
+
+
+Setter de l\textquotesingle{}angle d\textquotesingle{}ouverture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nouvel} & angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!set\+Postion@{set\+Postion}}
+\index{set\+Postion@{set\+Postion}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{set\+Postion(double px, double py, double pz)}{setPostion(double px, double py, double pz)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::set\+Postion (
+\begin{DoxyParamCaption}
+\item[{double}]{px, }
+\item[{double}]{py, }
+\item[{double}]{pz}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a4bb45e9a3775b226b55a4bda90225fea}{}\label{class_abstract_camera_a4bb45e9a3775b226b55a4bda90225fea}
+
+
+Setter de la position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nouvelle} & position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!set\+Vertical@{set\+Vertical}}
+\index{set\+Vertical@{set\+Vertical}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{set\+Vertical(double vertx, double verty, double vertz)}{setVertical(double vertx, double verty, double vertz)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::set\+Vertical (
+\begin{DoxyParamCaption}
+\item[{double}]{vertx, }
+\item[{double}]{verty, }
+\item[{double}]{vertz}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a0a17e0970ff82be9528a72ee427468ac}{}\label{class_abstract_camera_a0a17e0970ff82be9528a72ee427468ac}
+
+
+Setter de la verticale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nouvelle} & position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!set\+Visee@{set\+Visee}}
+\index{set\+Visee@{set\+Visee}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{set\+Visee(double vx, double vy, double vz)}{setVisee(double vx, double vy, double vz)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::set\+Visee (
+\begin{DoxyParamCaption}
+\item[{double}]{vx, }
+\item[{double}]{vy, }
+\item[{double}]{vz}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_ab6c48b6b2dcca743e826c9ca4c22940a}{}\label{class_abstract_camera_ab6c48b6b2dcca743e826c9ca4c22940a}
+
+
+Setter de la visée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nouvelle} & position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Abstract\+Camera@{Abstract\+Camera}!Zoumage@{Zoumage}}
+\index{Zoumage@{Zoumage}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{Zoumage(bool forward)}{Zoumage(bool forward)}}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Camera\+::\+Zoumage (
+\begin{DoxyParamCaption}
+\item[{bool}]{forward}
+\end{DoxyParamCaption}
+)}\hypertarget{class_abstract_camera_a658752e59c42aacadb3e05b811c5b733}{}\label{class_abstract_camera_a658752e59c42aacadb3e05b811c5b733}
+
+
+Zoom de la caméra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em true} & \+: avancer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Abstract\+Camera@{Abstract\+Camera}!m\+Angle\+Ouverture@{m\+Angle\+Ouverture}}
+\index{m\+Angle\+Ouverture@{m\+Angle\+Ouverture}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{m\+Angle\+Ouverture}{mAngleOuverture}}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::m\+Angle\+Ouverture\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_abstract_camera_a5facdc9b6a67be951f8adea9d7ed8756}{}\label{class_abstract_camera_a5facdc9b6a67be951f8adea9d7ed8756}
+
+
+Angle d\textquotesingle{}ouverture de la caméra. 
+
+\index{Abstract\+Camera@{Abstract\+Camera}!m\+Aspect@{m\+Aspect}}
+\index{m\+Aspect@{m\+Aspect}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{m\+Aspect}{mAspect}}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::m\+Aspect\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_abstract_camera_a84ea352c679449eeef49d92274bfc9e0}{}\label{class_abstract_camera_a84ea352c679449eeef49d92274bfc9e0}
+
+
+Aspect de la caméra. 
+
+\index{Abstract\+Camera@{Abstract\+Camera}!m\+Position@{m\+Position}}
+\index{m\+Position@{m\+Position}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{m\+Position}{mPosition}}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::m\+Position\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_abstract_camera_aacd5e7f2d881e719f254a1d6e2904b91}{}\label{class_abstract_camera_aacd5e7f2d881e719f254a1d6e2904b91}
+
+
+Position de la caméra. 
+
+\index{Abstract\+Camera@{Abstract\+Camera}!m\+Vertical@{m\+Vertical}}
+\index{m\+Vertical@{m\+Vertical}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{m\+Vertical}{mVertical}}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::m\+Vertical\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_abstract_camera_a64675d12169d6383a9371d7fd710a441}{}\label{class_abstract_camera_a64675d12169d6383a9371d7fd710a441}
+
+
+Vecteur vertical de la caméra. 
+
+\index{Abstract\+Camera@{Abstract\+Camera}!m\+Visee@{m\+Visee}}
+\index{m\+Visee@{m\+Visee}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{m\+Visee}{mVisee}}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::m\+Visee\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_abstract_camera_a5c7db642de2add50fad69539a8b220d8}{}\label{class_abstract_camera_a5c7db642de2add50fad69539a8b220d8}
+
+
+Point de visée de la caméra. 
+
+\index{Abstract\+Camera@{Abstract\+Camera}!m\+Z\+\_\+eloigne@{m\+Z\+\_\+eloigne}}
+\index{m\+Z\+\_\+eloigne@{m\+Z\+\_\+eloigne}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{m\+Z\+\_\+eloigne}{mZ_eloigne}}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::m\+Z\+\_\+eloigne\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_abstract_camera_a8e076553a55c8e2f19948bdf4ea01be1}{}\label{class_abstract_camera_a8e076553a55c8e2f19948bdf4ea01be1}
+
+
+Distance du plan éloigné 
+
+\index{Abstract\+Camera@{Abstract\+Camera}!m\+Z\+\_\+proche@{m\+Z\+\_\+proche}}
+\index{m\+Z\+\_\+proche@{m\+Z\+\_\+proche}!Abstract\+Camera@{Abstract\+Camera}}
+\subsubsection[{\texorpdfstring{m\+Z\+\_\+proche}{mZ_proche}}]{\setlength{\rightskip}{0pt plus 5cm}double Abstract\+Camera\+::m\+Z\+\_\+proche\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_abstract_camera_a408e219c2aed42b6aa4f9198c252d10a}{}\label{class_abstract_camera_a408e219c2aed42b6aa4f9198c252d10a}
+
+
+Distance du plan proche. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{abstract_camera_8hpp}{abstract\+Camera.\+hpp}\item 
+src/\hyperlink{abstract_camera_8cpp}{abstract\+Camera.\+cpp}\end{DoxyCompactItemize}

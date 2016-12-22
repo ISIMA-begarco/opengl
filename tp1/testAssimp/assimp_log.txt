@@ -1,12 +1,11 @@
-Info,  T0: Load ./dwarf.x
+Info,  T0: Load ../fichiers3DS/greek_sculpture.3ds
 Info,  T0: Found a matching importer for this file format
-Info,  T0: Import root directory is './'
+Info,  T0: Import root directory is '../fichiers3DS/'
+Info,  T0: 3DS file format version: 3
+Warn,  T0: No hierarchy information has been found in the file. 
 Info,  T0: Entering post processing pipeline
-Info,  T0: RemoveRedundantMatsProcess finished. Removed 0 redundant and 1 unused materials.
-Info,  T0: Points: 0, Lines: 0, Triangles: 2, Polygons: 0 (Meshes, X = removed)
-Warn,  T0: Simplified dummy tracks with just one key
-Skipping one or more lines with the same contents
-Info,  T0: CalcTangentsProcess finished. Tangents have been calculated
-Info,  T0: JoinVerticesProcess finished | Verts in: 5688 out: 2001 | ~64.8%
-Info,  T0: Cache relevant are 2 meshes (1896 faces). Average output ACMR is 1.150844
+Info,  T0: Points: 0, Lines: 0, Triangles: 1, Polygons: 0 (Meshes, X = removed)
+Error, T0: Failed to compute tangents; need UV data in channel0
+Info,  T0: JoinVerticesProcess finished | Verts in: 172188 out: 28688 | ~83.3%
+Info,  T0: Cache relevant are 1 meshes (57396 faces). Average output ACMR is 0.735940
 Info,  T0: Leaving post processing pipeline

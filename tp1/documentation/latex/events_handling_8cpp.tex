@@ -1,0 +1,76 @@
+\hypertarget{events_handling_8cpp}{}\section{src/events\+Handling.cpp File Reference}
+\label{events_handling_8cpp}\index{src/events\+Handling.\+cpp@{src/events\+Handling.\+cpp}}
+{\ttfamily \#include \char`\"{}gui.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for events\+Handling.\+cpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}{V\+I\+T\+E\+S\+S\+E\+K\+EY}~10
+\item 
+\#define \hyperlink{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}{V\+I\+T\+E\+S\+S\+E\+M\+OU}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}{manage\+Pressed\+Keys} (std\+::list$<$ int $>$ keys, \hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\begin{DoxyCompactList}\small\item\em Gestion d\textquotesingle{}un événement S\+DL extrait de la file. \end{DoxyCompactList}\item 
+void \hyperlink{events_handling_8cpp_a0ec9a5db4098a7dfa32386084e4eea67}{manage\+Mouse} (\hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\begin{DoxyCompactList}\small\item\em Gère le déplacement de la souris. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!V\+I\+T\+E\+S\+S\+E\+K\+EY@{V\+I\+T\+E\+S\+S\+E\+K\+EY}}
+\index{V\+I\+T\+E\+S\+S\+E\+K\+EY@{V\+I\+T\+E\+S\+S\+E\+K\+EY}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+I\+T\+E\+S\+S\+E\+K\+EY}{VITESSEKEY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+T\+E\+S\+S\+E\+K\+EY~10}\hypertarget{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}{}\label{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}
+\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!V\+I\+T\+E\+S\+S\+E\+M\+OU@{V\+I\+T\+E\+S\+S\+E\+M\+OU}}
+\index{V\+I\+T\+E\+S\+S\+E\+M\+OU@{V\+I\+T\+E\+S\+S\+E\+M\+OU}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+I\+T\+E\+S\+S\+E\+M\+OU}{VITESSEMOU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+T\+E\+S\+S\+E\+M\+OU~100}\hypertarget{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}{}\label{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}
+
+
+\subsection{Function Documentation}
+\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!manage\+Mouse@{manage\+Mouse}}
+\index{manage\+Mouse@{manage\+Mouse}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{\texorpdfstring{manage\+Mouse(\+Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{manageMouse(DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}void manage\+Mouse (
+\begin{DoxyParamCaption}
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)}\hypertarget{events_handling_8cpp_a0ec9a5db4098a7dfa32386084e4eea67}{}\label{events_handling_8cpp_a0ec9a5db4098a7dfa32386084e4eea67}
+
+
+Gère le déplacement de la souris. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & display manager \\
+\hline
+\end{DoxyParams}
+\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!manage\+Pressed\+Keys@{manage\+Pressed\+Keys}}
+\index{manage\+Pressed\+Keys@{manage\+Pressed\+Keys}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{\texorpdfstring{manage\+Pressed\+Keys(std\+::list$<$ int $>$ keys, Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{managePressedKeys(std::list< int > keys, DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}bool manage\+Pressed\+Keys (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ int $>$}]{keys, }
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)}\hypertarget{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}{}\label{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}
+
+
+Gestion d\textquotesingle{}un événement S\+DL extrait de la file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+evenement} & données de l\textquotesingle{}événement \\
+\hline
+{\em window} & Fenêtre S\+DL (pour gérer les S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+NT) \\
+\hline
+{\em p\+\_\+\+Params\+Affichage} & instance de la classe Vue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}événement est S\+D\+L\+\_\+\+Q\+U\+IT (fermeture de la fenêtre) 
+\end{DoxyReturn}

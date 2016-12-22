@@ -1,0 +1,66 @@
+\hypertarget{scene_8hpp}{}\section{src/scene.hpp File Reference}
+\label{scene_8hpp}\index{src/scene.\+hpp@{src/scene.\+hpp}}
+
+
+\hyperlink{class_scene}{Scene} chargee par fichier.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$assimp/cimport.\+h$>$}\\*
+{\ttfamily \#include $<$assimp/scene.\+h$>$}\\*
+{\ttfamily \#include $<$assimp/postprocess.\+h$>$}\\*
+{\ttfamily \#include $<$G\+L/glut.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}abstract\+Scene.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vecteur3\+D.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}noeud.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}maillage.\+hpp\char`\"{}}\\*
+Include dependency graph for scene.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_scene}{Scene}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{scene_8hpp_ae19f66e94255e323687e3dcdd5362125}{aisgl\+\_\+min}(x,  y)~(x$<$y?x\+:y)
+\item 
+\#define \hyperlink{scene_8hpp_a5d7d752ed7ce95f82f595ac2e5e300aa}{aisgl\+\_\+max}(x,  y)~(y$>$x?y\+:x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_scene}{Scene} chargee par fichier. 
+
+\begin{DoxyAuthor}{Author}
+Pierre Chevalier et Benoît Garçon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Octobre 2016 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{scene.\+hpp@{scene.\+hpp}!aisgl\+\_\+max@{aisgl\+\_\+max}}
+\index{aisgl\+\_\+max@{aisgl\+\_\+max}!scene.\+hpp@{scene.\+hpp}}
+\subsubsection[{\texorpdfstring{aisgl\+\_\+max}{aisgl_max}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aisgl\+\_\+max(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~(y$>$x?y\+:x)}\hypertarget{scene_8hpp_a5d7d752ed7ce95f82f595ac2e5e300aa}{}\label{scene_8hpp_a5d7d752ed7ce95f82f595ac2e5e300aa}
+\index{scene.\+hpp@{scene.\+hpp}!aisgl\+\_\+min@{aisgl\+\_\+min}}
+\index{aisgl\+\_\+min@{aisgl\+\_\+min}!scene.\+hpp@{scene.\+hpp}}
+\subsubsection[{\texorpdfstring{aisgl\+\_\+min}{aisgl_min}}]{\setlength{\rightskip}{0pt plus 5cm}\#define aisgl\+\_\+min(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~(x$<$y?x\+:y)}\hypertarget{scene_8hpp_ae19f66e94255e323687e3dcdd5362125}{}\label{scene_8hpp_ae19f66e94255e323687e3dcdd5362125}
