@@ -18,11 +18,11 @@ struct LightSourceData{
     /** Classe représentant une source lumineuse */
   struct PointLightSource{
     int mLightId; /// ATTENTION NE FONCTIONNE QU'AVEC GL_LIGHT0, GL_LIGHT1, etc.
-    float mIntensity;
+    float mIntensity; /// Intensité de la source de lumiere
 
-    float mLightPosition[4] = {0.0f,0.0f,10.0f,0.0f};
-    float mDiffuseIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité diffuse
-    float mSpecularIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité spéculaire
+    float mLightPosition[4] = {0.0f,0.0f,10.0f,0.0f};	/// Position de la source de lumiere
+    float mDiffuseIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité diffuse de la source de lumiere
+    float mSpecularIntensity[4] = {0.6f,0.6f,0.6f,1.0f}; // Intensité spéculaire de la source de lumiere
 
     PointLightSource(){}
 
@@ -62,7 +62,10 @@ struct LightSourceData{
     void Disable() const {
         RenderingModel::DisablePointLight(mLightId);
     }
-
+    
+	/** Setter d'intensite de la source
+	* @param float newIntensity nouvelle valeur de l'intensite
+	*/
     void setIntensity(float newIntensity){
       if(newIntensity>=0 && newIntensity<1.0){
         mIntensity=newIntensity;
@@ -74,7 +77,12 @@ struct LightSourceData{
         mSpecularIntensity[2] = newIntensity;
       }
     }
-
+    
+	/** Setter de la position de la source
+	* @param float lightPositionX nouvelle valeur de la position X
+	* @param float lightPositionY nouvelle valeur de la position Y
+	* @param float lightPositionZ nouvelle valeur de la position Z
+	*/
     void setPosition(float lightPositionX, float lightPositionY, float lightPositionZ){
       mLightPosition[0] = lightPositionX;
       mLightPosition[1] = lightPositionY;
@@ -83,9 +91,9 @@ struct LightSourceData{
   };
 
 
-  std::vector<PointLightSource> mSourcesRepereCamera;
-  std::vector<PointLightSource> mSourcesRepereMonde;
-  float mIntensity;
+  std::vector<PointLightSource> mSourcesRepereCamera;	/// vecteurs des sources lumineuses liees a la camera
+  std::vector<PointLightSource> mSourcesRepereMonde;	// /vecteurs des sources lumineuses liees au monde
+  float mIntensity;	/// Intensite commune
 
   /** Constructeur par défaut (ne crée aucune source lumineuse) */
   LightSourceData()
@@ -160,7 +168,8 @@ struct LightSourceData{
    return false;
   }
 
-  /** Positionner les sources qui se trouvent dans un certain repère */
+  /** Positionner les sources qui se trouvent dans un certain repère 
+  @param AbstractCamera::TypeRepere typeRepere permet de ne faire l'application que sur un type de source */
   void ApplyLightPositions(AbstractCamera::TypeRepere typeRepere){
     auto sources = GetSourcesByRepere(typeRepere);
     for (auto it = sources.cbegin() ; it != sources.cend() ; ++it){
@@ -168,7 +177,8 @@ struct LightSourceData{
     }
   }
 
-  /** Applique les intensités de toutes les sources de la scène */
+  /** Applique les intensités de toutes les sources de la scène 
+  * @param float intensity nouvelle valeur de l'intensite*/
   void SetIntensities(float intensity){
     if(intensity>=0 && intensity<1.0){
       mIntensity = intensity;
@@ -183,6 +193,10 @@ struct LightSourceData{
     }
   }
 
+  /** Renvoie la source en fonction de son id 
+  * @param int lightId id de la source recherchee
+  * @return PointLightSource* Renvoie la source demandee
+  */
   PointLightSource* getById(int lightId){
     PointLightSource* point=NULL;
     auto& sourcesCamera = mSourcesRepereCamera;
@@ -200,11 +214,17 @@ struct LightSourceData{
     return point;
   }
 
-  void SetPosition(int lightId, float lightPositionX, float lightPositionY, float lightPositionZ){
-    PointLightSource* point = getById(lightId);
-    point->setPosition(lightPositionX,lightPositionY,lightPositionZ);
-    point->ApplyPosition();
-  }
+	/** Setter de la position d'une source en fct de son id
+	* @param int lightId id de la lumiere
+	* @param float lightPositionX nouvelle valeur de la position X
+	* @param float lightPositionY nouvelle valeur de la position Y
+	* @param float lightPositionZ nouvelle valeur de la position Z
+	*/
+	void SetPosition(int lightId, float lightPositionX, float lightPositionY, float lightPositionZ){
+		PointLightSource* point = getById(lightId);
+		point->setPosition(lightPositionX,lightPositionY,lightPositionZ);
+		point->ApplyPosition();
+	}
 
   /** Applique les intensités de toutes les sources de la scène */
   void ApplyLightIntensities(){

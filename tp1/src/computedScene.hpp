@@ -25,12 +25,15 @@
 */
 class Teapot : public AbstractScene {
 	private:
-		int mSize;
+		int mSize;	/// Taille de l'objet calcule
 
 	public:
 		Teapot(int size): AbstractScene(), mSize(size){}
 		~Teapot() {}
 
+		/**
+		 * @brief methode virtuelle dessinant l'objet
+		 */
 		virtual void render();
 };
 
@@ -87,13 +90,14 @@ class Voiture : public AbstractScene {
 /**
 *	Scene renvoyant un cylindre anime par transformation,
 *  calculee par OpenGL
+* 	Applique une texture bitmap sur ce cylindre
 */
 class Cylindre : public AbstractScene {
 	private:
-		double mRayon;
-		double mHauteur;
-		int mNbMeridien;
-		std::vector<Vecteur3D> mSommets;
+		double mRayon;	/// rayon du cylindre
+		double mHauteur;	/// hauteur du cylindre
+		int mNbMeridien;	/// nb de meridiens du cylindre
+		std::vector<Vecteur3D> mSommets;	/// vecteur de sommets du cylindre
 
 	public:
 		Cylindre(double pRayon, double pHauteur, int pNbMeridien, const  char* = "../jp.bmp");

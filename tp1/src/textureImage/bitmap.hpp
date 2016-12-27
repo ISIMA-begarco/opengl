@@ -1,11 +1,10 @@
-/******************************************************************************\
-*     Copyright (C) 2016 by Rémy Malgouyres                                    *
-*     http://malgouyres.org                                                    *
-*     File: bitmap.hpp                                                         *
-*                                                                              *
-* The program is distributed under the terms of the GNU General Public License *
-*                                                                              *
-\******************************************************************************/
+/**
+ * @file lookAtCamera.hpp
+ * @brief Classe de caméra utilisant gluLookAt
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
 
 #ifndef HEADER_BITMAP_HPP
 #define HEADER_BITMAP_HPP
@@ -15,12 +14,12 @@
  * dans le but d'en faire une texture. */
 class PixelsBuffer{
 
-  int mWidth; // largeur (pixels)
-  int mHeight; // hauteur (pixels)
-  int mBytesPerPixel; // Nombre d'octets par pixel
-  int mScanLineWidth; // Largeur d'une scanline doit être multiple de 4
+  int mWidth; /// largeur (pixels)
+  int mHeight; /// hauteur (pixels)
+  int mBytesPerPixel; /// Nombre d'octets par pixel
+  int mScanLineWidth; /// Largeur d'une scanline doit être multiple de 4
 		      // = width*bytesPerPixel + ((4-(width*bytesPerPixel)%4)%4);
-  std::vector<unsigned char> mPixels; // couleurs des pixels dans un tableau contigu.
+  std::vector<unsigned char> mPixels; /// couleurs des pixels dans un tableau contigu.
 
   /** Constructeur par défaut */
   PixelsBuffer()

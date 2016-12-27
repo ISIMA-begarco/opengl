@@ -26,19 +26,19 @@
  */
 class DisplayManager{
 	public:
-		double mRevolutionLight;
-		double mMovingLightX;
-		double mMovingLightY;
-		double mMovingLightZ;
-		double mMovingLightIntensity;
+		double mRevolutionLight;	/// Valeur de la lumiere en revolution autour du point
+		double mMovingLightX;		/// coordonnee x de la lumiere en mouvement
+		double mMovingLightY;		/// coordonnee y de la lumiere en mouvement
+		double mMovingLightZ;		/// coordonnee z de la lumiere en mouvement
+		double mMovingLightIntensity;	/// Intensite de la lumiere en mouvement
 
-		GLint mLargeurFenetre; // Largeur de la vue
-		GLint mHauteurFenetre; // Hauteur de la vue
+		GLint mLargeurFenetre; /// Largeur de la vue
+		GLint mHauteurFenetre; /// Hauteur de la vue
 
 		// Modèle de données à afficher
-		Modele mModele;
-		TransfoCamera mCamera;
-		LightSourceData mLight;
+		Modele mModele;	/// Modele a afficher
+		TransfoCamera mCamera;	/// Camera utilisee
+		LightSourceData mLight;	/// Sources de lumiere de la scene
 
 		/** @brief  Constructeur prenant la géométrie de la fenêtre
 		  * Initialise les données nécessaires à l'affichage.*/

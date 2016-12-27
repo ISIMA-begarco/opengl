@@ -22,7 +22,7 @@
  */
 class Modele{
 	public:
-		// Niveau de gris du fond
+		/// Niveau de gris du fond
 		float mNiveauGris;
 		/// Liste des scènes du modèle
 		std::vector<AbstractScene *> mSceneList;
