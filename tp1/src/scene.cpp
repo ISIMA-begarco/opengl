@@ -1,22 +1,25 @@
 #include "scene.hpp"
 
-Scene::Scene(const std::string path):
+Scene::Scene(const std::string path, const std::string texture, bool reshape):
+mReshape(reshape),
 mSceneMin(new aiVector3D()),
 mSceneMax(new aiVector3D()),
-mCenter(new aiVector3D())
+mCenter(new aiVector3D()),
+mPathTexture(texture)
 {
 	/* we are taking one of the postprocessing presets to avoid
 	   spelling out 20+ single postprocessing flags here. */
-	this->mScene = aiImportFileEx(path.c_str(),aiProcess_GenNormals|aiProcess_GenSmoothNormals, NULL);
-
+	this->mScene = aiImportFileEx(path.c_str(), aiProcess_Triangulate | /*aiProcess_FlipUVs |*/ aiProcess_JoinIdenticalVertices | aiProcessPreset_TargetRealtime_MaxQuality | aiProcess_GenSmoothNormals, NULL);
 
 	if (this->mScene) {
 		this->getBoundindBox();
 		this->mCenter->x = (this->mSceneMin->x + this->mSceneMax->x) / 2.0f;
 		this->mCenter->y = (this->mSceneMin->y + this->mSceneMax->y) / 2.0f;
 		this->mCenter->z = (this->mSceneMin->z + this->mSceneMax->z) / 2.0f;
+		
+	}else{
+		printf("Error parsing '%s'\n", path.c_str());
 	}
-
 }
 
 Scene::~Scene(){
@@ -69,12 +72,28 @@ void Scene::getBoundindBoxForNode (
 }
 
 void Scene::render (){
+	if(mReshape){
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		this->center();
+	}
 	this->render(this->getRacine());
 }
 
 
 void Scene::render (Noeud noeud){
 	this->recursiveRender(noeud.mNoeud);
+}
+
+void Scene::center(){
+	/* scale the whole asset to fit into our view frustum */
+	float tmp = mSceneMax->x-mSceneMin->x;
+	tmp = aisgl_max(mSceneMax->y - mSceneMin->y,tmp);
+	tmp = aisgl_max(mSceneMax->z - mSceneMin->z,tmp);
+	tmp = 1.f / tmp;
+	glScalef(tmp, tmp, tmp);
+	
+	/* center the model */
+	glTranslatef( -mCenter->x, -mCenter->y, -mCenter->z );
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -158,6 +177,7 @@ void Scene::apply_material(const aiMaterial *mtl)
 		glDisable(GL_CULL_FACE);
 	else
 		glEnable(GL_CULL_FACE);
+		
 }
 
 void Scene::recursiveRender (const aiNode* nd)

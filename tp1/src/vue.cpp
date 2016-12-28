@@ -20,11 +20,16 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
     mLargeurFenetre(largeurFenetre),
     mHauteurFenetre(hauteurFenetre),
     mModele(), // Construction du modèle
-    mCamera(-7, -30, -110,
+    /*mCamera(-7, -30, -110,
     			0,0,0,
     			0,1,0,
     			1,5000, 50,
-          0.0, 0.0),
+          0.0, 0.0),*/
+	mCamera(0, 0, -3,
+		0,0,5,
+		0,1,0,
+		1,5000, 50,
+	0.0, 0.0),
     mLight()
 {
     FramesData::Init();
@@ -54,11 +59,12 @@ DisplayManager::DisplayManager(GLint largeurFenetre,GLint hauteurFenetre)
 
     RenderingModel::ApplyMaterial (mModele.mMaterialAllScenes);
 
- //   this->mModele.addScene("../testAssimp/dwarf.x");
+ //  this->mModele.addScene("../testAssimp/dwarf.x");
 //    this->mModele.addSystemeSolaire(10);
 //    this->mModele.addCylindre(30,40,600);
 //    this->mModele.addScene("../testAssimp/dwarf.x");
-      this->mModele.addScene("../fichiers3DS/greek_sculpture.3ds");
+//      this->mModele.addScene("../fichiers3DS/main.3ds");
+      this->mModele.addScene("../fichiers3DS/Infinite_Scan_Ver0.1/Infinite-Level_02.OBJ");
 //	   this->mModele.addTeapot(7);
 //    this->mModele.addVoiture(1.0);
 }
@@ -69,12 +75,13 @@ void DisplayManager::Affichage(){
     if (FramesData::Update()){
       fprintf(stderr, "%s\n", FramesData::getDescriptionFPS());
     }
-
+    
 	// On efface le buffer vidéo (fenêtre graphique)
     glClearColor(0, 0, 0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     RenderingModel::InitView();
     GeometricTransform::ClearModelView();
+    
     mCamera.ChangerRepereCamera();
     mLight.ApplyLightPositions(AbstractCamera::TypeRepere::MONDE);
 

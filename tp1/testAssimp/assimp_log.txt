@@ -1,4 +1,4 @@
-Info,  T0: Load ../fichiers3DS/greek_sculpture.3ds
+Info,  T0: Load ../fichiers3DS/main.3ds
 Info,  T0: Found a matching importer for this file format
 Info,  T0: Import root directory is '../fichiers3DS/'
 Info,  T0: 3DS file format version: 3
@@ -6,6 +6,6 @@ Warn,  T0: No hierarchy information has been found in the file.
 Info,  T0: Entering post processing pipeline
 Info,  T0: Points: 0, Lines: 0, Triangles: 1, Polygons: 0 (Meshes, X = removed)
 Error, T0: Failed to compute tangents; need UV data in channel0
-Info,  T0: JoinVerticesProcess finished | Verts in: 172188 out: 28688 | ~83.3%
-Info,  T0: Cache relevant are 1 meshes (57396 faces). Average output ACMR is 0.735940
+Info,  T0: JoinVerticesProcess finished | Verts in: 57603 out: 9954 | ~82.7%
+Info,  T0: Cache relevant are 1 meshes (19201 faces). Average output ACMR is 0.754961
 Info,  T0: Leaving post processing pipeline

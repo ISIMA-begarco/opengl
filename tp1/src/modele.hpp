@@ -65,9 +65,18 @@ class Modele{
 		void addCylindre(double pRayon, double pHauteur, int pNbMeridien);
 		/** @brief Ajout d'une scène chargée
 		  * @param Chemin vers le fichier
+		  * @param Redimension du modele
 		  * @return void
 		  */
-		void addScene(std::string path);
+		void addScene(std::string path, bool reshape=false);
+		
+		/** @brief Ajout d'une scène chargée
+		  * @param Chemin vers le fichier
+  		  * @param Chemin vers la texture
+		  * @param Redimension du modele
+		  * @return void
+		  */
+		void addSceneWithTexture(std::string path, std::string texture, bool reshape=false);
 
 		/** @brief Effectue le rendu d'une scène
 		  * @param Numéro de la scène à rendre

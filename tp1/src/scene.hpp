@@ -32,11 +32,13 @@
 class Scene : public AbstractScene {
 
 	private:
-
+		const bool mReshape;
 		const aiScene* mScene;	/// Pointeur vers la scene opengl
 		aiVector3D* mSceneMin;	/// Pointeur vers la position (opengl) min de la scene
 		aiVector3D* mSceneMax; 	/// Pointeur vers la position (opengl) max de la scene
 		aiVector3D* mCenter;		/// Pointeur vers la position (opengl) centre de la scene
+		
+		const std::string mPathTexture;
 
 
 		/**
@@ -65,11 +67,13 @@ class Scene : public AbstractScene {
 
 	public:
 
-		Scene(const std::string path);
+		Scene(const std::string path, const std::string texture, bool reshape = false);
 		virtual ~Scene();
 
 		void render ();
 		void render (Noeud noeud);
+		
+		void center();
 
 		/**
 		 * @brief Recupere le noeud mere de la scene

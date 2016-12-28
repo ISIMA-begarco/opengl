@@ -38,8 +38,12 @@ void Modele::addCylindre(double pRayon, double pHauteur, int pNbMeridien){
 	this->mSceneList.push_back(new Cylindre(pRayon, pHauteur, pNbMeridien));
 }
 
-void Modele::addScene(std::string path){
-	this->mSceneList.push_back(new Scene(path));
+void Modele::addScene(std::string path, bool reshape){
+	this->mSceneList.push_back(new Scene(path,"",reshape) );
+}
+
+void Modele::addSceneWithTexture(std::string path, std::string texture, bool reshape){
+	this->mSceneList.push_back(new Scene(path,texture,reshape) );
 }
 
 void Modele::render(int i){
