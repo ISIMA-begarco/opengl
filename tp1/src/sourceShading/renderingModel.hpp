@@ -45,7 +45,7 @@ struct RenderingModel{
 		glEnable (GL_LIGHTING) ; // Active l’éclairage
 		glLightModelf (GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE) ; // modèle local
 		glShadeModel (GL_SMOOTH) ; // lissage de phong
-		
+
 		// Intensité de la lumière ambiante
 		GLfloat ambientIntensityScene[] = {0.2f , 0.2f , 0.2f , 1.0f } ;
 		glLightModelfv (GL_LIGHT_MODEL_AMBIENT, ambientIntensityScene ) ;
@@ -56,7 +56,7 @@ struct RenderingModel{
 		glClear (GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT) ;
 	}
 
-	/** Positionner la source dans le repère courant 
+	/** Positionner la source dans le repère courant
 	* @param GLint lightId id de la source lumineuse a activer
 	* @param GLfloat[] position nouvelle position
 	*/
@@ -64,29 +64,29 @@ struct RenderingModel{
 		glLightfv( lightId , GL_POSITION, position ) ;
 	}
 
-	/** Applique l’intensité d'une source lumineuse donnée par son ID et active la source 
+	/** Applique l’intensité d'une source lumineuse donnée par son ID et active la source
 	* @param GLint lightId id de la source lumineuse a activer
 	* @param GLfloat[] diffuseIntensity valeur diffuse
 	* @param GLfloat[] specularIntensity valeur speculaire
 	*/
-	static void ApplyPointLightIntensity ( 
+	static void ApplyPointLightIntensity (
 		GLint lightId,
 		const GLfloat diffuseIntensity[4] ,
 		const GLfloat specularIntensity[4] ) {
-		
+
 		glLightfv( lightId , GL_DIFFUSE, diffuseIntensity ) ;
 		glLightfv( lightId  , GL_SPECULAR, specularIntensity ) ;
 		glEnable ( lightId  ) ;
 	}
 
-	/** Désactive une source lumineuse donnée par son ID 
+	/** Désactive une source lumineuse donnée par son ID
 	* @param id de la lumiere a desactiver
 	*/
 	static void DisablePointLight ( GLint lightId ) {
 		glDisable ( lightId ) ;
 	}
 
-	/** Applique des propriétés de matériaux pour les rendus qui vont suivre 
+	/** Applique des propriétés de matériaux pour les rendus qui vont suivre
 	* @param Material materiau a appliquer
 	*/
 	static void ApplyMaterial ( Material material ) {

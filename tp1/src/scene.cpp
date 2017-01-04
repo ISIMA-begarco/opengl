@@ -1,3 +1,11 @@
+/**
+ * @file scene.cpp
+ * @brief Scene chargee par fichier
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
 #include "scene.hpp"
 
 Scene::Scene(const std::string path, const std::string texture, bool reshape):
@@ -16,7 +24,7 @@ mPathTexture(texture)
 		this->mCenter->x = (this->mSceneMin->x + this->mSceneMax->x) / 2.0f;
 		this->mCenter->y = (this->mSceneMin->y + this->mSceneMax->y) / 2.0f;
 		this->mCenter->z = (this->mSceneMin->z + this->mSceneMax->z) / 2.0f;
-		
+
 	}else{
 		printf("Error parsing '%s'\n", path.c_str());
 	}
@@ -91,7 +99,7 @@ void Scene::center(){
 	tmp = aisgl_max(mSceneMax->z - mSceneMin->z,tmp);
 	tmp = 1.f / tmp;
 	glScalef(tmp, tmp, tmp);
-	
+
 	/* center the model */
 	glTranslatef( -mCenter->x, -mCenter->y, -mCenter->z );
 }
@@ -177,7 +185,7 @@ void Scene::apply_material(const aiMaterial *mtl)
 		glDisable(GL_CULL_FACE);
 	else
 		glEnable(GL_CULL_FACE);
-		
+
 }
 
 void Scene::recursiveRender (const aiNode* nd)

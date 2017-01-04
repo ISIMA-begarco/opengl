@@ -1,4 +1,12 @@
-#include "computedScene.hpp"
+/**
+ * @file abstractScene.cpp
+ * @brief Classe abstraite de scene
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
+ #include "computedScene.hpp"
 
 void Teapot::render(){
  	glutSolidTeapot(this->mSize);

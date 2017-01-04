@@ -18,10 +18,10 @@ class AbstractScene {
 	protected:
 		TextureManager mTexture;
 
-				AbstractScene():
-				mTexture("../jp.bmp") {}
-				AbstractScene(const char * path):
-				mTexture(path) {}
+		AbstractScene():
+			mTexture("../jp.bmp") {}
+			AbstractScene(const char * path):
+			mTexture(path) {}
 	public:
 
 		virtual ~AbstractScene() {}

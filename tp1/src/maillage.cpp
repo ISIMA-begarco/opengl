@@ -1,4 +1,12 @@
-#include "maillage.hpp"
+/**
+ * @file maillage.cpp
+ * @brief Classe de maillage
+ * @author Pierre Chevalier et Benoît Garçon
+ * @version 1.0
+ * @date Octobre 2016
+ */
+
+ #include "maillage.hpp"
 
 Maillage::Maillage():
 mMaillage(new aiMesh())
