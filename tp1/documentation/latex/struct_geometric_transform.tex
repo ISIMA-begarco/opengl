@@ -1,5 +1,6 @@
-\hypertarget{struct_geometric_transform}{}\section{Geometric\+Transform Struct Reference}
+\hypertarget{struct_geometric_transform}{\section{Geometric\+Transform Struct Reference}
 \label{struct_geometric_transform}\index{Geometric\+Transform@{Geometric\+Transform}}
+}
 
 
 {\ttfamily \#include $<$transform.\+hpp$>$}
@@ -7,9 +8,9 @@
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{struct_geometric_transform_a568c9eddb625b6d6a8e513efed1f08f5}{Viewport} (int32\+\_\+t view\+CenterX, int32\+\_\+t view\+CenterY, uint32\+\_\+t view\+Width, uint32\+\_\+t view\+Height)
+static void \hyperlink{struct_geometric_transform_a568c9eddb625b6d6a8e513efed1f08f5}{Viewport} (int32\+\_\+t view\+Center\+X, int32\+\_\+t view\+Center\+Y, uint32\+\_\+t view\+Width, uint32\+\_\+t view\+Height)
 \item 
-static void \hyperlink{struct_geometric_transform_a33174eb94f0ff24be29b8704c8ee99fd}{Apply\+Perspective\+Projection} (double angle\+OuvertureY, double aspect, double z\+Proche, double z\+Eloigne)
+static void \hyperlink{struct_geometric_transform_a33174eb94f0ff24be29b8704c8ee99fd}{Apply\+Perspective\+Projection} (double angle\+Ouverture\+Y, double aspect, double z\+Proche, double z\+Eloigne)
 \item 
 static void \hyperlink{struct_geometric_transform_a1a64fda32bc67f6e414a08b55a904ad6}{Clear\+Model\+View} ()
 \item 
@@ -17,89 +18,89 @@ static void \hyperlink{struct_geometric_transform_aa67fe82887937c72ee486521a3828
 \item 
 static void \hyperlink{struct_geometric_transform_a11df6454b17b6ed7a9327cfd837cef0d}{Look\+At} (double position\mbox{[}3\mbox{]}, double point\+De\+Visee\mbox{[}3\mbox{]}, double vecteur\+Vertical\mbox{[}3\mbox{]})
 \item 
-static void \hyperlink{struct_geometric_transform_aa1ce970125c307eae8e67732abfc2223}{Translate} (double vecX, double vecY, double vecZ)
+static void \hyperlink{struct_geometric_transform_aa1ce970125c307eae8e67732abfc2223}{Translate} (double vec\+X, double vec\+Y, double vec\+Z)
 \item 
-static void \hyperlink{struct_geometric_transform_a6d5739ab72a5de90da8992dfb9d73cf2}{Rotate} (double vecX, double vecY, double vecZ, double angle)
+static void \hyperlink{struct_geometric_transform_a6d5739ab72a5de90da8992dfb9d73cf2}{Rotate} (double vec\+X, double vec\+Y, double vec\+Z, double angle)
 \item 
-static void \hyperlink{struct_geometric_transform_a86dfbf0890a23aa7983b64cbd9fe6fd5}{Scale} (double factorX, double factorY, double factorZ)
+static void \hyperlink{struct_geometric_transform_a86dfbf0890a23aa7983b64cbd9fe6fd5}{Scale} (double factor\+X, double factor\+Y, double factor\+Z)
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-G\+E\+S\+T\+I\+ON D\+ES T\+R\+A\+N\+S\+F\+O\+R\+M\+A\+T\+I\+O\+NS G\+E\+O\+M\+E\+T\+R\+I\+Q\+UE (W\+R\+A\+P\+P\+ER) 
+G\+E\+S\+T\+I\+O\+N D\+E\+S T\+R\+A\+N\+S\+F\+O\+R\+M\+A\+T\+I\+O\+N\+S G\+E\+O\+M\+E\+T\+R\+I\+Q\+U\+E (W\+R\+A\+P\+P\+E\+R) 
 
 \subsection{Member Function Documentation}
-\index{Geometric\+Transform@{Geometric\+Transform}!Apply\+Perspective\+Projection@{Apply\+Perspective\+Projection}}
+\hypertarget{struct_geometric_transform_a33174eb94f0ff24be29b8704c8ee99fd}{\index{Geometric\+Transform@{Geometric\+Transform}!Apply\+Perspective\+Projection@{Apply\+Perspective\+Projection}}
 \index{Apply\+Perspective\+Projection@{Apply\+Perspective\+Projection}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Apply\+Perspective\+Projection(double angle\+Ouverture\+Y, double aspect, double z\+Proche, double z\+Eloigne)}{ApplyPerspectiveProjection(double angleOuvertureY, double aspect, double zProche, double zEloigne)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Apply\+Perspective\+Projection (
+\subsubsection[{Apply\+Perspective\+Projection}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Apply\+Perspective\+Projection (
 \begin{DoxyParamCaption}
-\item[{double}]{angle\+OuvertureY, }
+\item[{double}]{angle\+Ouverture\+Y, }
 \item[{double}]{aspect, }
 \item[{double}]{z\+Proche, }
 \item[{double}]{z\+Eloigne}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_a33174eb94f0ff24be29b8704c8ee99fd}{}\label{struct_geometric_transform_a33174eb94f0ff24be29b8704c8ee99fd}
-Applique la nouvelle projection en perspectives sur les primitives graphiques Seuls les objets affichés ultérieurement sont affectés \index{Geometric\+Transform@{Geometric\+Transform}!Clear\+Model\+View@{Clear\+Model\+View}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_a33174eb94f0ff24be29b8704c8ee99fd}
+Applique la nouvelle projection en perspectives sur les primitives graphiques Seuls les objets affichés ultérieurement sont affectés \hypertarget{struct_geometric_transform_a1a64fda32bc67f6e414a08b55a904ad6}{\index{Geometric\+Transform@{Geometric\+Transform}!Clear\+Model\+View@{Clear\+Model\+View}}
 \index{Clear\+Model\+View@{Clear\+Model\+View}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Clear\+Model\+View()}{ClearModelView()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Clear\+Model\+View (
+\subsubsection[{Clear\+Model\+View}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Clear\+Model\+View (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_a1a64fda32bc67f6e414a08b55a904ad6}{}\label{struct_geometric_transform_a1a64fda32bc67f6e414a08b55a904ad6}
-Réinitialise la transformation Model\+View à l\textquotesingle{}identité \index{Geometric\+Transform@{Geometric\+Transform}!Clear\+Projection@{Clear\+Projection}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_a1a64fda32bc67f6e414a08b55a904ad6}
+Réinitialise la transformation Model\+View à l'identité \hypertarget{struct_geometric_transform_aa67fe82887937c72ee486521a3828c51}{\index{Geometric\+Transform@{Geometric\+Transform}!Clear\+Projection@{Clear\+Projection}}
 \index{Clear\+Projection@{Clear\+Projection}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Clear\+Projection()}{ClearProjection()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Clear\+Projection (
+\subsubsection[{Clear\+Projection}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Clear\+Projection (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_aa67fe82887937c72ee486521a3828c51}{}\label{struct_geometric_transform_aa67fe82887937c72ee486521a3828c51}
-Réinitialise la transformation Projection à l\textquotesingle{}identité \index{Geometric\+Transform@{Geometric\+Transform}!Look\+At@{Look\+At}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_aa67fe82887937c72ee486521a3828c51}
+Réinitialise la transformation Projection à l'identité \hypertarget{struct_geometric_transform_a11df6454b17b6ed7a9327cfd837cef0d}{\index{Geometric\+Transform@{Geometric\+Transform}!Look\+At@{Look\+At}}
 \index{Look\+At@{Look\+At}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Look\+At(double position[3], double point\+De\+Visee[3], double vecteur\+Vertical[3])}{LookAt(double position[3], double pointDeVisee[3], double vecteurVertical[3])}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Look\+At (
+\subsubsection[{Look\+At}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Look\+At (
 \begin{DoxyParamCaption}
 \item[{double}]{position\mbox{[}3\mbox{]}, }
 \item[{double}]{point\+De\+Visee\mbox{[}3\mbox{]}, }
 \item[{double}]{vecteur\+Vertical\mbox{[}3\mbox{]}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_a11df6454b17b6ed7a9327cfd837cef0d}{}\label{struct_geometric_transform_a11df6454b17b6ed7a9327cfd837cef0d}
-Redéfinit la position et l\textquotesingle{}orientation de la caméra \index{Geometric\+Transform@{Geometric\+Transform}!Rotate@{Rotate}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_a11df6454b17b6ed7a9327cfd837cef0d}
+Redéfinit la position et l'orientation de la caméra \hypertarget{struct_geometric_transform_a6d5739ab72a5de90da8992dfb9d73cf2}{\index{Geometric\+Transform@{Geometric\+Transform}!Rotate@{Rotate}}
 \index{Rotate@{Rotate}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Rotate(double vec\+X, double vec\+Y, double vec\+Z, double angle)}{Rotate(double vecX, double vecY, double vecZ, double angle)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Rotate (
+\subsubsection[{Rotate}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Rotate (
 \begin{DoxyParamCaption}
-\item[{double}]{vecX, }
-\item[{double}]{vecY, }
-\item[{double}]{vecZ, }
+\item[{double}]{vec\+X, }
+\item[{double}]{vec\+Y, }
+\item[{double}]{vec\+Z, }
 \item[{double}]{angle}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_a6d5739ab72a5de90da8992dfb9d73cf2}{}\label{struct_geometric_transform_a6d5739ab72a5de90da8992dfb9d73cf2}
-Applique une rotation autour de l\textquotesingle{}axe passant par O dirigé par un vecteur \index{Geometric\+Transform@{Geometric\+Transform}!Scale@{Scale}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_a6d5739ab72a5de90da8992dfb9d73cf2}
+Applique une rotation autour de l'axe passant par O dirigé par un vecteur \hypertarget{struct_geometric_transform_a86dfbf0890a23aa7983b64cbd9fe6fd5}{\index{Geometric\+Transform@{Geometric\+Transform}!Scale@{Scale}}
 \index{Scale@{Scale}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Scale(double factor\+X, double factor\+Y, double factor\+Z)}{Scale(double factorX, double factorY, double factorZ)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Scale (
+\subsubsection[{Scale}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Scale (
 \begin{DoxyParamCaption}
-\item[{double}]{factorX, }
-\item[{double}]{factorY, }
-\item[{double}]{factorZ}
+\item[{double}]{factor\+X, }
+\item[{double}]{factor\+Y, }
+\item[{double}]{factor\+Z}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_a86dfbf0890a23aa7983b64cbd9fe6fd5}{}\label{struct_geometric_transform_a86dfbf0890a23aa7983b64cbd9fe6fd5}
-Applique un changement d\textquotesingle{}échelle (affinités orthogonales) sur chaque axe \index{Geometric\+Transform@{Geometric\+Transform}!Translate@{Translate}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_a86dfbf0890a23aa7983b64cbd9fe6fd5}
+Applique un changement d'échelle (affinités orthogonales) sur chaque axe \hypertarget{struct_geometric_transform_aa1ce970125c307eae8e67732abfc2223}{\index{Geometric\+Transform@{Geometric\+Transform}!Translate@{Translate}}
 \index{Translate@{Translate}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Translate(double vec\+X, double vec\+Y, double vec\+Z)}{Translate(double vecX, double vecY, double vecZ)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Translate (
+\subsubsection[{Translate}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Translate (
 \begin{DoxyParamCaption}
-\item[{double}]{vecX, }
-\item[{double}]{vecY, }
-\item[{double}]{vecZ}
+\item[{double}]{vec\+X, }
+\item[{double}]{vec\+Y, }
+\item[{double}]{vec\+Z}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_aa1ce970125c307eae8e67732abfc2223}{}\label{struct_geometric_transform_aa1ce970125c307eae8e67732abfc2223}
-Applique une translation d\textquotesingle{}un vecteur \index{Geometric\+Transform@{Geometric\+Transform}!Viewport@{Viewport}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_aa1ce970125c307eae8e67732abfc2223}
+Applique une translation d'un vecteur \hypertarget{struct_geometric_transform_a568c9eddb625b6d6a8e513efed1f08f5}{\index{Geometric\+Transform@{Geometric\+Transform}!Viewport@{Viewport}}
 \index{Viewport@{Viewport}!Geometric\+Transform@{Geometric\+Transform}}
-\subsubsection[{\texorpdfstring{Viewport(int32\+\_\+t view\+Center\+X, int32\+\_\+t view\+Center\+Y, uint32\+\_\+t view\+Width, uint32\+\_\+t view\+Height)}{Viewport(int32_t viewCenterX, int32_t viewCenterY, uint32_t viewWidth, uint32_t viewHeight)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Viewport (
+\subsubsection[{Viewport}]{\setlength{\rightskip}{0pt plus 5cm}static void Geometric\+Transform\+::\+Viewport (
 \begin{DoxyParamCaption}
-\item[{int32\+\_\+t}]{view\+CenterX, }
-\item[{int32\+\_\+t}]{view\+CenterY, }
+\item[{int32\+\_\+t}]{view\+Center\+X, }
+\item[{int32\+\_\+t}]{view\+Center\+Y, }
 \item[{uint32\+\_\+t}]{view\+Width, }
 \item[{uint32\+\_\+t}]{view\+Height}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_geometric_transform_a568c9eddb625b6d6a8e513efed1f08f5}{}\label{struct_geometric_transform_a568c9eddb625b6d6a8e513efed1f08f5}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_geometric_transform_a568c9eddb625b6d6a8e513efed1f08f5}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

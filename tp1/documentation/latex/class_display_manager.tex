@@ -1,8 +1,9 @@
-\hypertarget{class_display_manager}{}\section{Display\+Manager Class Reference}
+\hypertarget{class_display_manager}{\section{Display\+Manager Class Reference}
 \label{class_display_manager}\index{Display\+Manager@{Display\+Manager}}
+}
 
 
-Classe de gestion de l\textquotesingle{}affichage. Classe de gestion de l\textquotesingle{}affichage.  
+Classe de gestion de l'affichage. Classe de gestion de l'affichage.  
 
 
 
@@ -12,12 +13,18 @@ Classe de gestion de l\textquotesingle{}affichage. Classe de gestion de l\textqu
 
 
 Collaboration diagram for Display\+Manager\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_display_manager__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_display_manager_abf11523503126b8ee8ed26d79aba9974}{Display\+Manager} (G\+Lint largeur\+Fenetre, G\+Lint hauteur\+Fenetre)
-\begin{DoxyCompactList}\small\item\em Constructeur prenant la géométrie de la fenêtre Initialise les données nécessaires à l\textquotesingle{}affichage. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sources de lumiere de la scene. \end{DoxyCompactList}\item 
 void \hyperlink{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}{Affichage} ()
 \item 
 void \hyperlink{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}{Redimensionnement} (G\+Lint l, G\+Lint h)
@@ -25,53 +32,63 @@ void \hyperlink{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}{Redimen
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+double \hyperlink{class_display_manager_acfa75a1e8befcd84812d8cc667356704}{m\+Revolution\+Light}
+\item 
+double \hyperlink{class_display_manager_aa46bc5dad868a607c958d1ca692c59bc}{m\+Moving\+Light\+X}
+\begin{DoxyCompactList}\small\item\em Valeur de la lumiere en revolution autour du point. \end{DoxyCompactList}\item 
+double \hyperlink{class_display_manager_aa30e52908e554a66068599d65a978c9f}{m\+Moving\+Light\+Y}
+\begin{DoxyCompactList}\small\item\em coordonnee x de la lumiere en mouvement \end{DoxyCompactList}\item 
+double \hyperlink{class_display_manager_a87393e7c9a62c2f978b04c5e6adf2666}{m\+Moving\+Light\+Z}
+\begin{DoxyCompactList}\small\item\em coordonnee y de la lumiere en mouvement \end{DoxyCompactList}\item 
+double \hyperlink{class_display_manager_a610bc38fd015510a3d0f51c0c7ffe17f}{m\+Moving\+Light\+Intensity}
+\begin{DoxyCompactList}\small\item\em coordonnee z de la lumiere en mouvement \end{DoxyCompactList}\item 
 G\+Lint \hyperlink{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}{m\+Largeur\+Fenetre}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensite de la lumiere en mouvement. \end{DoxyCompactList}\item 
 G\+Lint \hyperlink{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}{m\+Hauteur\+Fenetre}
-\item 
+\begin{DoxyCompactList}\small\item\em Largeur de la vue. \end{DoxyCompactList}\item 
 \hyperlink{class_modele}{Modele} \hyperlink{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}{m\+Modele}
-\item 
-\hyperlink{class_look_at_camera}{Look\+At\+Camera} \hyperlink{class_display_manager_a17dd81e3974b51416a35c7e9d9232a60}{m\+Camera}
-\item 
+\begin{DoxyCompactList}\small\item\em Hauteur de la vue. \end{DoxyCompactList}\item 
+\hyperlink{class_transfo_camera}{Transfo\+Camera} \hyperlink{class_display_manager_a9af285e2c31a150d13fc5b86ff9e9baf}{m\+Camera}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_modele}{Modele} a afficher. \end{DoxyCompactList}\item 
 \hyperlink{struct_light_source_data}{Light\+Source\+Data} \hyperlink{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}{m\+Light}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Camera utilisee. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Classe de gestion de l\textquotesingle{}affichage. Classe de gestion de l\textquotesingle{}affichage. 
+Classe de gestion de l'affichage. Classe de gestion de l'affichage. 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_display_manager_abf11523503126b8ee8ed26d79aba9974}{\index{Display\+Manager@{Display\+Manager}!Display\+Manager@{Display\+Manager}}
 \index{Display\+Manager@{Display\+Manager}!Display\+Manager@{Display\+Manager}}
-\index{Display\+Manager@{Display\+Manager}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{Display\+Manager(\+G\+Lint largeur\+Fenetre, G\+Lint hauteur\+Fenetre)}{DisplayManager(GLint largeurFenetre, GLint hauteurFenetre)}}]{\setlength{\rightskip}{0pt plus 5cm}Display\+Manager\+::\+Display\+Manager (
+\subsubsection[{Display\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Display\+Manager\+::\+Display\+Manager (
 \begin{DoxyParamCaption}
 \item[{G\+Lint}]{largeur\+Fenetre, }
 \item[{G\+Lint}]{hauteur\+Fenetre}
 \end{DoxyParamCaption}
-)}\hypertarget{class_display_manager_abf11523503126b8ee8ed26d79aba9974}{}\label{class_display_manager_abf11523503126b8ee8ed26d79aba9974}
+)}}\label{class_display_manager_abf11523503126b8ee8ed26d79aba9974}
 
 
-Constructeur prenant la géométrie de la fenêtre Initialise les données nécessaires à l\textquotesingle{}affichage. 
+Sources de lumiere de la scene. 
 
-
+Constructeur prenant la géométrie de la fenêtre Initialise les données nécessaires à l'affichage. 
 
 \subsection{Member Function Documentation}
-\index{Display\+Manager@{Display\+Manager}!Affichage@{Affichage}}
+\hypertarget{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}{\index{Display\+Manager@{Display\+Manager}!Affichage@{Affichage}}
 \index{Affichage@{Affichage}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{Affichage()}{Affichage()}}]{\setlength{\rightskip}{0pt plus 5cm}void Display\+Manager\+::\+Affichage (
+\subsubsection[{Affichage}]{\setlength{\rightskip}{0pt plus 5cm}void Display\+Manager\+::\+Affichage (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}{}\label{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}
-Méthode d\textquotesingle{}affichage \index{Display\+Manager@{Display\+Manager}!Redimensionnement@{Redimensionnement}}
+)}}\label{class_display_manager_a692eb24cc56a7ab15ab1fd5a88646a34}
+Méthode d'affichage \hypertarget{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}{\index{Display\+Manager@{Display\+Manager}!Redimensionnement@{Redimensionnement}}
 \index{Redimensionnement@{Redimensionnement}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{Redimensionnement(\+G\+Lint l, G\+Lint h)}{Redimensionnement(GLint l, GLint h)}}]{\setlength{\rightskip}{0pt plus 5cm}void Display\+Manager\+::\+Redimensionnement (
+\subsubsection[{Redimensionnement}]{\setlength{\rightskip}{0pt plus 5cm}void Display\+Manager\+::\+Redimensionnement (
 \begin{DoxyParamCaption}
 \item[{G\+Lint}]{l, }
 \item[{G\+Lint}]{h}
 \end{DoxyParamCaption}
-)}\hypertarget{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}{}\label{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}
-Réglage du cadrage pour la vue Doit être rappelée si la taille de la vue change (S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+NT) 
+)}}\label{class_display_manager_a5372587f56171ad81ac7c0ef686c61f4}
+Réglage du cadrage pour la vue Doit être rappelée si la taille de la vue change (S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T) 
 \begin{DoxyParams}{Parameters}
 {\em l} & largeur de la (nouvelle) vue \\
 \hline
@@ -81,21 +98,72 @@ Réglage du cadrage pour la vue Doit être rappelée si la taille de la vue chan
 
 
 \subsection{Member Data Documentation}
-\index{Display\+Manager@{Display\+Manager}!m\+Camera@{m\+Camera}}
+\hypertarget{class_display_manager_a9af285e2c31a150d13fc5b86ff9e9baf}{\index{Display\+Manager@{Display\+Manager}!m\+Camera@{m\+Camera}}
 \index{m\+Camera@{m\+Camera}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{m\+Camera}{mCamera}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Look\+At\+Camera} Display\+Manager\+::m\+Camera}\hypertarget{class_display_manager_a17dd81e3974b51416a35c7e9d9232a60}{}\label{class_display_manager_a17dd81e3974b51416a35c7e9d9232a60}
-\index{Display\+Manager@{Display\+Manager}!m\+Hauteur\+Fenetre@{m\+Hauteur\+Fenetre}}
+\subsubsection[{m\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transfo\+Camera} Display\+Manager\+::m\+Camera}}\label{class_display_manager_a9af285e2c31a150d13fc5b86ff9e9baf}
+
+
+\hyperlink{class_modele}{Modele} a afficher. 
+
+\hypertarget{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}{\index{Display\+Manager@{Display\+Manager}!m\+Hauteur\+Fenetre@{m\+Hauteur\+Fenetre}}
 \index{m\+Hauteur\+Fenetre@{m\+Hauteur\+Fenetre}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{m\+Hauteur\+Fenetre}{mHauteurFenetre}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Display\+Manager\+::m\+Hauteur\+Fenetre}\hypertarget{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}{}\label{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}
-\index{Display\+Manager@{Display\+Manager}!m\+Largeur\+Fenetre@{m\+Largeur\+Fenetre}}
+\subsubsection[{m\+Hauteur\+Fenetre}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Display\+Manager\+::m\+Hauteur\+Fenetre}}\label{class_display_manager_a73b96e4ef8a0621077bcc83bc1dba2cf}
+
+
+Largeur de la vue. 
+
+\hypertarget{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}{\index{Display\+Manager@{Display\+Manager}!m\+Largeur\+Fenetre@{m\+Largeur\+Fenetre}}
 \index{m\+Largeur\+Fenetre@{m\+Largeur\+Fenetre}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{m\+Largeur\+Fenetre}{mLargeurFenetre}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Display\+Manager\+::m\+Largeur\+Fenetre}\hypertarget{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}{}\label{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}
-\index{Display\+Manager@{Display\+Manager}!m\+Light@{m\+Light}}
+\subsubsection[{m\+Largeur\+Fenetre}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Display\+Manager\+::m\+Largeur\+Fenetre}}\label{class_display_manager_a7078a2a1023ebe660ce2e3007a988a62}
+
+
+Intensite de la lumiere en mouvement. 
+
+\hypertarget{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}{\index{Display\+Manager@{Display\+Manager}!m\+Light@{m\+Light}}
 \index{m\+Light@{m\+Light}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{m\+Light}{mLight}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Light\+Source\+Data} Display\+Manager\+::m\+Light}\hypertarget{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}{}\label{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}
-\index{Display\+Manager@{Display\+Manager}!m\+Modele@{m\+Modele}}
+\subsubsection[{m\+Light}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Light\+Source\+Data} Display\+Manager\+::m\+Light}}\label{class_display_manager_a012e14f7761f19a3d049aae93f5d694b}
+
+
+Camera utilisee. 
+
+\hypertarget{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}{\index{Display\+Manager@{Display\+Manager}!m\+Modele@{m\+Modele}}
 \index{m\+Modele@{m\+Modele}!Display\+Manager@{Display\+Manager}}
-\subsubsection[{\texorpdfstring{m\+Modele}{mModele}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Modele} Display\+Manager\+::m\+Modele}\hypertarget{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}{}\label{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}
+\subsubsection[{m\+Modele}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Modele} Display\+Manager\+::m\+Modele}}\label{class_display_manager_a0c8ba3fe8aece87fc924847fc8958398}
+
+
+Hauteur de la vue. 
+
+\hypertarget{class_display_manager_a610bc38fd015510a3d0f51c0c7ffe17f}{\index{Display\+Manager@{Display\+Manager}!m\+Moving\+Light\+Intensity@{m\+Moving\+Light\+Intensity}}
+\index{m\+Moving\+Light\+Intensity@{m\+Moving\+Light\+Intensity}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{m\+Moving\+Light\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}double Display\+Manager\+::m\+Moving\+Light\+Intensity}}\label{class_display_manager_a610bc38fd015510a3d0f51c0c7ffe17f}
+
+
+coordonnee z de la lumiere en mouvement 
+
+\hypertarget{class_display_manager_aa46bc5dad868a607c958d1ca692c59bc}{\index{Display\+Manager@{Display\+Manager}!m\+Moving\+Light\+X@{m\+Moving\+Light\+X}}
+\index{m\+Moving\+Light\+X@{m\+Moving\+Light\+X}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{m\+Moving\+Light\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Display\+Manager\+::m\+Moving\+Light\+X}}\label{class_display_manager_aa46bc5dad868a607c958d1ca692c59bc}
+
+
+Valeur de la lumiere en revolution autour du point. 
+
+\hypertarget{class_display_manager_aa30e52908e554a66068599d65a978c9f}{\index{Display\+Manager@{Display\+Manager}!m\+Moving\+Light\+Y@{m\+Moving\+Light\+Y}}
+\index{m\+Moving\+Light\+Y@{m\+Moving\+Light\+Y}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{m\+Moving\+Light\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Display\+Manager\+::m\+Moving\+Light\+Y}}\label{class_display_manager_aa30e52908e554a66068599d65a978c9f}
+
+
+coordonnee x de la lumiere en mouvement 
+
+\hypertarget{class_display_manager_a87393e7c9a62c2f978b04c5e6adf2666}{\index{Display\+Manager@{Display\+Manager}!m\+Moving\+Light\+Z@{m\+Moving\+Light\+Z}}
+\index{m\+Moving\+Light\+Z@{m\+Moving\+Light\+Z}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{m\+Moving\+Light\+Z}]{\setlength{\rightskip}{0pt plus 5cm}double Display\+Manager\+::m\+Moving\+Light\+Z}}\label{class_display_manager_a87393e7c9a62c2f978b04c5e6adf2666}
+
+
+coordonnee y de la lumiere en mouvement 
+
+\hypertarget{class_display_manager_acfa75a1e8befcd84812d8cc667356704}{\index{Display\+Manager@{Display\+Manager}!m\+Revolution\+Light@{m\+Revolution\+Light}}
+\index{m\+Revolution\+Light@{m\+Revolution\+Light}!Display\+Manager@{Display\+Manager}}
+\subsubsection[{m\+Revolution\+Light}]{\setlength{\rightskip}{0pt plus 5cm}double Display\+Manager\+::m\+Revolution\+Light}}\label{class_display_manager_acfa75a1e8befcd84812d8cc667356704}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

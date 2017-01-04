@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gui_2ecpp',['gui.cpp',['../gui_8cpp.html',1,'']]],
-  ['gui_2ehpp',['gui.hpp',['../gui_8hpp.html',1,'']]]
+  ['frames_2ecpp',['frames.cpp',['../frames_8cpp.html',1,'']]],
+  ['frames_2ehpp',['frames.hpp',['../frames_8hpp.html',1,'']]]
 ];

@@ -1,0 +1,113 @@
+\hypertarget{class_pixels_buffer}{\section{Pixels\+Buffer Class Reference}
+\label{class_pixels_buffer}\index{Pixels\+Buffer@{Pixels\+Buffer}}
+}
+
+
+Structure pour stocker un buffer de pixels (B\+I\+T\+M\+A\+P) dans le but d'en faire une texture.  
+
+
+
+
+{\ttfamily \#include $<$bitmap.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pixels_buffer_ad21a6f7f2212b83062d429b156065a92}{Pixels\+Buffer} (int width, int height, int bytes\+Per\+Pixel)
+\item 
+\hyperlink{class_pixels_buffer_ac177037ebe836461b4f5ee3439ac7a98}{Pixels\+Buffer} (int width, int height, int bytes\+Per\+Pixel, unsigned char $\ast$data)
+\item 
+void \hyperlink{class_pixels_buffer_a074c37ff55e58712010843af4622aa55}{Set\+Size} (int width, int height, int bytes\+Per\+Pixel)
+\item 
+int \hyperlink{class_pixels_buffer_a7504098d27aa0b8076b7bae1911425d2}{Get\+Width} ()
+\item 
+int \hyperlink{class_pixels_buffer_aeec4875bde08cb334b93466129a2b162}{Get\+Height} ()
+\item 
+int \hyperlink{class_pixels_buffer_ae3dba897b0ffeda22c40f0c54bbe21f8}{Get\+Bytes\+Per\+Pixel} ()
+\item 
+void \hyperlink{class_pixels_buffer_a2884ff998f9b7d90c94221826e0df87a}{Set\+Pixel\+Bytes} (int x, int y, unsigned char $\ast$array)
+\item 
+unsigned char $\ast$ \hyperlink{class_pixels_buffer_a5f0b9cb1efaf465c0ec9679a9f7627a9}{Get\+Raw\+Data} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure pour stocker un buffer de pixels (B\+I\+T\+M\+A\+P) dans le but d'en faire une texture. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_pixels_buffer_ad21a6f7f2212b83062d429b156065a92}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Pixels\+Buffer@{Pixels\+Buffer}}
+\index{Pixels\+Buffer@{Pixels\+Buffer}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Pixels\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Pixels\+Buffer\+::\+Pixels\+Buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bytes\+Per\+Pixel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_ad21a6f7f2212b83062d429b156065a92}
+Constructeur avec fond blanc \hypertarget{class_pixels_buffer_ac177037ebe836461b4f5ee3439ac7a98}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Pixels\+Buffer@{Pixels\+Buffer}}
+\index{Pixels\+Buffer@{Pixels\+Buffer}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Pixels\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Pixels\+Buffer\+::\+Pixels\+Buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bytes\+Per\+Pixel, }
+\item[{unsigned char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_ac177037ebe836461b4f5ee3439ac7a98}
+Constructeur en copiant un buffer 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_pixels_buffer_ae3dba897b0ffeda22c40f0c54bbe21f8}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Get\+Bytes\+Per\+Pixel@{Get\+Bytes\+Per\+Pixel}}
+\index{Get\+Bytes\+Per\+Pixel@{Get\+Bytes\+Per\+Pixel}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Get\+Bytes\+Per\+Pixel}]{\setlength{\rightskip}{0pt plus 5cm}int Pixels\+Buffer\+::\+Get\+Bytes\+Per\+Pixel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_ae3dba897b0ffeda22c40f0c54bbe21f8}
+Bytes Per Pixel accessor \hypertarget{class_pixels_buffer_aeec4875bde08cb334b93466129a2b162}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Get\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Pixels\+Buffer\+::\+Get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_aeec4875bde08cb334b93466129a2b162}
+Height accessor \hypertarget{class_pixels_buffer_a5f0b9cb1efaf465c0ec9679a9f7627a9}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Get\+Raw\+Data@{Get\+Raw\+Data}}
+\index{Get\+Raw\+Data@{Get\+Raw\+Data}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Get\+Raw\+Data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ Pixels\+Buffer\+::\+Get\+Raw\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_a5f0b9cb1efaf465c0ec9679a9f7627a9}
+Acces raw pointer to pixels \hypertarget{class_pixels_buffer_a7504098d27aa0b8076b7bae1911425d2}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Get\+Width@{Get\+Width}}
+\index{Get\+Width@{Get\+Width}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Get\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Pixels\+Buffer\+::\+Get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_a7504098d27aa0b8076b7bae1911425d2}
+Width accessor \hypertarget{class_pixels_buffer_a2884ff998f9b7d90c94221826e0df87a}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Set\+Pixel\+Bytes@{Set\+Pixel\+Bytes}}
+\index{Set\+Pixel\+Bytes@{Set\+Pixel\+Bytes}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Set\+Pixel\+Bytes}]{\setlength{\rightskip}{0pt plus 5cm}void Pixels\+Buffer\+::\+Set\+Pixel\+Bytes (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{unsigned char $\ast$}]{array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_a2884ff998f9b7d90c94221826e0df87a}
+Set pixelsvalues \hypertarget{class_pixels_buffer_a074c37ff55e58712010843af4622aa55}{\index{Pixels\+Buffer@{Pixels\+Buffer}!Set\+Size@{Set\+Size}}
+\index{Set\+Size@{Set\+Size}!Pixels\+Buffer@{Pixels\+Buffer}}
+\subsubsection[{Set\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Pixels\+Buffer\+::\+Set\+Size (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bytes\+Per\+Pixel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_pixels_buffer_a074c37ff55e58712010843af4622aa55}
+Modifie la taille du buffer \begin{DoxyReturn}{Returns}
+true si la dimension du buffer suffit 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/texture\+Image/\hyperlink{bitmap_8hpp}{bitmap.\+hpp}\end{DoxyCompactItemize}

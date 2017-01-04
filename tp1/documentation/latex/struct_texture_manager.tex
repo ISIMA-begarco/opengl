@@ -1,0 +1,131 @@
+\hypertarget{struct_texture_manager}{\section{Texture\+Manager Struct Reference}
+\label{struct_texture_manager}\index{Texture\+Manager@{Texture\+Manager}}
+}
+
+
+{\ttfamily \#include $<$texture\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Texture\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{struct_texture_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_texture_manager_a72275326855ba87765f4546700f15719}{Texture\+Manager} (const char $\ast$path\+To\+B\+M\+P)
+\begin{DoxyCompactList}\small\item\em Unique buffer reutilise à chaque nouvel affichage. \end{DoxyCompactList}\item 
+\hyperlink{struct_texture_manager_a001d6d74674961db79987e3222682576}{$\sim$\+Texture\+Manager} ()
+\item 
+void \hyperlink{struct_texture_manager_a90556701109bfd103c778eb33c5d8771}{Select\+Texture2\+D} () const 
+\begin{DoxyCompactList}\small\item\em Sélectionne la texture. \end{DoxyCompactList}\item 
+void \hyperlink{struct_texture_manager_ab70062e3dcab6052fa6699880e256d5c}{Cree\+Buffer\+Form\+Picture} (const char $\ast$path\+To\+B\+M\+P)
+\item 
+void \hyperlink{struct_texture_manager_ac19f768b2653d9384b54226dda403396}{Cree\+Texture2\+D} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{struct_texture_manager_ac97817f882f366cd772d751f1179fb87}{m\+Tex\+Id}
+\item 
+\hyperlink{class_pixels_buffer}{Pixels\+Buffer} \hyperlink{struct_texture_manager_aaea3b4fd70a2735c98dc09bfea7a023b}{m\+Buffer}
+\begin{DoxyCompactList}\small\item\em Identifiant de texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{struct_texture_manager_a4710e38aa91611c0e9cfc37b40acbf4d}{Cree\+Surface} (const char $\ast$path\+To\+B\+M\+P)
+\begin{DoxyCompactList}\small\item\em Crée une surface S\+D\+L à partir d’un fichier B\+M\+P. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Permet d'appliquer une texture sur un objet 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_texture_manager_a72275326855ba87765f4546700f15719}{\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Texture\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::\+Texture\+Manager (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path\+To\+B\+M\+P}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_texture_manager_a72275326855ba87765f4546700f15719}
+
+
+Unique buffer reutilise à chaque nouvel affichage. 
+
+Constructeur par défaut avec rendu d’un t e x t e dans la texture \hypertarget{struct_texture_manager_a001d6d74674961db79987e3222682576}{\index{Texture\+Manager@{Texture\+Manager}!````~Texture\+Manager@{$\sim$\+Texture\+Manager}}
+\index{````~Texture\+Manager@{$\sim$\+Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{$\sim$\+Texture\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::$\sim$\+Texture\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_texture_manager_a001d6d74674961db79987e3222682576}
+Destructeur par défaut 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_texture_manager_ab70062e3dcab6052fa6699880e256d5c}{\index{Texture\+Manager@{Texture\+Manager}!Cree\+Buffer\+Form\+Picture@{Cree\+Buffer\+Form\+Picture}}
+\index{Cree\+Buffer\+Form\+Picture@{Cree\+Buffer\+Form\+Picture}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Cree\+Buffer\+Form\+Picture}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Manager\+::\+Cree\+Buffer\+Form\+Picture (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path\+To\+B\+M\+P}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_texture_manager_ab70062e3dcab6052fa6699880e256d5c}
+\hypertarget{struct_texture_manager_a4710e38aa91611c0e9cfc37b40acbf4d}{\index{Texture\+Manager@{Texture\+Manager}!Cree\+Surface@{Cree\+Surface}}
+\index{Cree\+Surface@{Cree\+Surface}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Cree\+Surface}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface$\ast$ Texture\+Manager\+::\+Cree\+Surface (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path\+To\+B\+M\+P}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{struct_texture_manager_a4710e38aa91611c0e9cfc37b40acbf4d}
+
+
+Crée une surface S\+D\+L à partir d’un fichier B\+M\+P. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$ path\+To\+B\+M\+P Chemin vers le bitmap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+Surface$\ast$ renvoie l'objet surface S\+D\+L 
+\end{DoxyReturn}
+\hypertarget{struct_texture_manager_ac19f768b2653d9384b54226dda403396}{\index{Texture\+Manager@{Texture\+Manager}!Cree\+Texture2\+D@{Cree\+Texture2\+D}}
+\index{Cree\+Texture2\+D@{Cree\+Texture2\+D}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Cree\+Texture2\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Manager\+::\+Cree\+Texture2\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_texture_manager_ac19f768b2653d9384b54226dda403396}
+\hypertarget{struct_texture_manager_a90556701109bfd103c778eb33c5d8771}{\index{Texture\+Manager@{Texture\+Manager}!Select\+Texture2\+D@{Select\+Texture2\+D}}
+\index{Select\+Texture2\+D@{Select\+Texture2\+D}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Select\+Texture2\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Texture\+Manager\+::\+Select\+Texture2\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_texture_manager_a90556701109bfd103c778eb33c5d8771}
+
+
+Sélectionne la texture. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_texture_manager_aaea3b4fd70a2735c98dc09bfea7a023b}{\index{Texture\+Manager@{Texture\+Manager}!m\+Buffer@{m\+Buffer}}
+\index{m\+Buffer@{m\+Buffer}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{m\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pixels\+Buffer} Texture\+Manager\+::m\+Buffer}}\label{struct_texture_manager_aaea3b4fd70a2735c98dc09bfea7a023b}
+
+
+Identifiant de texture. 
+
+\hypertarget{struct_texture_manager_ac97817f882f366cd772d751f1179fb87}{\index{Texture\+Manager@{Texture\+Manager}!m\+Tex\+Id@{m\+Tex\+Id}}
+\index{m\+Tex\+Id@{m\+Tex\+Id}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{m\+Tex\+Id}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Texture\+Manager\+::m\+Tex\+Id}}\label{struct_texture_manager_ac97817f882f366cd772d751f1179fb87}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/texture\+Image/\hyperlink{texture_manager_8hpp}{texture\+Manager.\+hpp}\end{DoxyCompactItemize}

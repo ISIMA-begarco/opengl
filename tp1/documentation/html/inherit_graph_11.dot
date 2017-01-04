@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="MouseData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_mouse_data.html",tooltip="Modèle pour la souris (interaction utilisateur) Paramètres concernant la souris (état, vitesse, etc) "];
-}

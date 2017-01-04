@@ -1,0 +1,10 @@
+<map id="MainApplication" name="MainApplication">
+<area shape="rect" id="node2" href="$struct_wrapper_s_d_l.html" title="WrapperSDL" alt="" coords="139,184,237,211"/>
+<area shape="rect" id="node3" href="$struct_wrapper_s_d_l_1_1_window_manager.html" title="Classe gestionnaire de la fenêtre graphique et du contexte OpenGL. " alt="" coords="5,95,208,121"/>
+<area shape="rect" id="node4" href="$class_display_manager.html" title="Classe de gestion de l&#39;affichage. Classe de gestion de l&#39;affichage. " alt="" coords="286,184,402,211"/>
+<area shape="rect" id="node5" href="$class_transfo_camera.html" title="TransfoCamera" alt="" coords="232,95,344,121"/>
+<area shape="rect" id="node6" href="$class_abstract_camera.html" title="Classe de caméra abstraite Classe de caméra abstraite. " alt="" coords="227,5,344,32"/>
+<area shape="rect" id="node7" href="$class_modele.html" title="Modele" alt="" coords="368,95,432,121"/>
+<area shape="rect" id="node8" href="$struct_material.html" title="Material" alt="" coords="367,5,435,32"/>
+<area shape="rect" id="node9" href="$struct_light_source_data.html" title="LightSourceData" alt="" coords="457,95,575,121"/>
+</map>

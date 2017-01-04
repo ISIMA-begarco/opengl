@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['light_2ehpp',['light.hpp',['../light_8hpp.html',1,'']]],
-  ['lookatcamera_2ecpp',['lookAtCamera.cpp',['../look_at_camera_8cpp.html',1,'']]],
-  ['lookatcamera_2ehpp',['lookAtCamera.hpp',['../look_at_camera_8hpp.html',1,'']]]
+  ['gui_2ecpp',['gui.cpp',['../gui_8cpp.html',1,'']]],
+  ['gui_2ehpp',['gui.hpp',['../gui_8hpp.html',1,'']]]
 ];

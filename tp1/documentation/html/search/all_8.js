@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['leftbuttonpressed',['leftButtonPressed',['../class_mouse_data.html#a0aba8d6075bdc8237efa484ffaeae14a',1,'MouseData']]],
-  ['light_2ehpp',['light.hpp',['../light_8hpp.html',1,'']]],
-  ['lightsourcedata',['LightSourceData',['../struct_light_source_data.html',1,'LightSourceData'],['../struct_light_source_data.html#a0862cd4423045f379a724594f5a7f7f2',1,'LightSourceData::LightSourceData()']]],
-  ['lookat',['LookAt',['../struct_geometric_transform.html#a11df6454b17b6ed7a9327cfd837cef0d',1,'GeometricTransform']]],
-  ['lookatcamera',['LookAtCamera',['../class_look_at_camera.html',1,'LookAtCamera'],['../class_look_at_camera.html#a14d523ff4ea3cc37abf726e2ffd981ec',1,'LookAtCamera::LookAtCamera()']]],
-  ['lookatcamera_2ecpp',['lookAtCamera.cpp',['../look_at_camera_8cpp.html',1,'']]],
-  ['lookatcamera_2ehpp',['lookAtCamera.hpp',['../look_at_camera_8hpp.html',1,'']]]
+  ['init',['Init',['../class_frames_data.html#adb376443cd35cdf789334e5216799632',1,'FramesData::Init()'],['../struct_wrapper_s_d_l_1_1_event_controller.html#a1d120644a13d32238f3372b601a67f80',1,'WrapperSDL::EventController::Init()'],['../struct_wrapper_s_d_l.html#a6731fd378a5431029257edae59bbb6d1',1,'WrapperSDL::Init()'],['../struct_rendering_model.html#aacbef0bb16dc69563ec64034f31acd58',1,'RenderingModel::Init()']]],
+  ['init_5fsdl_5fwindow',['init_SDL_Window',['../struct_wrapper_s_d_l_1_1_window_manager.html#a04c1b0e8c5c9b685863f60d2d033fcb5',1,'WrapperSDL::WindowManager']]],
+  ['initview',['InitView',['../struct_rendering_model.html#adabaa9b1f8ba171e50a62f4ef78ff28b',1,'RenderingModel']]]
 ];

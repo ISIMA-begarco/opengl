@@ -1,0 +1,22 @@
+<map id="src/main.cpp" name="src/main.cpp">
+<area shape="rect" id="node7" href="$frames_8hpp.html" title="Classe de gestion des frames. " alt="" coords="1622,155,1709,181"/>
+<area shape="rect" id="node8" href="$modele_8hpp.html" title="Classe du modèle de MVC. " alt="" coords="859,155,949,181"/>
+<area shape="rect" id="node23" href="$transform_8hpp.html" title="Diverses transformations. " alt="" coords="1608,319,1811,345"/>
+<area shape="rect" id="node26" href="$vue_8hpp.html" title="Classe de gestion de l&#39;affichage. " alt="" coords="1370,80,1438,107"/>
+<area shape="rect" id="node32" href="$mouse_8hpp.html" title="Classe de gestion de la souris. " alt="" coords="2318,80,2405,107"/>
+<area shape="rect" id="node33" href="$gui_8hpp.html" title="Wrapper SDL. " alt="" coords="2097,155,2161,181"/>
+<area shape="rect" id="node34" href="$events_handling_8cpp.html" title="eventsHandling.cpp" alt="" coords="1837,80,1974,107"/>
+<area shape="rect" id="node11" href="$scene_8hpp.html" title="Scene chargee par fichier. " alt="" coords="647,237,729,263"/>
+<area shape="rect" id="node16" href="$abstract_scene_8hpp.html" title="Classe abstraite de scene. " alt="" coords="1080,319,1211,345"/>
+<area shape="rect" id="node22" href="$computed_scene_8hpp.html" title="Scene chargee calculee en temps reel par openGL. " alt="" coords="908,237,1049,263"/>
+<area shape="rect" id="node25" href="$rendering_model_8hpp.html" title="Matériel et rendu. " alt="" coords="1184,229,1357,271"/>
+<area shape="rect" id="node19" href="$vecteur3_d_8hpp.html" title="Classe de vecteur en trois dimensions. " alt="" coords="677,393,784,420"/>
+<area shape="rect" id="node20" href="$noeud_8hpp.html" title="Classe de noeud. " alt="" coords="144,319,227,345"/>
+<area shape="rect" id="node21" href="$maillage_8hpp.html" title="Classe de maillage. " alt="" coords="726,319,821,345"/>
+<area shape="rect" id="node17" href="$texture_manager_8hpp.html" title="textureImage/textureManager.hpp" alt="" coords="1433,393,1650,420"/>
+<area shape="rect" id="node18" href="$bitmap_8hpp.html" title="bitmap.hpp" alt="" coords="1466,468,1553,495"/>
+<area shape="rect" id="node28" href="$transfo_camera_8hpp.html" title="Classe de caméra utilisant des transformations. " alt="" coords="1259,155,1392,181"/>
+<area shape="rect" id="node30" href="$look_at_camera_8hpp.html" title="Classe de caméra utilisant gluLookAt. " alt="" coords="1416,155,1547,181"/>
+<area shape="rect" id="node31" href="$light_8hpp.html" title="Classes de lumière. " alt="" coords="973,155,1142,181"/>
+<area shape="rect" id="node29" href="$abstract_camera_8hpp.html" title="Classe abstraite de caméra. " alt="" coords="1433,237,1573,263"/>
+</map>

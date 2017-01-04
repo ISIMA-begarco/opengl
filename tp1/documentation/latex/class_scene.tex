@@ -1,5 +1,6 @@
-\hypertarget{class_scene}{}\section{Scene Class Reference}
+\hypertarget{class_scene}{\section{Scene Class Reference}
 \label{class_scene}\index{Scene@{Scene}}
+}
 
 
 {\ttfamily \#include $<$scene.\+hpp$>$}
@@ -7,15 +8,27 @@
 
 
 Inheritance diagram for Scene\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_scene__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for Scene\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_scene__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_scene_af761cd03640e306bc55afa79093e334d}{Scene} (const std\+::string path)
+\hyperlink{class_scene_a91c732aff24d5b35d65a0f6e2fdfcd3a}{Scene} (const std\+::string path, const std\+::string texture, bool reshape=false)
 \item 
 virtual \hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene} ()
 \item 
@@ -23,66 +36,78 @@ void \hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{render} ()
 \begin{DoxyCompactList}\small\item\em Affiche la scene courante. \end{DoxyCompactList}\item 
 void \hyperlink{class_scene_af0747116905b9098ba3bd2c9d4b67162}{render} (\hyperlink{class_noeud}{Noeud} noeud)
 \item 
+void \hyperlink{class_scene_a1184bf60ec953a9ae9f6b979cfcc8f69}{center} ()
+\item 
 \hyperlink{class_noeud}{Noeud} \hyperlink{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}{get\+Racine} ()
 \begin{DoxyCompactList}\small\item\em Recupere le noeud mere de la scene. \end{DoxyCompactList}\item 
-\hyperlink{class_vecteur3_d}{Vecteur3D} \hyperlink{class_scene_ada5afef61a8061abb6d3dfb38802f551}{get\+Center} ()
+\hyperlink{class_vecteur3_d}{Vecteur3\+D} \hyperlink{class_scene_ada5afef61a8061abb6d3dfb38802f551}{get\+Center} ()
 \begin{DoxyCompactList}\small\item\em Renvoie le center de la scene. \end{DoxyCompactList}\item 
-std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_scene_a899e0ef799504383505743ebecc58406}{get\+Vertices} ()
+std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3\+D} $>$ \hyperlink{class_scene_a899e0ef799504383505743ebecc58406}{get\+Vertices} ()
 \begin{DoxyCompactList}\small\item\em Renvoie la liste des vertices de la scene. \end{DoxyCompactList}\item 
-std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3D} $>$ \hyperlink{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}{get\+Normals} ()
+std\+::vector$<$ \hyperlink{class_vecteur3_d}{Vecteur3\+D} $>$ \hyperlink{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}{get\+Normals} ()
 \begin{DoxyCompactList}\small\item\em Revoie la liste des normales de la scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
 \hyperlink{class_scene}{Scene} chargee par fichier 
 
 \subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_scene_a91c732aff24d5b35d65a0f6e2fdfcd3a}{\index{Scene@{Scene}!Scene@{Scene}}
 \index{Scene@{Scene}!Scene@{Scene}}
-\index{Scene@{Scene}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{Scene(const std\+::string path)}{Scene(const std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::\+Scene (
+\subsubsection[{Scene}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::\+Scene (
 \begin{DoxyParamCaption}
-\item[{const std\+::string}]{path}
+\item[{const std\+::string}]{path, }
+\item[{const std\+::string}]{texture, }
+\item[{bool}]{reshape = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}\hypertarget{class_scene_af761cd03640e306bc55afa79093e334d}{}\label{class_scene_af761cd03640e306bc55afa79093e334d}
-\index{Scene@{Scene}!````~Scene@{$\sim$\+Scene}}
+)}}\label{class_scene_a91c732aff24d5b35d65a0f6e2fdfcd3a}
+\hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}{\index{Scene@{Scene}!````~Scene@{$\sim$\+Scene}}
 \index{````~Scene@{$\sim$\+Scene}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{$\sim$\+Scene()}{~Scene()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::$\sim$\+Scene (
+\subsubsection[{$\sim$\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::$\sim$\+Scene (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}{}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}
 
 
 \subsection{Member Function Documentation}
-\index{Scene@{Scene}!get\+Center@{get\+Center}}
-\index{get\+Center@{get\+Center}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{get\+Center()}{getCenter()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vecteur3D} Scene\+::get\+Center (
+\hypertarget{class_scene_a1184bf60ec953a9ae9f6b979cfcc8f69}{\index{Scene@{Scene}!center@{center}}
+\index{center@{center}!Scene@{Scene}}
+\subsubsection[{center}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::center (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_ada5afef61a8061abb6d3dfb38802f551}{}\label{class_scene_ada5afef61a8061abb6d3dfb38802f551}
+)}}\label{class_scene_a1184bf60ec953a9ae9f6b979cfcc8f69}
+\hypertarget{class_scene_ada5afef61a8061abb6d3dfb38802f551}{\index{Scene@{Scene}!get\+Center@{get\+Center}}
+\index{get\+Center@{get\+Center}!Scene@{Scene}}
+\subsubsection[{get\+Center}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vecteur3\+D} Scene\+::get\+Center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_scene_ada5afef61a8061abb6d3dfb38802f551}
 
 
 Renvoie le center de la scene. 
 
-\index{Scene@{Scene}!get\+Normals@{get\+Normals}}
+\hypertarget{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}{\index{Scene@{Scene}!get\+Normals@{get\+Normals}}
 \index{get\+Normals@{get\+Normals}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{get\+Normals()}{getNormals()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Vecteur3D} $>$ Scene\+::get\+Normals (
+\subsubsection[{get\+Normals}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Vecteur3\+D} $>$ Scene\+::get\+Normals (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}{}\label{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}
+)}}\label{class_scene_a98442b4ed5ff289a695d9a6eea7b6ebd}
 
 
 Revoie la liste des normales de la scene. 
 
-\index{Scene@{Scene}!get\+Racine@{get\+Racine}}
+\hypertarget{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}{\index{Scene@{Scene}!get\+Racine@{get\+Racine}}
 \index{get\+Racine@{get\+Racine}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{get\+Racine()}{getRacine()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Noeud} Scene\+::get\+Racine (
+\subsubsection[{get\+Racine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Noeud} Scene\+::get\+Racine (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}{}\label{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}
+)}}\label{class_scene_a6d9239ca059ca24b0a767aebc1c9a63b}
 
 
 Recupere le noeud mere de la scene. 
@@ -90,39 +115,39 @@ Recupere le noeud mere de la scene.
 \begin{DoxyReturn}{Returns}
 le \hyperlink{class_noeud}{Noeud} mere 
 \end{DoxyReturn}
-\index{Scene@{Scene}!get\+Vertices@{get\+Vertices}}
+\hypertarget{class_scene_a899e0ef799504383505743ebecc58406}{\index{Scene@{Scene}!get\+Vertices@{get\+Vertices}}
 \index{get\+Vertices@{get\+Vertices}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{get\+Vertices()}{getVertices()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Vecteur3D} $>$ Scene\+::get\+Vertices (
+\subsubsection[{get\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Vecteur3\+D} $>$ Scene\+::get\+Vertices (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{class_scene_a899e0ef799504383505743ebecc58406}{}\label{class_scene_a899e0ef799504383505743ebecc58406}
+)}}\label{class_scene_a899e0ef799504383505743ebecc58406}
 
 
 Renvoie la liste des vertices de la scene. 
 
-\index{Scene@{Scene}!render@{render}}
+\hypertarget{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{\index{Scene@{Scene}!render@{render}}
 \index{render@{render}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{render()}{render()}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::render (
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::render (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{}\label{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}
 
 
 Affiche la scene courante. 
 
 
 
-Implements \hyperlink{class_abstract_scene_ae4f545c8335b65b42a6198ee09bf8084}{Abstract\+Scene}.
+Reimplemented from \hyperlink{class_abstract_scene_aaf2f4c7aa4a6401f66bed00a51d8e64f}{Abstract\+Scene}.
 
-\index{Scene@{Scene}!render@{render}}
+\hypertarget{class_scene_af0747116905b9098ba3bd2c9d4b67162}{\index{Scene@{Scene}!render@{render}}
 \index{render@{render}!Scene@{Scene}}
-\subsubsection[{\texorpdfstring{render(\+Noeud noeud)}{render(Noeud noeud)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::render (
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::render (
 \begin{DoxyParamCaption}
 \item[{{\bf Noeud}}]{noeud}
 \end{DoxyParamCaption}
-)}\hypertarget{class_scene_af0747116905b9098ba3bd2c9d4b67162}{}\label{class_scene_af0747116905b9098ba3bd2c9d4b67162}
+)}}\label{class_scene_af0747116905b9098ba3bd2c9d4b67162}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

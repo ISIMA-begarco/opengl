@@ -1,5 +1,6 @@
-\hypertarget{struct_rendering_model}{}\section{Rendering\+Model Struct Reference}
+\hypertarget{struct_rendering_model}{\section{Rendering\+Model Struct Reference}
 \label{struct_rendering_model}\index{Rendering\+Model@{Rendering\+Model}}
+}
 
 
 {\ttfamily \#include $<$rendering\+Model.\+hpp$>$}
@@ -24,62 +25,88 @@ static void \hyperlink{struct_rendering_model_ad70a68f53f3d8f9802677fa21b5b9c16}
 
 
 \subsection{Detailed Description}
-MÉ\+T\+H\+O\+D\+ES C\+O\+N\+C\+E\+R\+N\+A\+NT L\+ES M\+O\+DÈ\+L\+ES DE R\+E\+N\+DU ET D’É\+C\+L\+A\+I\+R\+E\+M\+E\+NT 
+MÉ\+T\+H\+O\+D\+E\+S C\+O\+N\+C\+E\+R\+N\+A\+N\+T L\+E\+S M\+O\+DÈ\+L\+E\+S D\+E R\+E\+N\+D\+U E\+T D’É\+C\+L\+A\+I\+R\+E\+M\+E\+N\+T 
 
 \subsection{Member Function Documentation}
-\index{Rendering\+Model@{Rendering\+Model}!Apply\+Material@{Apply\+Material}}
+\hypertarget{struct_rendering_model_a561385fa01420555b97f2bf22912eae6}{\index{Rendering\+Model@{Rendering\+Model}!Apply\+Material@{Apply\+Material}}
 \index{Apply\+Material@{Apply\+Material}!Rendering\+Model@{Rendering\+Model}}
-\subsubsection[{\texorpdfstring{Apply\+Material(\+Material material)}{ApplyMaterial(Material material)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Apply\+Material (
+\subsubsection[{Apply\+Material}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Apply\+Material (
 \begin{DoxyParamCaption}
 \item[{{\bf Material}}]{material}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_rendering_model_a561385fa01420555b97f2bf22912eae6}{}\label{struct_rendering_model_a561385fa01420555b97f2bf22912eae6}
-Applique des propri é t é s de maté riaux pour l e s rendus qui vont s u i v r e \index{Rendering\+Model@{Rendering\+Model}!Apply\+Point\+Light\+Intensity@{Apply\+Point\+Light\+Intensity}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_rendering_model_a561385fa01420555b97f2bf22912eae6}
+Applique des propriétés de matériaux pour les rendus qui vont suivre 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_material}{Material}} & materiau a appliquer \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_rendering_model_aadeef00a15e4310a0f0ea69f87884735}{\index{Rendering\+Model@{Rendering\+Model}!Apply\+Point\+Light\+Intensity@{Apply\+Point\+Light\+Intensity}}
 \index{Apply\+Point\+Light\+Intensity@{Apply\+Point\+Light\+Intensity}!Rendering\+Model@{Rendering\+Model}}
-\subsubsection[{\texorpdfstring{Apply\+Point\+Light\+Intensity(\+G\+Lint light\+Id, const G\+Lfloat diffuse\+Intensity[4], const G\+Lfloat specular\+Intensity[4])}{ApplyPointLightIntensity(GLint lightId, const GLfloat diffuseIntensity[4], const GLfloat specularIntensity[4])}}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Apply\+Point\+Light\+Intensity (
+\subsubsection[{Apply\+Point\+Light\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Apply\+Point\+Light\+Intensity (
 \begin{DoxyParamCaption}
 \item[{G\+Lint}]{light\+Id, }
 \item[{const G\+Lfloat}]{diffuse\+Intensity\mbox{[}4\mbox{]}, }
 \item[{const G\+Lfloat}]{specular\+Intensity\mbox{[}4\mbox{]}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_rendering_model_aadeef00a15e4310a0f0ea69f87884735}{}\label{struct_rendering_model_aadeef00a15e4310a0f0ea69f87884735}
-Applique l ’ i n t e n s i t é d ’ une source lumineuse donné e par son ID et a c t i v e l a source \index{Rendering\+Model@{Rendering\+Model}!Apply\+Point\+Light\+Position@{Apply\+Point\+Light\+Position}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_rendering_model_aadeef00a15e4310a0f0ea69f87884735}
+Applique l’intensité d'une source lumineuse donnée par son I\+D et active la source 
+\begin{DoxyParams}{Parameters}
+{\em G\+Lint} & light\+Id id de la source lumineuse a activer \\
+\hline
+{\em G\+Lfloat\mbox{[}$\,$\mbox{]}} & diffuse\+Intensity valeur diffuse \\
+\hline
+{\em G\+Lfloat\mbox{[}$\,$\mbox{]}} & specular\+Intensity valeur speculaire \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_rendering_model_a0b2c2babe4ea5154ef783e229729f1c9}{\index{Rendering\+Model@{Rendering\+Model}!Apply\+Point\+Light\+Position@{Apply\+Point\+Light\+Position}}
 \index{Apply\+Point\+Light\+Position@{Apply\+Point\+Light\+Position}!Rendering\+Model@{Rendering\+Model}}
-\subsubsection[{\texorpdfstring{Apply\+Point\+Light\+Position(\+G\+Lint light\+Id, const G\+Lfloat position[4])}{ApplyPointLightPosition(GLint lightId, const GLfloat position[4])}}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Apply\+Point\+Light\+Position (
+\subsubsection[{Apply\+Point\+Light\+Position}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Apply\+Point\+Light\+Position (
 \begin{DoxyParamCaption}
 \item[{G\+Lint}]{light\+Id, }
 \item[{const G\+Lfloat}]{position\mbox{[}4\mbox{]}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_rendering_model_a0b2c2babe4ea5154ef783e229729f1c9}{}\label{struct_rendering_model_a0b2c2babe4ea5154ef783e229729f1c9}
-Positionner l a source dans l e repère courant \index{Rendering\+Model@{Rendering\+Model}!Disable\+Point\+Light@{Disable\+Point\+Light}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_rendering_model_a0b2c2babe4ea5154ef783e229729f1c9}
+Positionner la source dans le repère courant 
+\begin{DoxyParams}{Parameters}
+{\em G\+Lint} & light\+Id id de la source lumineuse a activer \\
+\hline
+{\em G\+Lfloat\mbox{[}$\,$\mbox{]}} & position nouvelle position \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_rendering_model_a00bf18c5a373fbd8d80edebd093362df}{\index{Rendering\+Model@{Rendering\+Model}!Disable\+Point\+Light@{Disable\+Point\+Light}}
 \index{Disable\+Point\+Light@{Disable\+Point\+Light}!Rendering\+Model@{Rendering\+Model}}
-\subsubsection[{\texorpdfstring{Disable\+Point\+Light(\+G\+Lint light\+Id)}{DisablePointLight(GLint lightId)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Disable\+Point\+Light (
+\subsubsection[{Disable\+Point\+Light}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Disable\+Point\+Light (
 \begin{DoxyParamCaption}
 \item[{G\+Lint}]{light\+Id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_rendering_model_a00bf18c5a373fbd8d80edebd093362df}{}\label{struct_rendering_model_a00bf18c5a373fbd8d80edebd093362df}
-Dé s a c t i v e une source lumineuse donné e par son ID \index{Rendering\+Model@{Rendering\+Model}!Draw\+Teapot@{Draw\+Teapot}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_rendering_model_a00bf18c5a373fbd8d80edebd093362df}
+Désactive une source lumineuse donnée par son I\+D 
+\begin{DoxyParams}{Parameters}
+{\em id} & de la lumiere a desactiver \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_rendering_model_ad70a68f53f3d8f9802677fa21b5b9c16}{\index{Rendering\+Model@{Rendering\+Model}!Draw\+Teapot@{Draw\+Teapot}}
 \index{Draw\+Teapot@{Draw\+Teapot}!Rendering\+Model@{Rendering\+Model}}
-\subsubsection[{\texorpdfstring{Draw\+Teapot()}{DrawTeapot()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Draw\+Teapot (
+\subsubsection[{Draw\+Teapot}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Draw\+Teapot (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_rendering_model_ad70a68f53f3d8f9802677fa21b5b9c16}{}\label{struct_rendering_model_ad70a68f53f3d8f9802677fa21b5b9c16}
-\index{Rendering\+Model@{Rendering\+Model}!Init@{Init}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_rendering_model_ad70a68f53f3d8f9802677fa21b5b9c16}
+Dessin d’une théière ( ajouterglut\+Init(\&argc,argv) dans le main) \hypertarget{struct_rendering_model_aacbef0bb16dc69563ec64034f31acd58}{\index{Rendering\+Model@{Rendering\+Model}!Init@{Init}}
 \index{Init@{Init}!Rendering\+Model@{Rendering\+Model}}
-\subsubsection[{\texorpdfstring{Init()}{Init()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Init (
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Init (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_rendering_model_aacbef0bb16dc69563ec64034f31acd58}{}\label{struct_rendering_model_aacbef0bb16dc69563ec64034f31acd58}
-I n i t i a l i s e l e s paramètres globaux du rendu de l a scène \index{Rendering\+Model@{Rendering\+Model}!Init\+View@{Init\+View}}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_rendering_model_aacbef0bb16dc69563ec64034f31acd58}
+Initialise les paramètres globaux du rendu de la scène \hypertarget{struct_rendering_model_adabaa9b1f8ba171e50a62f4ef78ff28b}{\index{Rendering\+Model@{Rendering\+Model}!Init\+View@{Init\+View}}
 \index{Init\+View@{Init\+View}!Rendering\+Model@{Rendering\+Model}}
-\subsubsection[{\texorpdfstring{Init\+View()}{InitView()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Init\+View (
+\subsubsection[{Init\+View}]{\setlength{\rightskip}{0pt plus 5cm}static void Rendering\+Model\+::\+Init\+View (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{struct_rendering_model_adabaa9b1f8ba171e50a62f4ef78ff28b}{}\label{struct_rendering_model_adabaa9b1f8ba171e50a62f4ef78ff28b}
-Ré i n i t i a l i s e l a vue ( e f f a c e l ’ é cran ) 
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_rendering_model_adabaa9b1f8ba171e50a62f4ef78ff28b}
+Réinitialise la vue ( efface l’écran ) 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

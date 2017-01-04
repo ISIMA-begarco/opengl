@@ -1,76 +1,112 @@
-\hypertarget{events_handling_8cpp}{}\section{src/events\+Handling.cpp File Reference}
+\hypertarget{events_handling_8cpp}{\section{src/events\+Handling.cpp File Reference}
 \label{events_handling_8cpp}\index{src/events\+Handling.\+cpp@{src/events\+Handling.\+cpp}}
+}
 {\ttfamily \#include \char`\"{}gui.\+hpp\char`\"{}}\\*
 {\ttfamily \#include $<$list$>$}\\*
 {\ttfamily \#include $<$algorithm$>$}\\*
 {\ttfamily \#include $<$iostream$>$}\\*
 Include dependency graph for events\+Handling.\+cpp\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{events_handling_8cpp__incl}
+\end{center}
+\end{figure}
 This graph shows which files directly or indirectly include this file\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{events_handling_8cpp__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}{V\+I\+T\+E\+S\+S\+E\+K\+EY}~10
+\#define \hyperlink{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}{V\+I\+T\+E\+S\+S\+E\+K\+E\+Y}~10
 \item 
-\#define \hyperlink{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}{V\+I\+T\+E\+S\+S\+E\+M\+OU}~100
+\#define \hyperlink{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}{V\+I\+T\+E\+S\+S\+E\+M\+O\+U}~100
+\item 
+\#define \hyperlink{events_handling_8cpp_a86cdb1366106e812b372a5d1cd16cebf}{V\+I\+T\+E\+S\+S\+E\+R\+O\+T}~5
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \hyperlink{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}{manage\+Pressed\+Keys} (std\+::list$<$ int $>$ keys, \hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
-\begin{DoxyCompactList}\small\item\em Gestion d\textquotesingle{}un événement S\+DL extrait de la file. \end{DoxyCompactList}\item 
-void \hyperlink{events_handling_8cpp_a0ec9a5db4098a7dfa32386084e4eea67}{manage\+Mouse} (\hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
-\begin{DoxyCompactList}\small\item\em Gère le déplacement de la souris. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gestion d'un événement S\+D\+L extrait de la file. \end{DoxyCompactList}\item 
+void \hyperlink{events_handling_8cpp_a1fc0df626da9b5be5381611bff4536de}{manage\+Cam\+Move} (\hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\begin{DoxyCompactList}\small\item\em Gère le déplacement de la caméra. \end{DoxyCompactList}\item 
+void \hyperlink{events_handling_8cpp_a1627593ba47af47c7f1bc466937cd58e}{manage\+Cam\+Angle} (\hyperlink{class_display_manager}{Display\+Manager} $\ast$p\+\_\+\+Params\+Affichage)
+\begin{DoxyCompactList}\small\item\em Gère l'orientation de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
-\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!V\+I\+T\+E\+S\+S\+E\+K\+EY@{V\+I\+T\+E\+S\+S\+E\+K\+EY}}
-\index{V\+I\+T\+E\+S\+S\+E\+K\+EY@{V\+I\+T\+E\+S\+S\+E\+K\+EY}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
-\subsubsection[{\texorpdfstring{V\+I\+T\+E\+S\+S\+E\+K\+EY}{VITESSEKEY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+T\+E\+S\+S\+E\+K\+EY~10}\hypertarget{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}{}\label{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}
-\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!V\+I\+T\+E\+S\+S\+E\+M\+OU@{V\+I\+T\+E\+S\+S\+E\+M\+OU}}
-\index{V\+I\+T\+E\+S\+S\+E\+M\+OU@{V\+I\+T\+E\+S\+S\+E\+M\+OU}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
-\subsubsection[{\texorpdfstring{V\+I\+T\+E\+S\+S\+E\+M\+OU}{VITESSEMOU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+T\+E\+S\+S\+E\+M\+OU~100}\hypertarget{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}{}\label{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}
+\hypertarget{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}{\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!V\+I\+T\+E\+S\+S\+E\+K\+E\+Y@{V\+I\+T\+E\+S\+S\+E\+K\+E\+Y}}
+\index{V\+I\+T\+E\+S\+S\+E\+K\+E\+Y@{V\+I\+T\+E\+S\+S\+E\+K\+E\+Y}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{V\+I\+T\+E\+S\+S\+E\+K\+E\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+T\+E\+S\+S\+E\+K\+E\+Y~10}}\label{events_handling_8cpp_aee5cc60cf83fe16165b0a0a0158cce48}
+\hypertarget{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}{\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!V\+I\+T\+E\+S\+S\+E\+M\+O\+U@{V\+I\+T\+E\+S\+S\+E\+M\+O\+U}}
+\index{V\+I\+T\+E\+S\+S\+E\+M\+O\+U@{V\+I\+T\+E\+S\+S\+E\+M\+O\+U}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{V\+I\+T\+E\+S\+S\+E\+M\+O\+U}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+T\+E\+S\+S\+E\+M\+O\+U~100}}\label{events_handling_8cpp_a89a95330796f9b63426f99f954d2f959}
+\hypertarget{events_handling_8cpp_a86cdb1366106e812b372a5d1cd16cebf}{\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!V\+I\+T\+E\+S\+S\+E\+R\+O\+T@{V\+I\+T\+E\+S\+S\+E\+R\+O\+T}}
+\index{V\+I\+T\+E\+S\+S\+E\+R\+O\+T@{V\+I\+T\+E\+S\+S\+E\+R\+O\+T}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{V\+I\+T\+E\+S\+S\+E\+R\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+T\+E\+S\+S\+E\+R\+O\+T~5}}\label{events_handling_8cpp_a86cdb1366106e812b372a5d1cd16cebf}
 
 
 \subsection{Function Documentation}
-\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!manage\+Mouse@{manage\+Mouse}}
-\index{manage\+Mouse@{manage\+Mouse}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
-\subsubsection[{\texorpdfstring{manage\+Mouse(\+Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{manageMouse(DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}void manage\+Mouse (
+\hypertarget{events_handling_8cpp_a1627593ba47af47c7f1bc466937cd58e}{\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!manage\+Cam\+Angle@{manage\+Cam\+Angle}}
+\index{manage\+Cam\+Angle@{manage\+Cam\+Angle}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{manage\+Cam\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}void manage\+Cam\+Angle (
 \begin{DoxyParamCaption}
 \item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
 \end{DoxyParamCaption}
-)}\hypertarget{events_handling_8cpp_a0ec9a5db4098a7dfa32386084e4eea67}{}\label{events_handling_8cpp_a0ec9a5db4098a7dfa32386084e4eea67}
+)}}\label{events_handling_8cpp_a1627593ba47af47c7f1bc466937cd58e}
 
 
-Gère le déplacement de la souris. 
+Gère l'orientation de la caméra. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em Le} & display manager \\
 \hline
 \end{DoxyParams}
-\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!manage\+Pressed\+Keys@{manage\+Pressed\+Keys}}
+\hypertarget{events_handling_8cpp_a1fc0df626da9b5be5381611bff4536de}{\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!manage\+Cam\+Move@{manage\+Cam\+Move}}
+\index{manage\+Cam\+Move@{manage\+Cam\+Move}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
+\subsubsection[{manage\+Cam\+Move}]{\setlength{\rightskip}{0pt plus 5cm}void manage\+Cam\+Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
+\end{DoxyParamCaption}
+)}}\label{events_handling_8cpp_a1fc0df626da9b5be5381611bff4536de}
+
+
+Gère le déplacement de la caméra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & display manager \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}{\index{events\+Handling.\+cpp@{events\+Handling.\+cpp}!manage\+Pressed\+Keys@{manage\+Pressed\+Keys}}
 \index{manage\+Pressed\+Keys@{manage\+Pressed\+Keys}!events\+Handling.\+cpp@{events\+Handling.\+cpp}}
-\subsubsection[{\texorpdfstring{manage\+Pressed\+Keys(std\+::list$<$ int $>$ keys, Display\+Manager $\ast$p\+\_\+\+Params\+Affichage)}{managePressedKeys(std::list< int > keys, DisplayManager *p_ParamsAffichage)}}]{\setlength{\rightskip}{0pt plus 5cm}bool manage\+Pressed\+Keys (
+\subsubsection[{manage\+Pressed\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}bool manage\+Pressed\+Keys (
 \begin{DoxyParamCaption}
 \item[{std\+::list$<$ int $>$}]{keys, }
 \item[{{\bf Display\+Manager} $\ast$}]{p\+\_\+\+Params\+Affichage}
 \end{DoxyParamCaption}
-)}\hypertarget{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}{}\label{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}
+)}}\label{events_handling_8cpp_a097d525e851b25aa1aee029411df940b}
 
 
-Gestion d\textquotesingle{}un événement S\+DL extrait de la file. 
+Gestion d'un événement S\+D\+L extrait de la file. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em p\+\_\+evenement} & données de l\textquotesingle{}événement \\
+{\em p\+\_\+evenement} & données de l'événement \\
 \hline
-{\em window} & Fenêtre S\+DL (pour gérer les S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+NT) \\
+{\em window} & Fenêtre S\+D\+L (pour gérer les S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T) \\
 \hline
 {\em p\+\_\+\+Params\+Affichage} & instance de la classe Vue \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true si l\textquotesingle{}événement est S\+D\+L\+\_\+\+Q\+U\+IT (fermeture de la fenêtre) 
+true si l'événement est S\+D\+L\+\_\+\+Q\+U\+I\+T (fermeture de la fenêtre) 
 \end{DoxyReturn}

@@ -1,0 +1,8 @@
+<map id="src/scene.hpp" name="src/scene.hpp">
+<area shape="rect" id="node2" href="$modele_8hpp.html" title="Classe du modèle de MVC. " alt="" coords="81,80,192,107"/>
+<area shape="rect" id="node7" href="$scene_8cpp.html" title="Scene chargee par fichier. " alt="" coords="217,80,321,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Programme principal. " alt="" coords="5,229,103,256"/>
+<area shape="rect" id="node4" href="$vue_8hpp.html" title="Classe de gestion de l&#39;affichage. " alt="" coords="91,155,182,181"/>
+<area shape="rect" id="node6" href="$modele_8cpp.html" title="Classe du modèle de MVC. " alt="" coords="207,155,317,181"/>
+<area shape="rect" id="node5" href="$vue_8cpp.html" title="Classe de gestion de l&#39;affichage. " alt="" coords="127,229,218,256"/>
+</map>

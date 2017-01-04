@@ -1,0 +1,7 @@
+<map id="DisplayManager" name="DisplayManager">
+<area shape="rect" id="node2" href="$class_transfo_camera.html" title="TransfoCamera" alt="" coords="9,95,121,121"/>
+<area shape="rect" id="node3" href="$class_abstract_camera.html" title="Classe de caméra abstraite Classe de caméra abstraite. " alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node4" href="$class_modele.html" title="Modele" alt="" coords="147,95,211,121"/>
+<area shape="rect" id="node5" href="$struct_material.html" title="Material" alt="" coords="146,5,214,32"/>
+<area shape="rect" id="node6" href="$struct_light_source_data.html" title="LightSourceData" alt="" coords="235,95,354,121"/>
+</map>

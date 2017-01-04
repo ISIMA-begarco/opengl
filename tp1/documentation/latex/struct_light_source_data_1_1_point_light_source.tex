@@ -1,5 +1,6 @@
-\hypertarget{struct_light_source_data_1_1_point_light_source}{}\section{Light\+Source\+Data\+:\+:Point\+Light\+Source Struct Reference}
+\hypertarget{struct_light_source_data_1_1_point_light_source}{\section{Light\+Source\+Data\+:\+:Point\+Light\+Source Struct Reference}
 \label{struct_light_source_data_1_1_point_light_source}\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
+}
 
 
 {\ttfamily \#include $<$light.\+hpp$>$}
@@ -7,7 +8,9 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{struct_light_source_data_1_1_point_light_source_abcf0248c30097a775fee01fac024c69f}{Point\+Light\+Source} (int light\+Id, float intensity, float light\+PositionX, float light\+PositionY, float light\+PositionZ, float diffuse\+IntensityR, float diffuse\+IntensityG, float diffuse\+IntensityB, float specular\+IntensityR, float specular\+IntensityG, float specular\+IntensityB)
+\hyperlink{struct_light_source_data_1_1_point_light_source_a810ee14860e62f45e93bfeaad8933247}{Point\+Light\+Source} ()
+\item 
+\hyperlink{struct_light_source_data_1_1_point_light_source_abcf0248c30097a775fee01fac024c69f}{Point\+Light\+Source} (int light\+Id, float intensity, float light\+Position\+X, float light\+Position\+Y, float light\+Position\+Z, float diffuse\+Intensity\+R, float diffuse\+Intensity\+G, float diffuse\+Intensity\+B, float specular\+Intensity\+R, float specular\+Intensity\+G, float specular\+Intensity\+B)
 \item 
 void \hyperlink{struct_light_source_data_1_1_point_light_source_a282a80169cee9f93ce61517463ec1599}{Apply\+Position} () const 
 \item 
@@ -16,6 +19,8 @@ void \hyperlink{struct_light_source_data_1_1_point_light_source_a1e3f2921341e5c7
 void \hyperlink{struct_light_source_data_1_1_point_light_source_aaf6c53acb771b0d12d9eb7170a32768a}{Disable} () const 
 \item 
 void \hyperlink{struct_light_source_data_1_1_point_light_source_a5ed61c49ceb54686c205b91a3673378e}{set\+Intensity} (float new\+Intensity)
+\item 
+void \hyperlink{struct_light_source_data_1_1_point_light_source_ab436f701f065419fd20dcee7f4132a8c}{set\+Position} (float light\+Position\+X, float light\+Position\+Y, float light\+Position\+Z)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -23,11 +28,11 @@ void \hyperlink{struct_light_source_data_1_1_point_light_source_a5ed61c49ceb5468
 int \hyperlink{struct_light_source_data_1_1_point_light_source_af1e590645aa46ca01388ee4204f17eb7}{m\+Light\+Id}
 \item 
 float \hyperlink{struct_light_source_data_1_1_point_light_source_af7c91e317104049245c90bc39cdc9d7c}{m\+Intensity}
-\begin{DoxyCompactList}\small\item\em A\+T\+T\+E\+N\+T\+I\+ON NE F\+O\+N\+C\+T\+I\+O\+N\+NE QU\textquotesingle{}A\+V\+EC G\+L\+\_\+\+L\+I\+G\+H\+T0, G\+L\+\_\+\+L\+I\+G\+H\+T1, etc. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A\+T\+T\+E\+N\+T\+I\+O\+N N\+E F\+O\+N\+C\+T\+I\+O\+N\+N\+E Q\+U'A\+V\+E\+C G\+L\+\_\+\+L\+I\+G\+H\+T0, G\+L\+\_\+\+L\+I\+G\+H\+T1, etc. \end{DoxyCompactList}\item 
 float \hyperlink{struct_light_source_data_1_1_point_light_source_a54b8bcb5e6c8779065b39137b54e7a4a}{m\+Light\+Position} \mbox{[}4\mbox{]} = \{0.\+0f,0.\+0f,10.\+0f,0.\+0f\}
-\item 
+\begin{DoxyCompactList}\small\item\em Intensité de la source de lumiere. \end{DoxyCompactList}\item 
 float \hyperlink{struct_light_source_data_1_1_point_light_source_ad13d5b37ea396ed9b299943605f0bf42}{m\+Diffuse\+Intensity} \mbox{[}4\mbox{]} = \{0.\+6f,0.\+6f,0.\+6f,1.\+0f\}
-\item 
+\begin{DoxyCompactList}\small\item\em Position de la source de lumiere. \end{DoxyCompactList}\item 
 float \hyperlink{struct_light_source_data_1_1_point_light_source_ad561b4571eac75209782dd6a5ac2cabd}{m\+Specular\+Intensity} \mbox{[}4\mbox{]} = \{0.\+6f,0.\+6f,0.\+6f,1.\+0f\}
 \end{DoxyCompactItemize}
 
@@ -36,76 +41,114 @@ float \hyperlink{struct_light_source_data_1_1_point_light_source_ad561b4571eac75
 Classe représentant une source lumineuse 
 
 \subsection{Constructor \& Destructor Documentation}
-\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Point\+Light\+Source@{Point\+Light\+Source}}
+\hypertarget{struct_light_source_data_1_1_point_light_source_a810ee14860e62f45e93bfeaad8933247}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Point\+Light\+Source@{Point\+Light\+Source}}
 \index{Point\+Light\+Source@{Point\+Light\+Source}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{Point\+Light\+Source(int light\+Id, float intensity, float light\+Position\+X, float light\+Position\+Y, float light\+Position\+Z, float diffuse\+Intensity\+R, float diffuse\+Intensity\+G, float diffuse\+Intensity\+B, float specular\+Intensity\+R, float specular\+Intensity\+G, float specular\+Intensity\+B)}{PointLightSource(int lightId, float intensity, float lightPositionX, float lightPositionY, float lightPositionZ, float diffuseIntensityR, float diffuseIntensityG, float diffuseIntensityB, float specularIntensityR, float specularIntensityG, float specularIntensityB)}}]{\setlength{\rightskip}{0pt plus 5cm}Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Point\+Light\+Source (
+\subsubsection[{Point\+Light\+Source}]{\setlength{\rightskip}{0pt plus 5cm}Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Point\+Light\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_light_source_data_1_1_point_light_source_a810ee14860e62f45e93bfeaad8933247}
+\hypertarget{struct_light_source_data_1_1_point_light_source_abcf0248c30097a775fee01fac024c69f}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Point\+Light\+Source@{Point\+Light\+Source}}
+\index{Point\+Light\+Source@{Point\+Light\+Source}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
+\subsubsection[{Point\+Light\+Source}]{\setlength{\rightskip}{0pt plus 5cm}Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Point\+Light\+Source (
 \begin{DoxyParamCaption}
 \item[{int}]{light\+Id, }
 \item[{float}]{intensity, }
-\item[{float}]{light\+PositionX, }
-\item[{float}]{light\+PositionY, }
-\item[{float}]{light\+PositionZ, }
-\item[{float}]{diffuse\+IntensityR, }
-\item[{float}]{diffuse\+IntensityG, }
-\item[{float}]{diffuse\+IntensityB, }
-\item[{float}]{specular\+IntensityR, }
-\item[{float}]{specular\+IntensityG, }
-\item[{float}]{specular\+IntensityB}
+\item[{float}]{light\+Position\+X, }
+\item[{float}]{light\+Position\+Y, }
+\item[{float}]{light\+Position\+Z, }
+\item[{float}]{diffuse\+Intensity\+R, }
+\item[{float}]{diffuse\+Intensity\+G, }
+\item[{float}]{diffuse\+Intensity\+B, }
+\item[{float}]{specular\+Intensity\+R, }
+\item[{float}]{specular\+Intensity\+G, }
+\item[{float}]{specular\+Intensity\+B}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_1_1_point_light_source_abcf0248c30097a775fee01fac024c69f}{}\label{struct_light_source_data_1_1_point_light_source_abcf0248c30097a775fee01fac024c69f}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_light_source_data_1_1_point_light_source_abcf0248c30097a775fee01fac024c69f}
 Constructeur initialisant toutes les propriétés de la source 
 
 \subsection{Member Function Documentation}
-\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Apply\+Intensity@{Apply\+Intensity}}
+\hypertarget{struct_light_source_data_1_1_point_light_source_a1e3f2921341e5c76d5e6a7c86806518e}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Apply\+Intensity@{Apply\+Intensity}}
 \index{Apply\+Intensity@{Apply\+Intensity}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{Apply\+Intensity() const }{ApplyIntensity() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Apply\+Intensity (
+\subsubsection[{Apply\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Apply\+Intensity (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_1_1_point_light_source_a1e3f2921341e5c76d5e6a7c86806518e}{}\label{struct_light_source_data_1_1_point_light_source_a1e3f2921341e5c76d5e6a7c86806518e}
-Applique l\textquotesingle{}intensité de la source et active la source \index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Apply\+Position@{Apply\+Position}}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_light_source_data_1_1_point_light_source_a1e3f2921341e5c76d5e6a7c86806518e}
+Applique l'intensité de la source et active la source \hypertarget{struct_light_source_data_1_1_point_light_source_a282a80169cee9f93ce61517463ec1599}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Apply\+Position@{Apply\+Position}}
 \index{Apply\+Position@{Apply\+Position}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{Apply\+Position() const }{ApplyPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Apply\+Position (
+\subsubsection[{Apply\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Apply\+Position (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_1_1_point_light_source_a282a80169cee9f93ce61517463ec1599}{}\label{struct_light_source_data_1_1_point_light_source_a282a80169cee9f93ce61517463ec1599}
-Positionner la source dans le repère courant \index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Disable@{Disable}}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_light_source_data_1_1_point_light_source_a282a80169cee9f93ce61517463ec1599}
+Positionner la source dans le repère courant \hypertarget{struct_light_source_data_1_1_point_light_source_aaf6c53acb771b0d12d9eb7170a32768a}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!Disable@{Disable}}
 \index{Disable@{Disable}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{Disable() const }{Disable() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Disable (
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::\+Disable (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_1_1_point_light_source_aaf6c53acb771b0d12d9eb7170a32768a}{}\label{struct_light_source_data_1_1_point_light_source_aaf6c53acb771b0d12d9eb7170a32768a}
-Désactive la source \index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!set\+Intensity@{set\+Intensity}}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_light_source_data_1_1_point_light_source_aaf6c53acb771b0d12d9eb7170a32768a}
+Désactive la source \hypertarget{struct_light_source_data_1_1_point_light_source_a5ed61c49ceb54686c205b91a3673378e}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!set\+Intensity@{set\+Intensity}}
 \index{set\+Intensity@{set\+Intensity}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{set\+Intensity(float new\+Intensity)}{setIntensity(float newIntensity)}}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::set\+Intensity (
+\subsubsection[{set\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::set\+Intensity (
 \begin{DoxyParamCaption}
 \item[{float}]{new\+Intensity}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{struct_light_source_data_1_1_point_light_source_a5ed61c49ceb54686c205b91a3673378e}{}\label{struct_light_source_data_1_1_point_light_source_a5ed61c49ceb54686c205b91a3673378e}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_light_source_data_1_1_point_light_source_a5ed61c49ceb54686c205b91a3673378e}
+Setter d'intensite de la source 
+\begin{DoxyParams}{Parameters}
+{\em float} & new\+Intensity nouvelle valeur de l'intensite \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_light_source_data_1_1_point_light_source_ab436f701f065419fd20dcee7f4132a8c}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Light\+Source\+Data\+::\+Point\+Light\+Source\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{float}]{light\+Position\+X, }
+\item[{float}]{light\+Position\+Y, }
+\item[{float}]{light\+Position\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_light_source_data_1_1_point_light_source_ab436f701f065419fd20dcee7f4132a8c}
+Setter de la position de la source 
+\begin{DoxyParams}{Parameters}
+{\em float} & light\+Position\+X nouvelle valeur de la position X \\
+\hline
+{\em float} & light\+Position\+Y nouvelle valeur de la position Y \\
+\hline
+{\em float} & light\+Position\+Z nouvelle valeur de la position Z \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}
-\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Diffuse\+Intensity@{m\+Diffuse\+Intensity}}
+\hypertarget{struct_light_source_data_1_1_point_light_source_ad13d5b37ea396ed9b299943605f0bf42}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Diffuse\+Intensity@{m\+Diffuse\+Intensity}}
 \index{m\+Diffuse\+Intensity@{m\+Diffuse\+Intensity}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{m\+Diffuse\+Intensity}{mDiffuseIntensity}}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Diffuse\+Intensity\mbox{[}4\mbox{]} = \{0.\+6f,0.\+6f,0.\+6f,1.\+0f\}}\hypertarget{struct_light_source_data_1_1_point_light_source_ad13d5b37ea396ed9b299943605f0bf42}{}\label{struct_light_source_data_1_1_point_light_source_ad13d5b37ea396ed9b299943605f0bf42}
-\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Intensity@{m\+Intensity}}
+\subsubsection[{m\+Diffuse\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Diffuse\+Intensity\mbox{[}4\mbox{]} = \{0.\+6f,0.\+6f,0.\+6f,1.\+0f\}}}\label{struct_light_source_data_1_1_point_light_source_ad13d5b37ea396ed9b299943605f0bf42}
+
+
+Position de la source de lumiere. 
+
+\hypertarget{struct_light_source_data_1_1_point_light_source_af7c91e317104049245c90bc39cdc9d7c}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Intensity@{m\+Intensity}}
 \index{m\+Intensity@{m\+Intensity}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{m\+Intensity}{mIntensity}}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Intensity}\hypertarget{struct_light_source_data_1_1_point_light_source_af7c91e317104049245c90bc39cdc9d7c}{}\label{struct_light_source_data_1_1_point_light_source_af7c91e317104049245c90bc39cdc9d7c}
+\subsubsection[{m\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Intensity}}\label{struct_light_source_data_1_1_point_light_source_af7c91e317104049245c90bc39cdc9d7c}
 
 
-A\+T\+T\+E\+N\+T\+I\+ON NE F\+O\+N\+C\+T\+I\+O\+N\+NE QU\textquotesingle{}A\+V\+EC G\+L\+\_\+\+L\+I\+G\+H\+T0, G\+L\+\_\+\+L\+I\+G\+H\+T1, etc. 
+A\+T\+T\+E\+N\+T\+I\+O\+N N\+E F\+O\+N\+C\+T\+I\+O\+N\+N\+E Q\+U'A\+V\+E\+C G\+L\+\_\+\+L\+I\+G\+H\+T0, G\+L\+\_\+\+L\+I\+G\+H\+T1, etc. 
 
-\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Light\+Id@{m\+Light\+Id}}
+\hypertarget{struct_light_source_data_1_1_point_light_source_af1e590645aa46ca01388ee4204f17eb7}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Light\+Id@{m\+Light\+Id}}
 \index{m\+Light\+Id@{m\+Light\+Id}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{m\+Light\+Id}{mLightId}}]{\setlength{\rightskip}{0pt plus 5cm}int Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Light\+Id}\hypertarget{struct_light_source_data_1_1_point_light_source_af1e590645aa46ca01388ee4204f17eb7}{}\label{struct_light_source_data_1_1_point_light_source_af1e590645aa46ca01388ee4204f17eb7}
-\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Light\+Position@{m\+Light\+Position}}
+\subsubsection[{m\+Light\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Light\+Id}}\label{struct_light_source_data_1_1_point_light_source_af1e590645aa46ca01388ee4204f17eb7}
+\hypertarget{struct_light_source_data_1_1_point_light_source_a54b8bcb5e6c8779065b39137b54e7a4a}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Light\+Position@{m\+Light\+Position}}
 \index{m\+Light\+Position@{m\+Light\+Position}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{m\+Light\+Position}{mLightPosition}}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Light\+Position\mbox{[}4\mbox{]} = \{0.\+0f,0.\+0f,10.\+0f,0.\+0f\}}\hypertarget{struct_light_source_data_1_1_point_light_source_a54b8bcb5e6c8779065b39137b54e7a4a}{}\label{struct_light_source_data_1_1_point_light_source_a54b8bcb5e6c8779065b39137b54e7a4a}
-\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Specular\+Intensity@{m\+Specular\+Intensity}}
+\subsubsection[{m\+Light\+Position}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Light\+Position\mbox{[}4\mbox{]} = \{0.\+0f,0.\+0f,10.\+0f,0.\+0f\}}}\label{struct_light_source_data_1_1_point_light_source_a54b8bcb5e6c8779065b39137b54e7a4a}
+
+
+Intensité de la source de lumiere. 
+
+\hypertarget{struct_light_source_data_1_1_point_light_source_ad561b4571eac75209782dd6a5ac2cabd}{\index{Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}!m\+Specular\+Intensity@{m\+Specular\+Intensity}}
 \index{m\+Specular\+Intensity@{m\+Specular\+Intensity}!Light\+Source\+Data\+::\+Point\+Light\+Source@{Light\+Source\+Data\+::\+Point\+Light\+Source}}
-\subsubsection[{\texorpdfstring{m\+Specular\+Intensity}{mSpecularIntensity}}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Specular\+Intensity\mbox{[}4\mbox{]} = \{0.\+6f,0.\+6f,0.\+6f,1.\+0f\}}\hypertarget{struct_light_source_data_1_1_point_light_source_ad561b4571eac75209782dd6a5ac2cabd}{}\label{struct_light_source_data_1_1_point_light_source_ad561b4571eac75209782dd6a5ac2cabd}
+\subsubsection[{m\+Specular\+Intensity}]{\setlength{\rightskip}{0pt plus 5cm}float Light\+Source\+Data\+::\+Point\+Light\+Source\+::m\+Specular\+Intensity\mbox{[}4\mbox{]} = \{0.\+6f,0.\+6f,0.\+6f,1.\+0f\}}}\label{struct_light_source_data_1_1_point_light_source_ad561b4571eac75209782dd6a5ac2cabd}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

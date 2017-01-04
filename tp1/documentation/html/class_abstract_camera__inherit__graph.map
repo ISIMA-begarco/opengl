@@ -1,0 +1,4 @@
+<map id="AbstractCamera" name="AbstractCamera">
+<area shape="rect" id="node2" href="$class_look_at_camera.html" title="Classe de caméra utilisant gluLookAt Classe de caméra utilisant gluLookAt et héritant de AbstractCame..." alt="" coords="5,80,115,107"/>
+<area shape="rect" id="node3" href="$class_transfo_camera.html" title="TransfoCamera" alt="" coords="139,80,251,107"/>
+</map>

@@ -1,5 +1,6 @@
-\hypertarget{class_abstract_scene}{}\section{Abstract\+Scene Class Reference}
+\hypertarget{class_abstract_scene}{\section{Abstract\+Scene Class Reference}
 \label{class_abstract_scene}\index{Abstract\+Scene@{Abstract\+Scene}}
+}
 
 
 {\ttfamily \#include $<$abstract\+Scene.\+hpp$>$}
@@ -7,45 +8,93 @@
 
 
 Inheritance diagram for Abstract\+Scene\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_abstract_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Abstract\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_abstract_scene__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual \hyperlink{class_abstract_scene_a82b4811120763f71a5e81a9d72b339f3}{$\sim$\+Abstract\+Scene} ()
 \item 
-virtual void \hyperlink{class_abstract_scene_ae4f545c8335b65b42a6198ee09bf8084}{render} ()=0
+virtual void \hyperlink{class_abstract_scene_aaf2f4c7aa4a6401f66bed00a51d8e64f}{render} ()
 \begin{DoxyCompactList}\small\item\em Affiche la scene courante. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_abstract_scene_ae4b1176cfbb35e9ffc3b7021d3274cc4}{Abstract\+Scene} ()
+\item 
+\hyperlink{class_abstract_scene_a6f42922b5dc67eb56aeb2246c39c02ae}{Abstract\+Scene} (const char $\ast$path)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_texture_manager}{Texture\+Manager} \hyperlink{class_abstract_scene_af5c8041d61ff5700c02e365345c06f67}{m\+Texture}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Classe mere des types de scenes disponibles 
 
 \subsection{Constructor \& Destructor Documentation}
-\index{Abstract\+Scene@{Abstract\+Scene}!````~Abstract\+Scene@{$\sim$\+Abstract\+Scene}}
-\index{````~Abstract\+Scene@{$\sim$\+Abstract\+Scene}!Abstract\+Scene@{Abstract\+Scene}}
-\subsubsection[{\texorpdfstring{$\sim$\+Abstract\+Scene()}{~AbstractScene()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Abstract\+Scene\+::$\sim$\+Abstract\+Scene (
+\hypertarget{class_abstract_scene_ae4b1176cfbb35e9ffc3b7021d3274cc4}{\index{Abstract\+Scene@{Abstract\+Scene}!Abstract\+Scene@{Abstract\+Scene}}
+\index{Abstract\+Scene@{Abstract\+Scene}!Abstract\+Scene@{Abstract\+Scene}}
+\subsubsection[{Abstract\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}Abstract\+Scene\+::\+Abstract\+Scene (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_abstract_scene_a82b4811120763f71a5e81a9d72b339f3}{}\label{class_abstract_scene_a82b4811120763f71a5e81a9d72b339f3}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_abstract_scene_ae4b1176cfbb35e9ffc3b7021d3274cc4}
+\hypertarget{class_abstract_scene_a6f42922b5dc67eb56aeb2246c39c02ae}{\index{Abstract\+Scene@{Abstract\+Scene}!Abstract\+Scene@{Abstract\+Scene}}
+\index{Abstract\+Scene@{Abstract\+Scene}!Abstract\+Scene@{Abstract\+Scene}}
+\subsubsection[{Abstract\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}Abstract\+Scene\+::\+Abstract\+Scene (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_abstract_scene_a6f42922b5dc67eb56aeb2246c39c02ae}
+\hypertarget{class_abstract_scene_a82b4811120763f71a5e81a9d72b339f3}{\index{Abstract\+Scene@{Abstract\+Scene}!````~Abstract\+Scene@{$\sim$\+Abstract\+Scene}}
+\index{````~Abstract\+Scene@{$\sim$\+Abstract\+Scene}!Abstract\+Scene@{Abstract\+Scene}}
+\subsubsection[{$\sim$\+Abstract\+Scene}]{\setlength{\rightskip}{0pt plus 5cm}virtual Abstract\+Scene\+::$\sim$\+Abstract\+Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_abstract_scene_a82b4811120763f71a5e81a9d72b339f3}
 
 
 \subsection{Member Function Documentation}
-\index{Abstract\+Scene@{Abstract\+Scene}!render@{render}}
+\hypertarget{class_abstract_scene_aaf2f4c7aa4a6401f66bed00a51d8e64f}{\index{Abstract\+Scene@{Abstract\+Scene}!render@{render}}
 \index{render@{render}!Abstract\+Scene@{Abstract\+Scene}}
-\subsubsection[{\texorpdfstring{render()=0}{render()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Scene\+::render (
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Scene\+::render (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_abstract_scene_ae4f545c8335b65b42a6198ee09bf8084}{}\label{class_abstract_scene_ae4f545c8335b65b42a6198ee09bf8084}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_abstract_scene_aaf2f4c7aa4a6401f66bed00a51d8e64f}
 
 
 Affiche la scene courante. 
 
 
 
-Implemented in \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{Voiture}, \hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{Scene}, \hyperlink{class_systeme_solaire_a500de47c923d4284867416bc007b9c11}{Systeme\+Solaire}, and \hyperlink{class_teapot_aababf7bd2833ebd3c34564b45b902163}{Teapot}.
+Reimplemented in \hyperlink{class_cylindre_a1dfb851bf7fa789abb927361814ad1fe}{Cylindre}, \hyperlink{class_voiture_a4abe5b41fc48c9cbdd0da7780dcd9a53}{Voiture}, \hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{Scene}, \hyperlink{class_systeme_solaire_a500de47c923d4284867416bc007b9c11}{Systeme\+Solaire}, and \hyperlink{class_teapot_aababf7bd2833ebd3c34564b45b902163}{Teapot}.
 
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_abstract_scene_af5c8041d61ff5700c02e365345c06f67}{\index{Abstract\+Scene@{Abstract\+Scene}!m\+Texture@{m\+Texture}}
+\index{m\+Texture@{m\+Texture}!Abstract\+Scene@{Abstract\+Scene}}
+\subsubsection[{m\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Texture\+Manager} Abstract\+Scene\+::m\+Texture\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_abstract_scene_af5c8041d61ff5700c02e365345c06f67}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

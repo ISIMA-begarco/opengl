@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['redimensionnement',['Redimensionnement',['../class_abstract_camera.html#a7231574aecbb95374f3b6f82349608a4',1,'AbstractCamera::Redimensionnement()'],['../class_display_manager.html#a5372587f56171ad81ac7c0ef686c61f4',1,'DisplayManager::Redimensionnement()']]],
-  ['render',['render',['../class_abstract_scene.html#ae4f545c8335b65b42a6198ee09bf8084',1,'AbstractScene::render()'],['../class_teapot.html#aababf7bd2833ebd3c34564b45b902163',1,'Teapot::render()'],['../class_systeme_solaire.html#a500de47c923d4284867416bc007b9c11',1,'SystemeSolaire::render()'],['../class_voiture.html#a4abe5b41fc48c9cbdd0da7780dcd9a53',1,'Voiture::render()'],['../class_modele.html#a8c611c3edf341892ceefebd9c3e00136',1,'Modele::render()'],['../class_scene.html#a4ddf2d16f371ee9533b3faf1dd5ddfb1',1,'Scene::render()'],['../class_scene.html#af0747116905b9098ba3bd2c9d4b67162',1,'Scene::render(Noeud noeud)']]],
-  ['renderall',['renderAll',['../class_modele.html#a78714b95cdb2f63e76c9e122f41e6bbd',1,'Modele']]],
-  ['renderingmodel',['RenderingModel',['../struct_rendering_model.html',1,'']]],
-  ['renderingmodel_2ehpp',['renderingModel.hpp',['../rendering_model_8hpp.html',1,'']]],
-  ['rightbuttonpressed',['rightButtonPressed',['../class_mouse_data.html#a224b54f7b421bdb8443133db38c1ae4b',1,'MouseData']]],
-  ['rotate',['Rotate',['../struct_geometric_transform.html#a6d5739ab72a5de90da8992dfb9d73cf2',1,'GeometricTransform']]]
+  ['pixelsbuffer',['PixelsBuffer',['../class_pixels_buffer.html',1,'PixelsBuffer'],['../class_pixels_buffer.html#ad21a6f7f2212b83062d429b156065a92',1,'PixelsBuffer::PixelsBuffer(int width, int height, int bytesPerPixel)'],['../class_pixels_buffer.html#ac177037ebe836461b4f5ee3439ac7a98',1,'PixelsBuffer::PixelsBuffer(int width, int height, int bytesPerPixel, unsigned char *data)']]],
+  ['pmousex',['pmousex',['../class_mouse_data.html#a7694431e993365b4817ff2e9ac161555',1,'MouseData']]],
+  ['pmousey',['pmousey',['../class_mouse_data.html#a35be8fdf24f27e0de5ba01e44bd6eb33',1,'MouseData']]],
+  ['pointlightsource',['PointLightSource',['../struct_light_source_data_1_1_point_light_source.html#a810ee14860e62f45e93bfeaad8933247',1,'LightSourceData::PointLightSource::PointLightSource()'],['../struct_light_source_data_1_1_point_light_source.html#abcf0248c30097a775fee01fac024c69f',1,'LightSourceData::PointLightSource::PointLightSource(int lightId, float intensity, float lightPositionX, float lightPositionY, float lightPositionZ, float diffuseIntensityR, float diffuseIntensityG, float diffuseIntensityB, float specularIntensityR, float specularIntensityG, float specularIntensityB)']]],
+  ['pointlightsource',['PointLightSource',['../struct_light_source_data_1_1_point_light_source.html',1,'LightSourceData']]]
 ];

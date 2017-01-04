@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['center',['center',['../class_scene.html#a1184bf60ec953a9ae9f6b979cfcc8f69',1,'Scene']]],
   ['changebrillance',['changeBrillance',['../class_modele.html#af105ed94c8a03a7283b4099ef1855976',1,'Modele']]],
   ['changementangle',['ChangementAngle',['../class_abstract_camera.html#a14ae54182b566740e1285ad33dfc6b2b',1,'AbstractCamera']]],
   ['changerefambiante',['changeRefAmbiante',['../class_modele.html#ab313a52585ff0db49e253b55ddbbc108',1,'Modele']]],
@@ -8,5 +9,9 @@ var searchData=
   ['clearmodelview',['ClearModelView',['../struct_geometric_transform.html#a1a64fda32bc67f6e414a08b55a904ad6',1,'GeometricTransform']]],
   ['clearprojection',['ClearProjection',['../struct_geometric_transform.html#aa67fe82887937c72ee486521a3828c51',1,'GeometricTransform']]],
   ['createtimerrefreshframe',['CreateTimerRefreshFrame',['../struct_wrapper_s_d_l_1_1_event_controller.html#ad4516dc1813e1ab583659ae8386b84af',1,'WrapperSDL::EventController']]],
-  ['cross',['Cross',['../class_vecteur3_d.html#a7050066f71a250c11b81e58e1466b389',1,'Vecteur3D']]]
+  ['creebufferformpicture',['CreeBufferFormPicture',['../struct_texture_manager.html#ab70062e3dcab6052fa6699880e256d5c',1,'TextureManager']]],
+  ['creesurface',['CreeSurface',['../struct_texture_manager.html#a4710e38aa91611c0e9cfc37b40acbf4d',1,'TextureManager']]],
+  ['creetexture2d',['CreeTexture2D',['../struct_texture_manager.html#ac19f768b2653d9384b54226dda403396',1,'TextureManager']]],
+  ['cross',['Cross',['../class_vecteur3_d.html#a7050066f71a250c11b81e58e1466b389',1,'Vecteur3D']]],
+  ['cylindre',['Cylindre',['../class_cylindre.html#a366e16060b323a991788d43e6808372e',1,'Cylindre']]]
 ];

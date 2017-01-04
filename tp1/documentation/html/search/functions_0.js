@@ -1,7 +1,10 @@
 var searchData=
 [
   ['abstractcamera',['AbstractCamera',['../class_abstract_camera.html#a66df51ce45fb8be484c56161fe326129',1,'AbstractCamera']]],
-  ['addscene',['addScene',['../class_modele.html#a2b9ce0869e6965e9247eaa91587d37b7',1,'Modele']]],
+  ['abstractscene',['AbstractScene',['../class_abstract_scene.html#ae4b1176cfbb35e9ffc3b7021d3274cc4',1,'AbstractScene::AbstractScene()'],['../class_abstract_scene.html#a6f42922b5dc67eb56aeb2246c39c02ae',1,'AbstractScene::AbstractScene(const char *path)']]],
+  ['addcylindre',['addCylindre',['../class_modele.html#aed71c56a6b68a4cef08ff152046680f9',1,'Modele']]],
+  ['addscene',['addScene',['../class_modele.html#a2842a0b79d9230f95a571ab5fa7c9189',1,'Modele']]],
+  ['addscenewithtexture',['addSceneWithTexture',['../class_modele.html#a83eaf9b1478a82d94819776682ca5fce',1,'Modele']]],
   ['addsource',['AddSource',['../struct_light_source_data.html#a575b34d80813c9057e8e4bdbc60e53c1',1,'LightSourceData']]],
   ['addsystemesolaire',['addSystemeSolaire',['../class_modele.html#a01924068a9a20616cdfe667caaa0e0e5',1,'Modele']]],
   ['addteapot',['addTeapot',['../class_modele.html#a3a5fdb6f258abb35347ba0610eef5ff2',1,'Modele']]],

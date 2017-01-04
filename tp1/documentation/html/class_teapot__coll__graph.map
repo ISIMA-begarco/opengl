@@ -1,0 +1,5 @@
+<map id="Teapot" name="Teapot">
+<area shape="rect" id="node2" href="$class_abstract_scene.html" title="AbstractScene" alt="" coords="9,184,117,211"/>
+<area shape="rect" id="node3" href="$struct_texture_manager.html" title="TextureManager" alt="" coords="5,95,121,121"/>
+<area shape="rect" id="node4" href="$class_pixels_buffer.html" title="Structure pour stocker un buffer de pixels (BITMAP) dans le but d&#39;en faire une texture. " alt="" coords="17,5,110,32"/>
+</map>
